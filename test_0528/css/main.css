@@ -1,0 +1,103 @@
+@font-face {
+	font-family: 'PT';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff) format('woff2'), url(../fonts/Pretendard-Regular.woff2) format('woff');
+}
+@font-face {
+	font-family: 'PT';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url(../fonts/Pretendard-Bold.woff) format('woff2'), url(../fonts/Pretendard-Bold.woff2) format('woff');
+}
+
+/* 홈페이지 전체에 적용될 기본 글자 스타일 */
+body {
+    font-family: "PT";
+    font-weight: 400;
+    color: #3d3d3d;
+    letter-spacing: -0.02em;
+    line-height: 1.4; /* 배수 */
+    font-size: 15px;
+    word-break: keep-all; /* 단어별로 줄바꿈 */
+}
+/* 홈페이지의 넓이를 결정하고, 가운데 정렬하게 하는 요소 */
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+/* 모든 태그에 여백 삭제 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* 높이/넓이가 padding 때문에 늘어나는 현상을 막아줌 */
+}
+em { /*태그의 기울임 스타일 삭제 */
+    font-style: normal;
+}
+
+.intro {
+    text-align: center;
+    margin: 100px 0 100px 0;
+}
+.biz {
+    text-align: center;
+    background-color: #f7f7f7;
+    padding: 100px 0 100px 0;
+}
+.intro h1,
+.biz h1 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #0091ff;
+}
+.intro p,
+.biz p {
+    color: #999999;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.15;
+} 
+.intro p em,
+.biz p em {
+    color: #1d1d1d;
+}
+.intro p strong,
+.biz p strong {
+    color: #0091ff;
+}
+.company {
+    margin: 100px 0 100px 0;
+    line-height: 1.2;
+}
+.company h1 {
+    color: #1d1d1d;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    margin: 0 0 20px 0;
+}
+.company p strong {
+    color: #1d1d1d;
+    font-weight: 700;
+}
+.overview {
+    /* 배경에 아무리 커다란 이미지를 넣어도 그 영역이 존재하는 만큼만 이미지가 보임 */
+    background: url(../images/overview_bg.png) no-repeat center center / cover;
+    height: 438px;
+    color: #ffffff;
+    /* 배경 때문에 글자의 색상이 변경되었다면, 배경과 글자색상을 동시에 선언하는 것이 좋음 */
+    text-align: right;
+    padding: 75px 30px 0 0;
+}
+.overview h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+}
+.overview p strong {
+    font-weight: 700;
+    text-decoration: underline;
+}
