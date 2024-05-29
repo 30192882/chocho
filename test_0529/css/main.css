@@ -1,0 +1,81 @@
+@import url(default.css); /* default.css 불러오기 */
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url(../fonts/Pretendard-Bold.woff2) format('woff2'), url(../fonts/Pretendard-Bold.woff) format('woff');
+}
+
+html, body {
+    /* font-family 사용하는 서체명은 font-face에서 사용한 이름으로 사용, sans-serif는 고딕체라는 의미 */
+    font-family: "Pretendard", sans-serif;
+    font-size: 15px;
+    color: #3d3d3d;
+    line-height: 1.3;
+    font-weight: 400;
+    word-break: keep-all;
+    letter-spacing: -0.03em;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+.asset h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #1d1d1d;
+    line-height: 1.1;
+    margin: 130px 0 10px 0;
+}
+.asset ul {
+    margin: 55px 0 0 0;
+}
+.asset ul li {
+    width: 404px;
+    height: 202px;
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    padding: 60px 0 0 30px;
+    float: left;
+    margin-right: 24px;
+}
+.asset ul li:last-child {
+    margin-right: 0;
+}
+.asset ul li p {
+    font-weight: 700;
+    font-size: 45px;
+    color: #1d1d1d;
+}
+.clearfix:after{display:block;clear:both;content:".";visibility:hidden;height:0;}
+.clearfix{display:block;}
+.core {
+    margin: 80px 0 200px 0;
+}
+.core .photo {
+    float: left;
+}
+.core .photo img {
+    border-radius: 30px;
+}
+.core .txt {
+    float: left;
+    margin: 80px 0 0 135px;
+}
+.core .txt h1 {
+    font-size: 15px;
+    color: #297aff;
+}
+.core .txt p {
+    font-size: 50px;
+    font-weight: 700;
+    color: #1d1d1d;
+    line-height: 1.1;
+}
