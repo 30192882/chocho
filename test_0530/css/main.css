@@ -1,0 +1,88 @@
+@import url(default.css); /* default.css 불러오기 */
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Pretendard ExtraBold'), url(../fonts/Pretendard-ExtraBold.woff2) format('woff2'), url(../fonts/Pretendard-ExtraBold.woff) format('woff');
+}
+
+html, body {
+    /* font-family 사용하는 서체명은 font-face에서 사용한 이름으로 사용, sans-serif는 고딕체라는 의미 */
+    font-family: "Pretendard", sans-serif;
+    font-size: 16px;
+    color: #3d3d3d;
+    font-weight: 400; /* 글자두께 */
+    line-height: 1.2; /* 행간 */
+    word-break: keep-all; /* 단어별로 줄바꿈 */
+    letter-spacing: -0.03em; /* 자간 */
+}
+.wrapper { /* 홈페이지 넓이를 제한하고 가운데 정렬 */
+    width: 1260px;
+    margin: 0 auto;
+}
+h1 {
+    font-size: 50px;
+    font-weight: 800;
+    color: #1d1d1d;
+    letter-spacing: -0.015em;
+    text-align: center; /* 텍스트 정렬 */
+    margin: 103px 0 37px 0;
+}
+.only {
+    background-image: url(../images/only_bg2.png);
+    background-position: center; /* 배경정렬 */
+    background-repeat: no-repeat; /* 반복 안함 */
+    background-size: cover;/* 영역에 꽉 차게 */
+    background: url(../images/only_bg.png) no-repeat center center / cover;
+    /* 배경에 이미지를 넣을 때 한번에 선언하는 방법 */
+    height: 665px;
+    color: rgb(255, 255, 255, 0.8);
+    text-align: center;
+}
+.only h2 {
+    font-size: 50px;
+    font-weight: 800;
+    color: #fff;
+    padding: 248px 0 10px 0;
+    letter-spacing: -0.015em;
+}
+.cj .wrapper {
+    display: flex;
+    justify-content: space-between
+}
+.cj .txt {
+    width: 550px;
+}
+.cj .txt strong {
+    color: #1f8eff;
+    font-size: 50px;
+    font-weight: 800;
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+}
+.cj .txt h2 {
+    font-size: 50px;
+    font-weight: 800;
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+    margin: 0 0 16px 0;
+}
+.cj .photo img {
+    border-radius: 30px;
+}
+.culture {
+    margin: 166px 0 0 0;
+}
+.culture .txt {
+    margin: 235px 0 0 0;
+}
+.global .txt {
+    margin: 235px 0 0 0;
+}
