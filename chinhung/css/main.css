@@ -62,7 +62,7 @@ header .gnb ul li a:hover { /* 마우스를 오버했을 때 */
 .visual h2 {
     font-size: 50.14px;
     font-weight: 700;
-    line-height: 1;
+    line-height: 1.1;
     letter-spacing: -0.02em;
     padding: 295px 0 18px 0;
 }
@@ -78,4 +78,84 @@ header .gnb ul li a:hover { /* 마우스를 오버했을 때 */
     font-size: 40px;
     font-weight: 700;
     letter-spacing: -0.02em;
+}
+.biz .list ul {
+    display: flex;
+    justify-content: space-between
+}
+.biz .list ul li {
+    width: 297.01px;
+    text-align: center;
+}
+.biz .list ul li a {
+    display: block;
+}
+.biz .list ul li a h3 {
+    font-size: 35px;
+    color: #1d1d1d;
+    margin: 29px 0 24px 0; /*위 - 오른쪽 - 아래 - 왼쪽 */
+}
+.biz .list ul li a p {
+    margin: 0 16px 34px 16px;
+}
+.biz .list ul li a .more {
+    width: 263px;
+    height: 53.98px;
+    line-height: 53.98px;
+    /* 행간을 높이와 동일하게 주면 글자가 위아래 가운데 정렬이 됨 */
+    border: 1px solid #ccc;
+    display: inline-block;
+}
+.brand {
+    background: url(../images/brand_bg.png) no-repeat center center / cover;
+    color: #fff;
+    height: 863px;
+    margin: 94px 0 0 0;
+}
+.brand p {
+    color: #dfe8ff;
+    padding: 310px 0 0 0;
+    /* strong 태그 줄 경우 display: block */
+}
+.brand h2 {
+    font-size: 56.27px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 0 24px 0;
+}
+.brand a {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 15px 57px; /*위아래 15px 좌우 57px*/
+    display: inline-block;
+}
+
+footer {
+    background-color: #333333;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 39px 0 77px 0;
+}
+footer .f_nav ul {
+    display: flex;
+}
+footer .f_nav ul li {
+    margin: 0 39px 0 0;
+}
+/* li.privacy (여백 없음) li 중에서 privacy라는 클래스명을 가진 li를 지칭
+   li. privacy (여백 있음) li 안에 privacy라는 클래스명을 가진 요소 */
+footer .f_nav ul li.privacy {
+    font-weight: 700;
+    margin: 0 40px 0 0;
+}
+footer .f_sub {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 39px 0 0 0; /* 선 밖 여백 */
+    padding: 40px 0 0 0; /* 선 내부 여백 */
+}
+footer .f_sub .f_info span {
+    margin: 0 39px 10px 0;
+    display: inline-block;
+}
+footer .f_sub .copyright {
+    margin: 100px 0 0 0;
+    color: rgba(255, 255, 255, 0.6);
 }
