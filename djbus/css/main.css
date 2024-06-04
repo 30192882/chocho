@@ -1,0 +1,72 @@
+@import url(fonts.css);
+@import url(default.css);
+
+/* 글자의 스타일은 상속받음. 기본 글자의 스타일은 모든 태그를 감싸는 html과 body에 선언 */
+html, body {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0em; /* 자간 */
+    line-height: 1; /* 배수 */
+    color: #3d3d3d; /* 글자 색상 */
+    word-break: keep-all; /* 단어별로 줄바꿈 */
+}
+/* 홈페이지의 넓이를 제한하고 가운데 정렬 */
+.wrapper {
+    width: 1260px;
+    margin: 0 auto; /* 가운데 정렬 */
+}
+
+header {
+    height: 100px;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+header .logo {
+    margin: 24px 0 0 0;
+}
+header .gnb ul {
+    display: flex;
+}
+/* 1차 메뉴는 큼직하게 눌려야 함. 여백 및 사이즈는 a에게 줘야함 */
+header .gnb ul li a {
+    color: #506C60;
+    padding: 42px 23px;
+    display: block; /* padding 값을 적용하기 위해서 - a가 인라인태그라 적용이 안됨 */
+}
+/* a 태그에 커서를 올렸을 때의 스타일 */
+header .gnb ul li a:hover {
+    color: #FF7E58;
+    font-weight: 700;
+    letter-spacing: -0.05px;
+}
+
+.visual {
+    height: 800px;
+    background-image: url(../images/visual_bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background 속성을 한번에 선언하는 방법 */
+    background: url(../images/visual_bg.png) no-repeat center center / cover;
+    color: #fff;
+}
+.visual strong {
+    padding: 289px 0 0 0;
+    display: block; /* 인라인 요소는 여백이 적용 x */
+}
+.visual h2 {
+    font-size: 45px;
+    line-height: 1.05;
+}
+.visual h2 em {
+    font-weight: 700;
+}
+img {
+    border: 0;
+}
+em {
+    font-style: normal;
+}
