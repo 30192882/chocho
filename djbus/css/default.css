@@ -18,6 +18,6 @@ a {
 img { /* img 태그를 a 태그로 감싸면 일부 브라우저에서 파란 테두리가 생김 */
     border: 0;
 }
-em {
+em, address {
     font-style: normal;
 }
