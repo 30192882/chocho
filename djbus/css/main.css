@@ -4,6 +4,7 @@
 /* 글자의 스타일은 상속받음. 기본 글자의 스타일은 모든 태그를 감싸는 html과 body에 선언 */
 html, body {
     font-family: 'Pretendard', sans-serif;
+    /* 컨트롤 물음표 = 주석 */
     font-weight: 400;
     font-size: 16px;
     letter-spacing: 0em; /* 자간 */
@@ -133,7 +134,7 @@ header .gnb ul li a:hover {
 
 .promotion {
     /* 배경보다 promotion 콘텐츠 길이가 더 길다. 배경의 위치를 정확하게 주어야함 - 가운데 상단 background-size 주면 안됨 디자인한 사이즈로 들어가야 하기 때문에 */
-    background: url(../images/promotion_bg.png) no-repeat center top;
+    background: url(../images/promotion_bg_2.png) no-repeat center top;
 }
 .promotion .news {
     color: #fff;
@@ -150,20 +151,10 @@ header .gnb ul li a:hover {
     color: #fff;
     margin: 0 0 10px 0;
 }
-.promotion .news .tit a {
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    padding: 6px 15px;
-    display: inline-block;
-    margin: 43px 0 0 0;
-}
 .promotion .news .tit h2 em {
     color: #F8E3D2;
 }
-.promotion .news .tit a:hover {
-    border: 1px solid #FF7E58;
-    background-color: #FF7E58;
-    color: #fff;
-}
+
 .promotion .news .list {
     width: 620px;
 }
@@ -187,6 +178,33 @@ header .gnb ul li a:hover {
     /* a태그에 오버했을 때 strong 태그는 */
     color: #F8E3D2;
     font-weight: 700;
+}
+.promotion .news .wrapper {
+    position: relative;
+    /* more 정렬의 기준
+        more를 감싸는 wrapper를 기준으로 정렬
+        wrapper에 position값을 줘야함
+        position 속성값 중에서 유일하게 relative 값만이
+        요소에 아무런 영향을 끼치지 않음 */
+}
+.promotion .news .more {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 6px 15px;
+    display: inline-block;
+    margin: 111px 0 0 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* position: absolute는 반드시 좌우위치 left right
+        위아래 위치 top bottom 값이 필수이고
+        이 값이 어디서부터 계산되는지 기준이 필요함 
+        나를 감싸는 요소 중에서 position 속성을 가진 요소를 기준으로 정렬
+        ---- .wrapper를 기준으로 정렬 */
+}
+.promotion .news .more:hover {
+    border: 1px solid #FF7E58;
+    background-color: #FF7E58;
+    color: #fff;
 }
 .promotion .movie .tit h2 {
     font-size: 45px;
@@ -277,4 +295,25 @@ footer .f_info span {
 }
 footer .copyright {
     color: rgba(255, 255, 255, 0.6);
+}
+footer .wrapper {
+    /* footer .family의 기준 */
+    position: relative;
+}
+footer .family {
+    position: absolute;
+    right: 0;
+    top: -8px;
+    /* footer .wrapper를 기준으로 정렬 */
+}
+footer .family button {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    width: 175px;
+    height: 31px;
+    /*원래 버튼태그는 요소가 좌우에 가운데 위아래 가운데 정렬*/
+    display: flex;
+    justify-content: space-between;
+    /* 내부 두 요소를 좌우 끝단에 배치하기 위해서 */
+    align-items: center;
+    padding: 0 16px;
 }
