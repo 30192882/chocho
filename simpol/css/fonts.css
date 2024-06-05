@@ -1,0 +1,19 @@
+/* 폰트 스타일 선언 */
+@font-face {
+    font-family: 'NanumSquareNeo';
+    font-weight: 300;
+    font-style: normal;
+    src: url('../fonts/NanumSquareNeoTTF-aLt.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/NanumSquareNeoTTF-aLt.woff2') format('woff2'),
+            url('../fonts/NanumSquareNeoTTF-aLt.woff') format('woff');
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'NanumSquareNeo';
+    font-weight: 900;
+    font-style: normal;
+    src: url('../fonts/NanumSquareNeoTTF-eHv.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/NanumSquareNeoTTF-eHv.woff2') format('woff2'),
+            url('../fonts/NanumSquareNeoTTF-eHv.woff') format('woff');
+    font-display: swap;
+} 
