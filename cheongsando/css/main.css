@@ -403,6 +403,25 @@ footer .f_nav ul {
     display: flex;
     gap: 49px; /* li 사이 여백 */
 }
+footer .f_nav ul li {
+    position: relative; /* ::after정렬의 기본 */
+}
+footer .f_nav ul li::after {
+    content: "";
+    /* 가상요소 before와 after 사용할 때는 반드시 content 필요
+       지우면 나타나지 않음 */
+    width: 1px;
+    height: 14px;
+    background-color: rgba(102, 102, 102, 0.3);
+    display: block;
+    position: absolute; /* 각각의 li를 기준으로 정렬 */
+    right: -25px;
+    bottom: 2px;
+}
+/* 중에서 마지막 li의 after */
+footer .f_nav ul li:last-child::after {
+    display: none; /* 숨김 */
+}
 footer .f_nav span {
     color: #00817D;
     font-weight: 800;
