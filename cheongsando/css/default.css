@@ -29,4 +29,7 @@ button { /* 버튼 태그는 글자의 스타일을 상속받지 않음 */
     font-weight: inherit;
     font-size: inherit;
     color: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    cursor: pointer; /* 버튼에 마우스 오버 시 마우스 포인터를 손바닥으로 변형 */
 }
