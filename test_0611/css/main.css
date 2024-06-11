@@ -1,0 +1,181 @@
+@import url(font.css);
+@import url(default.css);
+
+/* 글자의 스타일은 상속받음. 기본 글자의 스타일은 모든 태그를 감싸는 html과 body에 선언 */
+html, body {
+    font-family: 'pretendard', sans-serif;
+    /* 컨트롤 물음표 = 주석 */
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.02em; /* 자간 */
+    line-height: 1.1; /* 배수 */ 
+    color: #3d3d3d; /* 글자 색상 */
+    word-break: keep-all; /* 단어별로 줄바꿈 */
+}
+/* 홈페이지 전체를 감싸는 요소 - 가로 스크롤바가 생겼을 때 배경이 잘리는 현상을 막음 */
+#wrap {
+    min-width: 1260px;
+}
+/* 홈페이지의 넓이를 제한하고 가운데 정렬 */
+.wrapper {
+    width: 1260px;
+    margin: 0 auto; /* 가운데 정렬 */
+}
+
+@media screen and (max-width:640px) {
+    /* 640px 이하에서만 우선 적용
+       선택자가 동일해야 함
+       pc버전 스타일과 mobile버전 스타일이 동시에 적용되는 것이라
+       변경되는 요소만 스타일을 적용 */
+    html, body {
+        font-size: 13px;
+    }
+    #wrap {
+        min-width: 100%; /* 최소넓이 꽉차게 */
+    }
+    .wrapper {
+        width: auto; /* block 요소의 속성대로 알아서 주기
+        100%를 주면 margin이 좌우로 20px씩 들어가서 실제 넓이가 100% + 40px로 사이즈가 넘치게 됨
+        auto로 주면 알아서 여백까지 해서 꽉차게 들어감 */
+        margin: 0 20px; /* 좌우 여백 20px */
+    }
+} /* media */
+
+.eco h2 {
+    color: #1d1d1d;
+    font-size: 35px;
+    font-weight: 800;
+    margin: 229px 0 42px 0;
+}
+
+.eco ul {
+    display: flex;
+    justify-content: space-between;
+}
+.eco ul li {
+    width: 404px;
+}
+.eco ul li a h3 {
+    color: #1d1d1d;
+    font-size: 30px;
+    font-weight: 800;
+    margin: 39px 0 10px 0;
+}
+
+@media screen and (max-width:640px) {
+    .eco h2 {
+        font-size: 23px;
+        margin: 176px 0 20px 0;
+    }
+    .eco ul li {
+        width: 48%;
+    }
+    .eco ul li:last-child { /*3개 나오다가 2개만 나옴 - 마지막 거 숨김 */
+        display: none;
+    }
+    .eco ul li a h3 {
+        font-size: 20px;
+        margin: 21px 0 7px 0;
+    }
+    /* 글자는 넓이가 부족하면 줄이 바뀜 - 하지만 이미지는 넓이를 주지 않으면 넓이가 바뀌지 않음
+       - 아무리 이미지를 감싸는 영역의 넓이가 줄어도 이미지는 튀어나옴 */
+    .eco ul li a .photo img {
+        width: 100%;
+        /* 넓이만 줌 - 높이는 비율에 맞게 알아서 들어감
+        (넓이와 높이를 동시에 선언하면 비율에 맞지 않게 깨질수도 있음)
+        100% - 이미지를 감싸는 요소와 넓이의 100% 
+        ==> 만약 이미지의 사이자가 더 작다면 일어남 */
+    }
+}/* media */
+.pure {
+    background: url(../images/pure_bg.png) no-repeat center center / cover;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 118px 0 0 0;
+    height: 711px;
+    text-align: center;
+}
+.pure h2 {
+    font-size: 35px;
+    font-weight: 800;
+    padding: 139px 0 42px 0;
+}
+.pure ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0 0 0;
+}
+.pure ul li {
+    width: 297px;
+    height: 297px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+}
+@media screen and (max-width:640px) {
+    .pure {
+        margin: 113px 0 0 0;
+        padding: 0 0 30px 0;
+        /* 모바일에서 높이는 계속 바뀜 
+        높이를 지정해주는 것이 아니라 콘텐츠 하단에 여백을 줌 */
+        height: auto;
+        /* 기존에 선언된 높이값을 해제하는 방법
+        auto로 주면 내부 콘텐츠의 길이대로 늘어남 (원래대로) */
+    }
+    .pure h2 {
+        font-size: 20px;
+        font-weight: 800;
+        padding: 65px 0 21px 0;
+    }
+    .pure ul {
+        flex-wrap: wrap; /* 여러줄 허용 */
+        gap: 16px;
+        margin: 40px 0 0 0;
+    }
+    .pure ul li {
+        width: calc(50% - 8px);
+        /* 두개의 li가 반반 들어가는데 사이에 여백이 16px 고정으로 들어감
+           (100% / li 개수) - (사이 여백의 총합 / li 갯수)
+           (100% / 2) - (16px / 2)
+           50% - 8px
+           퍼센트와 px 두 단위를 동시에 계산하는 계산식
+           calc(50% - 8px) - 반드시 -, + 같은 기호 앞뒤로 여백이 있어야 함 */
+        height: 153px;
+        border-radius: 10px;
+    }
+} /* media */
+
+.tech {
+    margin: 290px 0 0 0;
+}
+.tech .wrapper {
+    display: flex;  
+    justify-content: space-between;  
+}
+.tech strong {
+    font-size: 20px;
+    margin: 53px 0 6px 0;
+    display: block; /* margin값 적용하기 위해 */
+}
+.tech h2 {
+    color: #1d1d1d;
+    font-size: 30px;
+    font-weight: 800;
+}
+.tech p {
+    width: 490px;
+    /* 영역을 제한해서 글자의 줄바꿈을 구현 */
+    margin: 48px 0 38px 0;
+}
+
+@media screen and (max-width:640px) {
+    .tech .wrapper {
+        display: block;   
+        /* flex를 해제하기 위해서는 display의 다른 속성을 선언
+        inline, inline-block, none 제일 만만한 것은 block */
+    }
+    .tech p {
+        width: auto; /* 넓이 해제 */
+    }
+    .tech .photo img {
+        width: 100%;
+    }
+} /* media */
