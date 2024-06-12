@@ -1,0 +1,42 @@
+
+/* 글자의 스타일은 상속받음. 기본 글자의 스타일은 모든 태그를 감싸는 html과 body에 선언 */
+html, body {
+    font-family: 'Pretendard', sans-serif;
+    /* 컨트롤 물음표 = 주석 */
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: -0.02em; /* 자간 */
+    line-height: 1.1; /* 배수 */
+    color: #3d3d3d; /* 글자 색상 */
+    word-break: keep-all; /* 단어별로 줄바꿈 */
+}
+/* 홈페이지 전체를 감싸는 요소 - 가로 스크롤바가 생겼을 때 배경이 잘리는 현상을 막음 */
+#wrap {
+    min-width: 1260px;
+}
+/* 홈페이지의 넓이를 제한하고 가운데 정렬 */
+.wrapper {
+    width: 1260px; /* 좌우 양쪽에 20px의 여백을 줌 1260 + 20 + 20 */
+    margin: 0 auto; /* 가운데 정렬 */
+}
+/* 1260px 나의 wrapper의 넓이에 좌우 여백 20px씩 추가한 사이즈부터 반응형 */
+@media screen and (max-width:1300px){
+    #wrap {
+        min-width: 1300px;
+    }
+    .wrapper {
+        /* 넓이는 1260px 유지 */
+        margin: 0 20px; /* 좌우에 20px */
+    }
+}/* media */
+@media screen and (max-width:640px){ /* 모바일 반응형 */
+    html, body {
+        font-size: 13px;
+    }
+    #wrap {
+        min-width: 100%;
+    }
+    .wrapper {
+        width: auto;
+    }
+}/* media */
