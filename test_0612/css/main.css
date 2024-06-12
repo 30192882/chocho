@@ -21,18 +21,202 @@
     width로 주면 가운데 정렬이 되지 않음 */
     color: rgba(255, 255, 255, 0.8);
 }
-@media screen and (max-width:640px){
-    .sound {
-        height: auto;
-        /* 높이 설정해준 것 해제 - 원래 스타일대로 적용 
-        컨텐츠의 높이에 맞춰서 자동으로 늘어나는 스타일 */
-        padding: 0 0 101px 0;
-    }
-    .sound h2 {
-        font-size: 25px;
-        padding: 116px 0 14px 0;
-    }
-    .sound p {
-        margin: 0; /*pc에서 준 여백을 삭제하려면 0을 줘야함 */
-    }
-}/* media */
+    @media screen and (max-width:640px){
+        .sound {
+            height: auto;
+            /* 높이 설정해준 것 해제 - 원래 스타일대로 적용 
+            컨텐츠의 높이에 맞춰서 자동으로 늘어나는 스타일 */
+            padding: 0 0 101px 0;
+        }
+        .sound h2 {
+            font-size: 25px;
+            padding: 116px 0 14px 0;
+        }
+        .sound p {
+            margin: 0; /*pc에서 준 여백을 삭제하려면 0을 줘야함 */
+        }
+    }/* media */
+
+.health {
+    background: url(../images/sound_bg.png) no-repeat center center / cover;
+    color: #fff;
+    text-align: center;
+    padding: 118px 0 128px 0;
+}
+.health h2 {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1;
+    margin: 0 0 22px 0;
+}
+.health p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+    @media screen and (max-width:640px){
+        .health {
+            padding: 116px 0 101px 0;
+        }
+        .health h2 {
+            font-size: 25px;
+            margin: 0 0 14px 0;
+        }
+        .health p {
+            font-size: 13px;
+        }
+        .health p br {
+            display: none;
+        }
+    } /* media */
+
+.solution {
+    background: url(../images/sound_bg.png) no-repeat center center / cover;
+    color: #fff;
+    text-align: center;
+    padding: 118px 0 128px 0;
+}
+.solution h2 {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1;
+    margin: 0 0 22px 0;
+}
+.solution p {
+    color: rgba(255, 255, 255, 0.8);
+}
+.solution p span {
+    display: block; /* 줄바꿈 */
+}
+    @media screen and (max-width:640px){
+        .solution {
+            padding: 116px 0 101px 0;
+        }
+        .solution h2 {
+            font-size: 25px;
+            margin: 0 0 14px 0;
+        }
+        .solution p {
+            font-size: 13px;
+        }
+        .solution p span {
+            display: inline; /* 줄바꿈 */
+        }
+    } /* media */
+
+.story {
+    margin: 100px 0;
+}
+.story .rowgroup1,
+.story .rowgroup2 {
+    display: flex;
+    align-items: center;
+    /* txt와 photo를 위아래 가운데 정렬 (세로정렬) */
+}
+.story .rowgroup2 {
+    flex-direction: row-reverse /* 좌우 순서 역전 */
+}
+.story .txt {
+    width: 630px;
+    padding: 0 0 0 107px;
+}
+.story .txt h2 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #1d1d1d;
+    line-height: 1;
+    margin: 9px 0 69px 0;
+}
+.story .txt .more {
+    margin: 38px 0 0 0;
+}
+.story .txt .more a {
+    position: relative; /*after 정렬의 기준 */
+    display: inline-block; /* padding 적용 */
+    padding: 16px 99px 16px 25px;
+    background-color: #00AC4F;
+    color: #fff;
+}
+.story .txt .more a::after {
+    position: absolute; /* a태그 기준으로 정렬 */
+    right: 25px;
+    top: 13px;
+    /* 아이콘 같이 전체가 보여야하는 경우는 contain - 이미지 안잘림
+    배경에 이미지를 넣은 경우는 cover - 이미지 잘림
+    둘 다 영역에 크기에 맞춰서 배경이미지가 리사이즈 됨 */
+    background: url(../images/more.svg) no-repeat center center / contain;
+    content: "";
+    width: 24px;
+    height: 24px;
+    display: block; /* 넓이와 높이를 적용시키려고 */
+    /* before, after 가상선택자는 반드시 content 속성을 줘야 나타남
+    넓이와 높이가 존재하지 않음
+    이미지를 배경으로 넣으려면 이미지 사이즈를 넓이와 높이로 지정해줘야 함
+    위치가 태그의 시작 위치 종료 위치 맘대로 배치됨 
+    내가 원하는 위치에 배치하려면 absolute로 배치해야 함
+    그냥 before, after 가상선택지는 반드시 absolute를 준다고 생각하면 됨 */
+}
+.story .photo {
+    font-size: 0;
+    line-height: 0;
+    /* 이미지 태그 하단에는 행간이 적용됨
+    이걸 없애려면 이미지를 감싸는 태그에 글자크기와 행간을 0으로 줘야함 */
+}
+
+    @media screen and (max-width:640px){
+        .story {
+            margin: 50px 0;
+        }
+        .story .rowgroup1,
+        .story .rowgroup2 {
+            display: block;
+            /* display: flex를 해제하기 위해
+            display 속성중에 주기 적합한 값으로 대체 */
+            /* align-items: center; -- flex일 때만 적용되는 속성
+            해제가 필요 X */
+            align-items: center;
+        }
+        .story .rowgroup2 {
+            /*flex-direction: row-reverse flex일 때만 적용되는 속성
+            해제가 필요 X */
+            /* 좌우 순서 역전 */
+        }
+        .story .txt {
+            width: auto; /* 넓이의 제한을 해제 */
+            padding: 0;
+            margin: 79px 0 31px 0;
+        }
+        .story .txt strong {
+            margin: 0 31.25% 0 0;
+            display: block; /* margin 적용하기 위해 */
+        }
+        .story .txt strong br {
+            display: none; /* br로 줄바꿈한 것 삭제 */
+        }
+        .story .txt h2 {
+            font-size: 25px;
+            margin: 11px 0 26px 0;
+        }
+        .story .txt .more {
+            margin: 38px 0 0 0;
+        }
+        .story .txt .more a {
+            position: relative; /*after 정렬의 기준 */
+            display: inline-block; /* padding 적용 */
+            padding: 10px 58px 10px 29px;
+            background-color: #00AC4F;
+            color: #fff;
+        }
+        .story .txt .more a::after {
+            right: 21px;
+            top: 9px;
+            width: 18px;
+            height: 18px;
+        }
+        .story .photo {
+            font-size: 0;
+            line-height: 0;
+        }
+        .story .photo img {
+            width: 100%; /* photo의 넓이에 100% */
+        }
+    } /* media */
