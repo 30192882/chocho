@@ -1,0 +1,160 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+
+/*  폰트가 2개 - 제목에는 Gmarket / 본문은 Pretendard
+    body는 기본적으로 본문 서체 적용
+    1. css에서 해당 요소를 모두 선택해서 .biz h2... 이렇게 각각 불러내서 gmarket 서체 적용 (font-family: gmarket을 계속 선언)
+    2. css를 하나를 만들어줌
+    예를 들어 .tit 이라고
+    html에서 gmarket 서체를 써야하는 html 요소에
+    <section class="biz">
+        <h2 class="tit"></h2> <!-- 필요한 곳에 class명을 주는 방식 -->
+    </section> */
+    .tit {
+        font-family: 'GmarketSans', sans-serif; /* sans-serif 고딕 */
+        font-weight: 500;
+        letter-spacing: -0.02em;
+    }
+    .tit_b {
+        font-family: 'GmarketSans', sans-serif;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+    }
+
+    header {
+        position: absolute; /* body를 기준으로 정렬 */
+        left: 0;
+        top: 0;
+        z-index: 100;
+        /* position을 가지고 있는 요소들 중에서 가장 높은 숫자를 둬서 위에 배치
+        잘못하면 메뉴가 눌리지 않음 */
+        width: 100%;
+        height: 100px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        color: #fff;
+    }
+    header .wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    header .logo {
+        margin-top: 14px;
+    }
+    header .gnb .gnb_open {
+        /* 모바일에서만 나타남 - pc에서는 숨김 */
+        display: none;
+    }
+    header .gnb .gnb_wrap ul {
+        display: flex;
+    }
+    header .gnb .gnb_wrap ul li a {
+        padding: 41px 33px;
+        display: block; /* padding 때문에 */
+        font-size: 16px;
+        position: relative; /* after 정렬의 기준 */
+    }
+    /* 마지막 li의 a의 after 선택자를 숨김 */
+    header .gnb .gnb_wrap ul li a::after {
+        position: absolute; /* a를 기준으로 */
+        right: 0;
+        top: 47px;
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 1);
+        content: ""; /* after를 보이게 하는 값 */
+    }
+    header .gnb .gnb_wrap ul li:last-child a::after {
+        display: none;
+    }
+        @media screen and (max-width:640px){
+            header {
+                height: 50px;
+            }
+            header .logo {
+                margin-top: 6px;
+            }
+            header .logo img {
+                width: 103px;
+                /* 이미지 태그로 코딩한 요소는 사이즈가 변경되면 반드시 css에서 img 태그를 불러서 스타일을 줘야함
+                감싸는 요소에 줘도 적용 안됨
+                이미지는 넓이만 주면 높이는 알아서 조정됨 */
+            }
+            header .gnb .gnb_open {
+                /* 모바일에서만 나타남
+                 - 이미 header에 position 값이 존재함 - header를 기준으로 정렬 */
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 60px;
+                height: 50px;
+                /* button의 사이즈를 크게 줘서 잘 눌리게 하려고 */
+                font-size: 0;
+                line-height: 0; /* 글자 숨기기 */
+                background: url(../images/gnb_open.svg) no-repeat center center;
+            }
+            header .gnb .gnb_wrap {
+                display: none; /* 메뉴는 열기 버튼을 클릭했을 때만 나옴 */
+            }
+        } /* media */
+    .visual {
+        background: url(../images/visual_bg.png) no-repeat center center / cover;
+        color: #fff;
+        height: 850px;
+        text-align: right;
+    }
+    .visual strong {
+        padding: 372px 0 5px 0;
+        display: block;
+    }
+    .visual h2 {
+        font-size: 40px;
+        margin-bottom: 13px;
+    }
+        @media screen and (max-width:640px){
+            .visual {
+                height: auto; /* 높이는 콘텐츠의 길이 맞춰 알아서 */
+                padding: 0 0 394px 0;
+            }
+            .visual strong {
+                padding: 115px 0 3px 0;
+            }
+            .visual h2 {
+                font-size: 28px;
+            }
+            .visual em {
+                display: none;
+            }
+        }/* media */
+
+        .biz .wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .biz .subject {
+            position: sticky;
+            top: 20px;
+        }
+        .biz .subject strong {
+            color: #384EBE;
+        }
+        .biz .subject h2 {
+            color: #1d1d1d;
+            font-size: 40px;
+            margin: 12px 0 21px 0;
+        }
+        .biz .subject h2 em {
+            color: #384EBE;
+            font-weight: 700;
+        }
+        .biz .list {
+            width: 500px;
+            height: 1000px;
+            background-color: #384EBE;
+        }
+footer {
+    margin: 2000px;
+}
