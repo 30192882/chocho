@@ -130,7 +130,7 @@ header .gnb .gnb_wrap ul li:last-child a::after {
     }/* media */
 
 .biz {
-    margin: 146px 0 0 0;
+    margin: 155px 0 0 0;
 }
 .biz .wrapper {
     display: flex;
@@ -158,7 +158,7 @@ header .gnb .gnb_wrap ul li:last-child a::after {
 .biz .subject h2 {
     color: #1d1d1d;
     font-size: 40px;
-    margin: 12px 0 21px 0;
+    margin: 3px 0 21px 0;
 }
 .biz .subject h2 em {
     color: #384EBE;
@@ -254,6 +254,7 @@ header .gnb .gnb_wrap ul li:last-child a::after {
     background: url(../images/biz_more.svg) no-repeat center center / contain;
     content: ""; /* after를 보이게 하는 값 */
 }
+
     @media screen and (max-width:640px){
         .biz {
             margin: 102px 0 0 0;
@@ -272,7 +273,7 @@ header .gnb .gnb_wrap ul li:last-child a::after {
             margin: 2px 0 12px 0;
         }
         .biz .subject p {
-            margin: 0 0 10px 0;
+            margin: 0 0 31px 0;
         }
         .biz .list {
             width: auto; /* 넓이 고정값 해제 */
@@ -349,6 +350,219 @@ header .gnb .gnb_wrap ul li:last-child a::after {
             display: none;
         }
     } /* media */
+
+.news {
+    background-color: #F4F4F4;
+    margin: 243px 0 0 0;
+    padding: 128px 0 179px 0;
+}
+.news .subject strong {
+    color: #384EBE;
+}
+.news .subject h2 {
+    color: #1d1d1d;
+    font-size: 40px;
+    margin: 3px 0 46px 0;
+}
+.news .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.news .list ul li {
+    width: 298px;
+}
+.news .list ul li a {
+    display: block; /* border를 주기 위해 */
+    border-top: 2px solid #3d3d3d;
+}
+.news .list ul li h3 {
+    color: #1d1d1d;
+    font-size: 20px;
+    /* 무조건 2줄 - 절대 padding 주면 안됨 */
+    line-height: 1.2;
+    height: 2.4em; /* 행간 X 줄수 (단위 em) */
+    overflow: hidden;
+    /* 1줄
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+    margin: 21px 0 21px 0;
+}
+.news .list ul li p {
+    /* 무조건 3줄 */
+    line-height: 1.2;
+    height: 3.6em;
+    overflow: hidden;
+}
+.news .list ul li .date {
+    color: rgba(61, 61, 61, 0.7);
+    margin: 21px 0 0 0;
+    display: block; /* margin을 적용하기 위한 것 */
+}
+.news .list ul li a:hover {
+    border-top: 4px solid #384EBE;
+    color: #384EBE;
+}
+.news .list ul li a:hover h3 {
+    color: #384EBE;
+}
+.news .list ul li a:hover .date {
+    color: #384EBE;
+}
+.news .wrapper {
+    position: relative; /* more 정렬의 기준 */
+}
+.news .more {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.news .more a {
+    display: block;
+    padding: 9px 49px 8px 21px;
+    border: 1px solid #3d3d3d;
+    border-radius: 18px;
+    position: relative; /* after 정렬의 기준 */
+}
+.news .more a::after {
+    position: absolute; /* more를 기준으로 정렬 */
+    right: 15px;
+    top: 5px;
+    width: 24px;
+    height: 24px;
+    background: url(../images/news_more.svg) no-repeat center center / contain;
+    content: ""; /* after를 존재하게 하는 값 */
+}
+.news .more a:hover {
+    background-color: #384EBE;
+    border-color: #384EBE;
+    color: #fff;
+}
+.news .more a:hover::after {
+    background-image: url(../images/news_more_over.svg);
+}
+
+    @media screen and (max-width:640px) {
+        .news {
+            margin: 97px 0 0 0;
+            padding: 63px 0 83px 0;
+        }
+        .news .subject h2 {
+            font-size: 28px;
+            margin: 2px 0 35px 0;
+        }
+        .news .list ul {
+            display: block;
+        /* flex 해제, inline/inline-block/none 등 flex 말고 다른 값을 주면 flex가 해제
+        - 그중에 제일 해당 요소에 영향이 없는 block을 줌 */
+        }
+        .news .list ul li {
+            width: auto;
+        /* 넓이 고정한 것 해제 - 원래 해당 태그 스타일대로
+        li는 block 태그 넓이 100%
+        100%을 주면 margin 등의 여백을 줬을 때 사이즈가 늘어날 수 있음 */
+        }
+        .news .list ul li a {    
+            border-top: 1px solid rgba(61, 61, 61, 0.5);
+        }
+        /* 마지막 li의 a */
+        .news .list ul li:last-child a {
+            border-bottom: 1px solid rgba(61, 61, 61, 0.5);
+        }
+        .news .list ul li h3 {
+            font-size: 16px;
+            margin: 22px 0 0 0;
+            /* 무조건 2줄 -> 줄제한 해제 */
+            height: auto;
+            overflow: visible;
+
+            line-height: 1.2;
+            height: 2.4em; /* 행간 X 줄수 (단위 em) */
+            overflow: hidden;
+        }
+        .news .list ul li a p {
+            display: none; /* 숨김 */
+        }
+        .news .list ul li .date {
+            padding: 17px 0 21px 0;
+            display: block; /* margin을 적용하기 위한 것 */
+            text-align: right;
+        }
+        .news .more {
+            position: relative;
+            right: auto;
+            top: auto;
+            margin: 12px 0 0 0;
+            text-align: center;
+        }
+        .news .more a {
+            display: inline-block;
+            padding: 8px 66px 6px 19px;
+            border: 1px solid #3d3d3d;
+            border-radius: 18px;
+            position: relative; /* after 정렬의 기준 */
+        }
+        .news .more a::after {
+            position: absolute; /* more를 기준으로 정렬 */
+            right: 13px;
+            top: 3px;
+            width: 21.5px;
+            height: 21.5px;
+        }
+    } /* media */
+
+.webzine .subject strong {
+    color: #384EBE;
+    margin: 130px 0 0 0;
+    display: block; /* margin을 적용하기 위해서 */
+}
+.webzine .subject h2 {
+    color: #1d1d1d;
+    font-size: 40px;
+    margin: 3px 0 33px 0;
+}
+.webzine .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.webzine .list ul li {
+    width: 404px;
+}
+.webzine .list ul li a {
+    height: 383px;
+    border-radius: 20px;
+    border: 1px solid rgba(102, 102, 102, 0.8);
+    display: block;
+    overflow: hidden;
+}
+/* 게시판에서 이미지를 가져오는 경우는 이미지의 사이즈가 다양함
+이를 디자인한대로 동일한 사이즈로 리사이즈하는 방법
+1. 이미지를 감싸는 요소가 넓이와 높이를 가지고 있어야함
+    overflow: hidden; 가지고 있어야함
+2. 이미지에는 width: 100%, height: 100%, object-fit: cover를 줘야함 */
+.webzine .list ul li a .photo {
+    overflow: hidden;
+    height: 238px; /* block 요소이기 때문에 width는 안줘도 됨 */
+}
+.webzine .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 감싸는 요소에 딱맞게 리사이즈 - 위아래/좌우에 가운데 이미지 정렬 */
+}
+.webzine .list ul li a strong{
+    color: #384EBE;
+}
+.webzine .list ul li h3 {
+    color: #1d1d1d;
+    font-size: 20px;
+    /* 무조건 2줄 - 절대 padding 주면 안됨 */
+    line-height: 1.2;
+    height: 2.4em; /* 행간 X 줄수 (단위 em) */
+    overflow: hidden;
+    
+}
+
 footer {
     margin: 2000px;
 }
