@@ -400,7 +400,7 @@ header .gnb .gnb_wrap ul li:last-child a::after {
     display: block; /* margin을 적용하기 위한 것 */
 }
 .news .list ul li a:hover {
-    border-top: 4px solid #384EBE;
+    border-top: 2px solid #384EBE;
     color: #384EBE;
 }
 .news .list ul li a:hover h3 {
@@ -420,7 +420,7 @@ header .gnb .gnb_wrap ul li:last-child a::after {
 .news .more a {
     display: block;
     padding: 9px 49px 8px 21px;
-    border: 1px solid #3d3d3d;
+    border: 1px solid #666;
     border-radius: 18px;
     position: relative; /* after 정렬의 기준 */
 }
@@ -498,7 +498,7 @@ header .gnb .gnb_wrap ul li:last-child a::after {
         .news .more a {
             display: inline-block;
             padding: 8px 66px 6px 19px;
-            border: 1px solid #3d3d3d;
+            border: 1px solid #666;
             border-radius: 18px;
             position: relative; /* after 정렬의 기준 */
         }
@@ -549,20 +549,159 @@ header .gnb .gnb_wrap ul li:last-child a::after {
     height: 100%;
     object-fit: cover;
     /* 감싸는 요소에 딱맞게 리사이즈 - 위아래/좌우에 가운데 이미지 정렬 */
+    transition: 0.5s;
+    /* 앞으로 img에 어떤 변화가 있으면 그걸 부드럽게 처리
+    1. 마우스오버
+    2. 클래스추가
+    3. 브라우저 사이즈가 바뀌어서 반응형 코드 적용 */
 }
-.webzine .list ul li a strong{
+.webzine .list ul li a strong {
     color: #384EBE;
+    display: block; /* margin 값 적용 */
+    margin: 35px 0 10px 24px;
 }
-.webzine .list ul li h3 {
-    color: #1d1d1d;
+.webzine .list ul li a h3 {
+    display: block;
     font-size: 20px;
     /* 무조건 2줄 - 절대 padding 주면 안됨 */
     line-height: 1.2;
     height: 2.4em; /* 행간 X 줄수 (단위 em) */
     overflow: hidden;
-    
+    margin: 0 24px 0 24px;
 }
+/* a에 마우스를 올렸을 때 */
+.webzine .list ul li a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1); /* 이미지 확대 */
+}
+.webzine .list ul li a:hover {
+    border-color: rgba(255, 255, 255, 0);
+    background-color: #384EBE;
+    color: #fff;
+    box-shadow: 0 5px 17px rgba(0, 0, 0, 0.2);
+}
+.webzine .list ul li a:hover strong {
+    color: #fff;
+}
+.webzine .wrapper {
+    position: relative; /* more 정렬의 기준 */
+}
+.webzine .more {
+    position: absolute; /* wrapper를 기준으로 정렬 */
+    right: 0;
+    top: 0;
+}
+.webzine .more a {
+    padding: 9px 50px 8px 21px;
+    border: 1px solid #666;
+    border-radius: 20px; /* 높이의 절반 */
+    color: #666;
+    display: block; /* padding, border 적용을 위한 값 */
+    position: relative; /* after 정렬의 기준 */
+}
+.webzine .more a::after {
+    position: absolute; /* a를 기준으로 정렬 */
+    right: 15px;
+    top: 5px;
+    width: 24px;
+    height: 24px;
+    background: url(../images/news_more.svg) no-repeat center center / contain;
+    content: ""; /* after를 보이게 하는 값 */
+}
+.webzine .more a:hover {
+    border-color: #384EBE;
+    background-color: #384EBE;
+    color: #fff;
+}
+.webzine .more a:hover::after {
+    background-image: url(../images/news_more_over.svg);
+}
+    @media screen and (max-width:640px) {
+        .webzine .subject strong {
+            margin: 108px 0 0 0;
+        }
+        .webzine .subject h2 {
+            font-size: 28px;
+            margin: 2px 0 22px 0;
+        }
+        .webzine .list ul li {
+            width: 100%;
+        }
+        .webzine .list ul li:nth-child(2),
+        .webzine .list ul li:nth-child(3) {
+            display: none;
+            /* 해당 태그가 존재하지 않았던 것처럼 사라짐
+               공간차지 X */
+        }
+        .webzine .list ul li a {
+            height: auto;
+            border-radius: 0;
+            border: 0;
+        }
+        /* 게시판에서 이미지를 가져오는 경우는 이미지의 사이즈가 다양함
+        이를 디자인한대로 동일한 사이즈로 리사이즈하는 방법
+        1. 이미지를 감싸는 요소가 넓이와 높이를 가지고 있어야함
+            overflow: hidden; 가지고 있어야함
+        2. 이미지에는 width: 100%, height: 100%, object-fit: cover를 줘야함 */
+        .webzine .list ul li a .photo {
+            height: 167px;
+        }
+        .webzine .list ul li a strong {
+            color: #384EBE;
+            display: block; /* margin 값 적용 */
+            margin: 35px 0 10px 0;
+        }
+        .webzine .list ul li a h3 {
+            font-size: 16px;
+
+            /* 2줄제한 */
+            line-height: 1.2;
+            height: 2.4em; /* 행간 X 줄수 (단위 em) */
+            overflow: hidden;
+            margin: 0 0 0 0;
+        }
+        .webzine .list ul li a:hover {
+            background-color: transparent; /* 투명 */
+            color: #3d3d3d;
+            box-shadow: none;
+        }
+        .webzine .list ul li a:hover strong {
+            color: #384EBE;
+        }
+        .webzine .more {
+            position: relative; /* absolute 해제 */
+            right: auto; /* 해제 */
+            top: auto;
+            margin: 18px 0 0 0;
+            text-align: center;
+        }
+        .webzine .more a {
+            padding: 8px 66px 6px 19px;
+            border: 1px solid #666;
+            border-radius: 20px; /* 높이의 절반 */
+            color: #666;
+            display: inline-block; /* padding, border 적용을 위한 값 */
+            position: relative; /* after 정렬의 기준 */
+            
+        }
+        .webzine .more a::after {
+            position: absolute; /* a를 기준으로 정렬 */
+            right: 13px;
+            top: 3px;
+            width: 21.5px;
+            height: 21.5px;
+            background: url(../images/news_more.svg) no-repeat center center / contain;
+            content: ""; /* after를 보이게 하는 값 */
+        }
+        .webzine .more a:hover {
+            border-color: #384EBE;
+            background-color: #384EBE;
+            color: #fff;
+        }
+        .webzine .more a:hover::after {
+            background-image: url(../images/news_more_over.svg);
+        }
+    } /* media */
 
 footer {
-    margin: 2000px;
+    margin: 500px;
 }
