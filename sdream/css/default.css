@@ -29,4 +29,5 @@ button { /* 버튼 태그는 글자의 스타일을 상속받지 않음 */
     font-weight: inherit;
     font-size: inherit;
     color: inherit;
+    cursor: pointer;
 }
