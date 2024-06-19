@@ -1,0 +1,404 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+
+.biz {
+    margin-top: 100px;
+}
+.biz ul {
+    display: flex;
+    justify-content: space-between;
+}
+.biz ul li {
+    width: 297px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.biz ul li a {
+    display: block;
+    position: relative; /* h2 / p 정렬의 기준 */
+}
+.biz ul li a .photo {
+    overflow: hidden; /* 이미지가 넘치는 것 자르기 */
+    font-size: 0; /*이미지도 하단에 행간이 들어가서 여백이 발생함 - 여백 삭제 */
+    line-height: 0;
+    border-radius: 10px;
+}
+.biz ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 감싸는 photo의 넓이와 높이에 이미지를
+        꽉차고 비율에 맞게 리사이즈 */
+    transition: 0.1s; /* 오버 후에 변경사항을 부드럽게 */
+}
+.biz ul li a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1);
+}
+.biz ul li a h2 {
+    position: absolute;
+    /* img 태그 위에 올라가야 하므로 absolute
+        a를 기준으로 정렬 */
+    left: 20px;
+    top: 98px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+}
+.biz ul li a p {
+    position: absolute;
+    left: 20px;
+    top: 162px;
+    width: calc(100% - 40px);
+    /* p의 100%는 감싸는 a의 넓이
+        그 100%에 왼쪽과 오른쪽 여백 (각 30씩)
+        을 뺀 나머지 전체를 넓이를 주는 방식 */
+}
+
+    @media screen and (max-width:640px){
+        .biz ul {
+            flex-wrap: wrap; /* 여러줄 허용 */
+        }
+        .biz ul li {
+            width: calc(50% - 8px);
+            /* 100% 나누기 한줄에 들어가는 li의 개수 = 100% / 2 = 50%
+                한줄에 들어가는 여백의 합 / li의 개수 = 16px / 2 = 8px
+                그래서 결론이 50% - 8px
+                만약 한줄에 3개씩 나오면
+                100% / 3 - 16+16 = 32/2
+                33.33% -10.66px */
+            color: #3d3d3d;
+        }
+        .biz ul li a {
+            display: block;
+            position: relative; /* h2 / p 정렬의 기준 */
+        }
+        .biz ul li a .photo {
+            height: 102px;
+            border-radius: 10px;
+        }
+        .biz ul li a h2 {
+            position: relative;
+            /* absolute 해제 absolute 말고 position의 다른 값을 줘야함
+            sticky, fixed 이런 값중에 제일 일반 태그처럼 작동되는 것이
+            relative 밖에 없음 */
+            left: auto;
+            top: auto;
+            color: #1d1d1d;
+            font-size: 17px;
+        }
+        .biz ul li a p {
+            position: relative;
+            left: auto;
+            top: auto;
+            font-size: 12px;
+            width: auto;
+            /* block 태그라서 감싸는 a 사이즈만큼 들어감 */
+        }
+    } /* media */
+
+.business {
+    margin: 100px 0 0 0;
+}
+.business ul {
+    display: flex;
+    justify-content: space-between;
+}
+.business ul li {
+    width: calc(25% - 18px);
+}
+.business ul li a {
+    display: block; /* height 때문에 */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgba(255, 255, 255, 0.8);
+    height: 297px;
+    border-radius: 10px;
+    padding: 98px 20px 0 20px;
+    /* 높이를 제한한 경우 padding 아래 여백은 안줌
+       하단 여백까지 주면 주변 콘텐츠가 길어질 경우 높이가 늘어남 */
+    transition: 0.3s; /* 배경이미지 사이즈 변경은 부드럽게 되지 않음 */
+}
+.business ul li a:hover {
+    /* 배경사이즈 100%는 a의 넓이를 100%으로 봄
+        - 배경이미지 사이즈가 아님
+        - 배경이미지는 비율에 맞게 사이즈가 조정되지 않음
+        이미지는 넓이만 줘도 비율에 맞게 높이가 조정됨
+        배경은 꼭 넓이를 주고 높이에 비율맞게 들어가도록 auto를 줘야함 */
+    background-size: 120% auto;
+}
+.business ul li.biz1 a {
+    background-image: url(../images/biz1.png);
+}
+.business ul li.biz2 a {
+    background-image: url(../images/biz2.png);
+}
+.business ul li.biz3 a {
+    background-image: url(../images/biz3.png);
+}
+.business ul li.biz4 a {
+    background-image: url(../images/biz4.png);
+}
+.business ul li a h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 28px 0;
+    color: #fff;
+}
+
+    @media screen and (max-width:640px){
+        .business {
+            margin: 50px 0 100px 0;
+        }
+        .business ul {
+            display: block; /* display에 flex를 해제하기 위해 */
+        }
+        .business ul li {
+            width: auto; /* 넓이 고정 해제 - 원래 속성대로 돌아감
+            li는 block 태그라서 감싸는 요소 ul 넓이의 100% */
+            margin: 0 0 10px 0;
+        }
+        .business ul li a {
+            height: auto; /* 내부 컨텐츠의 높이만큼 들어가야 함 */
+            border-radius: 0;
+            padding: 48px 27px 45px 27px;
+            /* 높이를 제한한 경우 padding 아래 여백은 안줌
+               하단 여백까지 주면 주변 콘텐츠가 길어질 경우 높이가 늘어남 */
+        }
+        .business ul li a h2 {
+            font-size: 17px;
+            margin: 0 0 8px 0;
+        }
+        .business ul li a p {
+            font-size: 12px;
+        }
+    } /* media */
+
+.gallery {
+    margin: 100px 0 0 0;
+}
+.gallery ul {
+    display: flex;
+    justify-content: space-between;
+}
+.gallery ul li {
+    width: calc(33.33% - 16px);
+    /* 중간 여백 24px이 두개 - 48 / 3 = 16px */
+}
+.gallery ul li a .photo {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+.gallery ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+    @media screen and (max-width:640px){
+        .gallery ul li {
+            width: calc(33.33% - 10.6666px);
+            /* 중간 여백 16px이 두개 - 32 / 3 = 10.6666px */
+        }
+    } /* media */
+
+.news {
+    margin: 50px 0 200px 0;
+}
+.news ul {
+    display: flex;
+    justify-content: space-between;
+}
+.news ul li {
+    width: calc(33.33% - 16px);
+}
+.news ul li a .photo {
+    overflow: hidden;
+    font-size: 0;
+    height: 500px;
+}
+.news ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+    @media screen and (max-width:640px){
+        .news ul li {
+            width: calc(33.33% - 10.66px);
+            /* 중간 여백 16px이 두개 - 32 / 3 = 10.6666px */
+        }
+        .news ul li a .photo {
+            height: 150px;
+        }
+    } /* media */
+
+.popup {
+    margin: 100px 0;
+}
+.popup .wrapper {
+    position: relative;
+}
+
+.popup .swiper { height:368px } /* 팝업의 높이가 됨 */
+.popup .swiper-slide img { display:block; width:100%; height:100%; object-fit:cover; } /* 팝업 안에 이미지를 넣었다면 이미지를 꽉차게 나타나게 하기 위해서 해당 스타일을 넣어줌 object-fit 상세설명 */
+
+.visual {
+    margin: 100px 0;
+    position: relative; /* 팝업을 감싸는 요소는 position: relative; */
+}
+.visual ul li.bg1 {
+    background-image: url(../images/visual_bg1.png);
+}
+.visual ul li.bg2 {
+    background-image: url(../images/visual_bg2.png);
+}
+.visual ul li.bg3 {
+    background-image: url(../images/visual_bg3.png);
+}
+.visual ul li {
+    height: 800px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+.visual ul li h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 332px 0 14px 0;
+}
+.visual .btn_prev,
+.visual .btn_next {
+    position: absolute; /* swiper를 기준으로 정렬 */
+    top: 344px;
+    z-index: 10;
+    /* swiper 안에는 position값이 많이 적용됨
+    position끼리는 서로 겹침
+    더 위에 배치하기 위해 z-index 위아래값 (층수)
+    숫자가 높은게 더 위에 배치됨 */
+}
+.visual .btn_prev {
+    left: 1%;
+}
+.visual .btn_next {
+    right: 1%;
+    text-align: right;
+}
+.visual .btn_prev i,
+.visual .btn_next i {
+    font-size: 100px; /* 아이콘 크기 */
+    color: rgba(255, 255, 255, 0.8); /* 아이콘 색상 */
+    font-weight: 100;
+}
+.visual .btn_wrap {
+    /* swiper를 기준으로 정렬 */
+    position: absolute;
+    color: rgba(255, 255, 255, 0.8);
+    left: 0;
+    bottom: 43px;
+    z-index: 10;
+    width: 100%; /* swiper와 넓이가 같아짐 */
+    display: flex; /* 안에 있는 요소 좌우 나란히 */
+    justify-content: center;
+    /* 해당 요소의 넓이에서 가운데임 */
+    align-items: center /* 좌우로 배치된 요소끼리 위아래 가운데 정렬 */
+}
+.visual .btn_wrap .paging {
+    width: auto; /* swiper에서 paging에 넓이 100%를 줌 */
+}
+.visual .btn_wrap .paging .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    background: transparent;
+    opacity: 1;
+    border: 1px solid #fff;
+}
+/* 현재 선택된 동그라미 */
+.visual .btn_wrap .paging .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #fff;
+}
+.visual .btn_wrap button i {
+    color: #fff; /* 아이콘 색상 */
+    font-size: 24px; /* 아이콘 크기 */
+    font-weight: 100; /* 아이콘 두께 */
+}
+
+    @media screen and (max-width:640px){
+        .visual ul li {
+            height: 478px;
+        }
+        .visual ul li h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin: 202px 0 10px 0;
+        }
+        .visual ul li p {
+            font-size: 12px;
+        }
+        .visual .btn_prev,
+        .visual .btn_next {
+            display: none;
+        }
+        .visual .btn_wrap {
+            /* swiper를 기준으로 정렬 */
+            bottom: 20px;
+        }
+        .visual .btn_wrap .paging .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+        }
+        .visual .btn_wrap button i {
+            font-size: 20px; /* 아이콘 크기 */
+        }
+    }
+
+.book {
+    margin: 100px 0;
+}
+.book ul li {
+    width: 297px;
+}
+.book ul li h2 {
+    color: #1d1d1d;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+.book ul li a .photo {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+.book ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+    @media screen and (max-width:640px){
+        .book ul li {
+            width: 200px;
+        }
+    }
+
+.sns {
+    margin: 100px 0;
+}
+.sns ul li a .photo {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+.sns ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sns ul li h2 {
+    color: #1d1d1d;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px 0;
+}
