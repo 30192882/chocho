@@ -1,0 +1,14 @@
+/* 폰트 스타일 선언 */
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-display: swap;
+    src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
+}
+/* 경로에서 ../는 */
+@font-face {
+    font-family: 'eulyoo1945';
+    font-weight: 400;
+    font-display: swap;
+    src: local('eulyou1945 Regular'), url(../fonts/Eulyoo1945-Regular.woff2) format('woff2'), url(../fonts/Eulyoo1945-Regular.woff) format('woff');
+}
