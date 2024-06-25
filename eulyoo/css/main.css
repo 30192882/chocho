@@ -508,7 +508,7 @@ header.fixed .tnb .search::before {
 .interview {
     background-color: #F1F2F6;
     margin: 205px 0 0 0;
-    padding: 111px 0 0 0;
+    padding: 90px 0 0 0;
     height: 900px;
 }
 .interview .wrapper {
@@ -855,6 +855,12 @@ header.fixed .tnb .search::before {
     color: #1d1d1d;
     margin: 124px 0 50px 0;
 }
+.story .list {
+    margin: 0;
+    width: calc(100% + 20px);
+    /* 오른쪽 wrapper 밖까지 list가 나오게 하기 위해서
+    list 한테 100%에 오른쪽 여백 20xp를 추가해줌*/;
+}
 .story .list ul li {
     width: 297px;
 }
@@ -867,6 +873,10 @@ header.fixed .tnb .search::before {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.3s;
+}
+.story .list ul li a:hover .photo img {
+    transform: scale3d(1.1, 1.1, 1);
 }
 .story .list ul li a strong {
     display: block;
@@ -934,12 +944,12 @@ header.fixed .tnb .search::before {
 }
 
     @media screen and (max-width:640px){
-        .story .list ul li {
-            width: 180px; /* 넓이 jquery가 줌 */
-        }
         .story .tit h2 {
             font-size: 35px;
             margin: 82px 0 43px 0;
+        }
+        .story .list ul li {
+            width: 180px; /* 넓이 jquery가 줌 */
         }
         .story .list ul li a .photo {
             height: 220px;
@@ -995,5 +1005,123 @@ header.fixed .tnb .search::before {
     }/* media */
 
 footer {
-    margin: 200px 0 0 0;
+    margin: 120px 0 0 0;
+    padding: 104px 0 104px 0;
+    background-color: #4b4b4b;
+    color: rgba(255, 255, 255, 0.8);
 }
+footer .wrapper {
+    position: relative; /* copyright 정렬의 기준 */
+    display: flex;
+    justify-content: space-between;
+        /*  
+        <div class="wrapper">
+            <div class="slogan"></div>
+            <div class="f_info"></div>
+            <div class="copyright"></div> --- absolute
+        </div>
+        absolute를 빼고 나머지 2개의 요소에만 flex의 영향을 받음 */
+}
+footer .slogan {
+    color: #fff;
+    font-family: 'Eulyoo1945';
+    font-size: 20px;
+    font-weight: -0.04em;
+}
+footer .f_info {
+    width: 404px;
+}
+footer .f_info .item {
+    margin: 0 0 70px 0;
+}
+/*
+    <div class="f_info">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div> - last-child
+    </div>
+    f_info 안에 item이라는 동일한 이름의 div만 존재한다면
+    마지막 item도 last-child 선택가능
+*/
+footer .f_info .item:last-child {
+    margin: 0;
+}
+footer .f_info .item h2 {
+    color: #fff;
+    font-family: 'Eulyoo1945';
+    font-size: 20px;
+    margin: 0 0 11px 0;
+}
+footer .f_info .item .tel li {
+    display: flex;
+    line-height: 1.5;
+}
+footer .f_info .item .tel li strong {
+    width: 4.2em;
+}
+footer .f_info .item .tel li span {
+    width: calc(100% - 4.2em);
+    /* 왼쪽 strong의 넓이 빼고 전부 다 */
+}
+footer .f_info .item .sns {
+    display: flex;
+    flex-wrap: wrap;
+}
+footer .f_info .item .sns li {
+    margin: 0 35px 0 0;
+}
+footer .f_info .item .sns li a:hover {
+    text-decoration: underline;
+}
+footer .copyright {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+footer .copyright .f_logo img {
+    width: 214px;
+}
+footer .copyright .copy {
+    color: rgba(255, 255, 255, 0.6);
+    margin: 16px 0 0 0;
+}
+
+    @media screen and (max-width:640px){
+        footer {
+            margin: 90px 0 0 0;
+            padding: 75px 0 75px 0;
+        }
+        footer .wrapper {
+            display: block; /* flex 해제 */
+        }
+        footer .slogan {
+            font-size: 18px;
+        }
+        footer .f_info {
+            width: auto;
+            margin: 0 0 65px 0;
+        }
+        footer .f_info .item {
+            margin: 50px 0 40px 0;
+        }
+        footer .f_info .item h2 {
+            font-size: 18px;
+            margin: 0 0 10px 0;
+        }
+        footer .f_info .item .sns li {
+            margin: 0 25px 0 0;
+        }
+        footer .copyright {
+            position: relative; /* 원래 코딩한 순서대로 배치 */
+            left: auto;
+            bottom: auto;
+            margin: 35px 0 0 0;
+        }
+        footer .copyright .f_logo img {
+            width: 170px;
+        }
+        footer .copyright .copy {
+            color: rgba(255, 255, 255, 0.6);
+            margin: 9px 0 0 0;
+        }
+    }

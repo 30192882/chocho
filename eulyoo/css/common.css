@@ -5,7 +5,7 @@ html, body {
     /* 컨트롤 물음표 = 주석 */
     font-weight: 400;
     font-size: 16px;
-    letter-spacing: -0.02em; /* 자간 */
+    letter-spacing: -0.03em; /* 자간 */
     line-height: 1.2; /* 배수 */
     color: #3d3d3d; /* 글자 색상 */
     word-break: keep-all; /* 단어별로 줄바꿈 */
