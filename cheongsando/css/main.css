@@ -50,8 +50,16 @@ header {
     header가 맨위가 됨
     visual tit은 visual 보다 위에 배치될 수 없음
     (감싸는 요소가 z-index 10이기 때문에 header보다 높은 숫자를 줘도 아래 배치) */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+header.fixed {
+    backdrop-filter: blur(7px) brightness(0.9);
+    position: fixed;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    border-bottom: 0;
+}
+
 header .wrapper {
     display: flex;
     justify-content: space-between;
@@ -218,13 +226,12 @@ header .gnb ul li a:hover {
 }
 .tour .list ul li {
     width: 190px;
+    overflow: hidden; /* 내가 준 넓이보다 내부요소가 더 크면 자르기 */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     color: rgba(255, 255, 255, 0.8);
-}
-.tour .list ul li.active {
- width: 618px;
+    transition: 0.4s;
 }
 .tour .list ul li.tour1 {
     background-image: url(../images/tour1.png);
@@ -243,11 +250,20 @@ header .gnb ul li a:hover {
     flex-direction: column;
     justify-content: flex-end;
     height: 500px;
-    padding: 0 24px 100px 24px;
-}
-.tour .list ul li.active a {
     padding: 0 24px 58px 24px;
     text-align: left;
+}
+.tour .list ul li.active {
+    width: 618px;
+    /* transition 영향으로 넓이가 0.3초동안
+    190 -> 618px 점점 변형
+    하지만 a에는 transition이 없기 때문에
+    즉시 넓이가 618px로 고정되기 때문에
+    내부 컨텐츠 넓이가 고정된
+    p태그의 글이 여러줄로 바뀌는 현상이 사라짐 */
+}
+.tour .list ul li.active a {
+    width: 618px;
 }
 .tour .list ul li a p {
     display: none; /* 숨김 (공간차지 X) */
@@ -398,6 +414,7 @@ footer {
 footer .wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 }
 footer .f_nav ul {
     display: flex;
@@ -434,6 +451,9 @@ footer .f_info {
 footer .copyright {
     color: rgba(102, 102, 102, 0.6)
 }
+footer .familysite {
+    position: relative; /* list 정렬의 기준 */
+}
 footer .familysite button {
     width: 190px;
     height: 42px;
@@ -442,5 +462,48 @@ footer .familysite button {
     color: #00817D;
     padding: 0 26px;
     text-align: left; /* 버튼의 기본은 가운데 - 왼쪽정렬로 변경 */
-    background: url(../images/more.svg) no-repeat right 26px center;
+    position: relative; /* after 정렬의 기준 */
+}
+footer .familysite button::after {
+    position: absolute;
+    right: 25px;
+    top: 14px;
+    width: 12px;
+    height: 12px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+footer .familysite button.btn_open::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath id='add_24dp_FILL0_wght300_GRAD0_opsz24' d='M225.308-733.308h-4.615a.669.669,0,0,1-.493-.2A.67.67,0,0,1,220-734a.669.669,0,0,1,.2-.493.67.67,0,0,1,.493-.2h4.615v-4.615a.669.669,0,0,1,.2-.493A.67.67,0,0,1,226-740a.669.669,0,0,1,.493.2.67.67,0,0,1,.2.493v4.615h4.615a.669.669,0,0,1,.493.2.67.67,0,0,1,.2.493.669.669,0,0,1-.2.493.67.67,0,0,1-.493.2h-4.615v4.615a.669.669,0,0,1-.2.493.67.67,0,0,1-.493.2.669.669,0,0,1-.493-.2.67.67,0,0,1-.2-.493Z' transform='translate(-220 740)' fill='%238ac1c4'/%3E%3C/svg%3E%0A");
+}
+footer .familysite button.btn_close::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='1.385' viewBox='0 0 12 1.385'%3E%3Cpath id='remove_24dp_FILL0_wght300_GRAD0_opsz24' d='M220-508.615V-510h12v1.385Z' transform='translate(-220 510)' fill='%238ac1c4'/%3E%3C/svg%3E%0A");
+}
+footer .familysite button.btn_close {
+    display: none;
+}
+footer .familysite .list {
+    display: none; /* 닫혀있는 상태에서 안보임 */
+    position: absolute; /* familysite를 기준으로 정렬 */
+    left: 0;
+    bottom: 41px;
+    color: #00817D;
+    border-radius: 21px;
+    border: 1px solid #00817D;
+    background-color: #fff;
+    width: 100%;
+    padding: 18px 26px;
+}
+footer .familysite .list ul li a {
+    display: block; /* 글자 옆에 여백도 넓게 클릭되도록 */
+    line-height: 1.7;
+}
+/* familysite가 열렸을 때 */
+footer .familysite.open button.btn_open {
+    display: none;
+}
+footer .familysite.open button.btn_close {
+    display: block;
 }
