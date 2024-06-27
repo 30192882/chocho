@@ -1,0 +1,20 @@
+/* 폰트 스타일 선언 */
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-display: swap;
+    src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-display: swap;
+    src: local('Pretendard SemiBold'), url(../fonts/Pretendard-SemiBold.woff2) format('woff2'), url(../fonts/Pretendard-SemiBold.woff) format('woff');
+}
+/* 경로에서 ../는 */
+@font-face {
+    font-family: 'KCC-Hanbit';
+    src: local('KCC-Hanbit'), url(../fonts/KCC-Hanbit.woff2) format('woff2'), url(../fonts/KCC-Hanbit.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

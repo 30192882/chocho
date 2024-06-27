@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32">
+  <g id="sns3" transform="translate(-6050 4393.154)">
+    <g id="그룹_37" data-name="그룹 37" transform="translate(6058.477 -4384.308)">
+      <g id="그룹_31" data-name="그룹 31" transform="translate(0 0)">
+        <path id="패스_103" data-name="패스 103" d="M45.365,31.662V46.311H40.018l-5.24-7.374v7.374H29.432V31.662h5.347l5.24,7.672V31.662Z" transform="translate(-29.432 -31.662)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="타원_42" data-name="타원 42" transform="translate(6050 -4393.154)" fill="none" stroke="#fff" stroke-width="1">
+      <ellipse cx="16.5" cy="16" rx="16.5" ry="16" stroke="none"/>
+      <ellipse cx="16.5" cy="16" rx="16" ry="15.5" fill="none"/>
+    </g>
+  </g>
+</svg>
