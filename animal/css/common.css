@@ -12,11 +12,7 @@ html, body {
     word-wrap: break-word; /* 만약 단어가 엄청 길면 줄바꿈 강제로 실행 */
 }
 /* 홈페이지 전체를 감싸는 요소 - 가로 스크롤바가 생겼을 때 배경이 잘리는 현상을 막음 */
-#wrap {
-    min-width: 1260px;
-    overflow: hidden;
-}
-/* 홈페이지의 넓이를 제한하고 가운데 정렬 */
+
 .wrapper {
     width: 1260px; /* 좌우 양쪽에 20px의 여백을 줌 1260 + 20 + 20 */
     margin: 0 auto; /* 가운데 정렬 */
@@ -24,22 +20,25 @@ html, body {
 /* 1260px 나의 wrapper의 넓이에 좌우 여백 20px씩 추가한 사이즈부터 반응형 */
 
 @media screen and (max-width:1300px){
-    #wrap {
-        min-width: 1300px;
-    }
-    .wrapper {
-        /* 넓이는 1260px 유지 */
-        margin: 0 20px; /* 좌우에 20px */
-    }
-}/* media */
-@media screen and (max-width:640px){ /* 모바일 반응형 */
     html, body {
-        font-size: 13px;
-    }
-    #wrap {
-        min-width: 100%;
+        font-size: 14px;
     }
     .wrapper {
         width: auto;
+    }
+}/* media */
+
+@media screen and (max-width:1024px){
+    html, body {
+        font-size: 14px;
+    }
+    .wrapper {
+        width: auto;
+    }
+}/* media */
+
+@media screen and (max-width:640px){ /* 모바일 반응형 */
+    html, body {
+        font-size: 13px;
     }
 }/* media */
