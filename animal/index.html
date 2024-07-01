@@ -15,7 +15,10 @@
 </head>
 <body>
     <div id="wrap">
-        <header>
+        <!--pc버전 메뉴에 마우스를 오버했을 때 (menu_over)
+            스크롤을 내려서 header가 고정이 됐을 때 (fixed)
+            모바일 버전에서 메뉴열기를 클릭했을 때 (mobile_open)-->
+        <header >
             <div class="wrapper">
                 <h1 class="logo"><a href="index.html">동물보호센터</a></h1>
                 <nav class="gnb">
@@ -25,6 +28,7 @@
                             그 하위메뉴는 2차메뉴 2depth
                             하지만 class명은 숫자가 먼저 못옴 = depth1 -->
                         <ul class="depth1">
+                            <!--메뉴가 열리면 li에 on 클래스를 추가 (pc/mobile)-->
                             <li>
                                 <a href="#n">찾습니다</a>
                                 <ul class="depth2">
