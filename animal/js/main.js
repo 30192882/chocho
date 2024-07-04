@@ -212,4 +212,15 @@ $(document).ready(function(){
         },
     });//swiper
 
+    /*family_site 열고 닫기
+        footer .family_site button.open 을 클릭하면 family site에 open 클래스 추가
+        footer .family_site button.close 을 클릭하면 family site에 open 클래스 삭제*/
+
+        $('footer .family_site button.open').on('click', function(){
+            $('footer .family_site').addClass('on')
+        })
+        $('footer .family_site button.close').on('click', function(){
+            $('footer .family_site').removeClass('on')
+        })
+
 })//document

@@ -416,24 +416,33 @@ header.menu_over {
 }
 .visual .slogan {
     position: absolute;
-    left: 3%;
-    bottom: -81px;
+    left: 2%;
+    bottom: 0;
+    transform: translate(0, 50%);
     z-index: 10;
-    width: 161px;
-    height: 161px;
+    width: 10vw;
     /* 블렌드모드 색상 주기
     mix-blend-mode: difference;
     filter: invert(1);
     */
+    
 }
 .visual .slogan img {
     width: 100%;
+    /*애니메이션 호출*/
+    animation-name: slogan_rotate;
+    animation-duration: 6s; /*애니메이션 1번 실행시간*/
+    animation-iteration-count: infinite; /*반복횟수 - 영원히*/
+    animation-timing-function: linear; /*가속도가 기본값이라 가속도를 삭제하는 값*/
+}
+@keyframes slogan_rotate { /*애니메이션을 정의*/
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
         @media screen and (max-width:1024px){
             .visual .slogan {
-                left: 10px;
-                
+                left: 0;
             }
             .visual ul li .wrapper {
                 height: 650px;
@@ -823,6 +832,7 @@ header.menu_over {
     background-color: #FF7D00;
     padding: 131px 0 260px 0;
     color: #fff;
+    position: relative; /*move_txt의 기준*/
 }
 .family h2 {
     font-family: 'KCC-Hanbit';
@@ -844,7 +854,6 @@ header.menu_over {
             .family h2 {
                 font-family: 'KCC-Hanbit';
                 font-size: 30px;
-                text-align: center;
                 margin: 0 0 34px 0;
             }
             .family .list ul li {
@@ -967,7 +976,40 @@ header.menu_over {
 .family .list .btn_wrap .more:hover:after {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' viewBox='0 0 13 13'%3E%3Cpath id='add_24dp_FILL0_wght300_GRAD0_opsz24_1_' data-name='add_24dp_FILL0_wght300_GRAD0_opsz24 (1)' d='M225.75-732.75h-5a.725.725,0,0,1-.534-.216A.726.726,0,0,1,220-733.5a.725.725,0,0,1,.216-.534.726.726,0,0,1,.534-.215h5v-5a.725.725,0,0,1,.216-.534A.726.726,0,0,1,226.5-740a.725.725,0,0,1,.534.216.726.726,0,0,1,.215.534v5h5a.725.725,0,0,1,.534.216.726.726,0,0,1,.216.534.725.725,0,0,1-.216.534.726.726,0,0,1-.534.215h-5v5a.725.725,0,0,1-.216.534.726.726,0,0,1-.534.216.725.725,0,0,1-.534-.216.726.726,0,0,1-.215-.534Z' transform='translate(-220 740)' fill='%23ff7d00'/%3E%3C/svg%3E%0A");
 }
+.family .move_txt {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 145px;
+    font-weight: 600;
+    /*글자를 선언 표시 - webkit - 일부 브라우저에서는 적용 안될수 있음*/
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.2);
+    color: transparent; /*글자 색상을 없앰*/
+    white-space: nowrap; /*줄바꿈 금지*/
+}
+/*p태그는 진짜 글자가 들어간 만큼의 넓이를 가져야함
+    position: absolute를 줘서 */
+.family .move_txt p {
+    /*transform: translate(0.35%, 0);*/
+    position: absolute; /*slogan*/
+    left: 0;
+    bottom: 0;
+    animation-name: movetxt_move;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes movetxt_move {
+    0% {transform: translate(0, 0);}
+    100% {transform: translate(-25.09%, 0);}
+}
+
         @media screen and (max-width:768px){
+            .family .move_txt {
+                font-size: 100px;
+            }
             .family .list .btn_wrap {
                 margin: 34px 0 0 0;
             }
@@ -989,5 +1031,215 @@ header.menu_over {
         }/*media*/
 
 footer {
-    margin: 500px 0 0 0;
+    background-color: #3D3D3D;
+    padding: 64px 0 244px 0;
+    color: #fff;
 }
+footer .wrapper {
+    position: relative; /*family_site sns 정렬의 기준*/ 
+}
+footer .sns {
+    position: absolute; /*wrapper를 기준으로 정렬*/
+    right: 0;
+    bottom: 0;
+}
+footer .sns ul {
+    display: flex;
+    gap: 10px;
+}
+footer .sns ul li a {
+    display: block;
+    width: 32px;
+    height: 32px;
+    font-size: 0;
+    line-height: 0;
+    position: relative; /*before 정렬의 기준*/
+}
+footer .sns ul li a::before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 32px;
+    height: 32px;
+    transform: translate(-50%, -50%);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+footer .sns ul li.facebook a::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg id='그룹_42' data-name='그룹 42' transform='translate(-1431 -3883.846)'%3E%3Cpath id='패스_106' data-name='패스 106' d='M21.323,10.363l.511-3.334h-3.2V4.865a1.667,1.667,0,0,1,1.88-1.8h1.454V.225A17.718,17.718,0,0,0,19.387,0C16.752,0,15.03,1.6,15.03,4.488V7.029H12.1v3.334H15.03v8.06h3.6v-8.06Z' transform='translate(1429.636 3890.718)' fill='%23fff'/%3E%3Cg id='타원_24' data-name='타원 24' transform='translate(1431 3883.846)' fill='none' stroke='%23fff' stroke-width='1'%3E%3Ccircle cx='16' cy='16' r='16' stroke='none'/%3E%3Ccircle cx='16' cy='16' r='15.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+}
+footer .sns ul li.twitter a::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg id='그룹_43' data-name='그룹 43' transform='translate(-1473 -3883.846)'%3E%3Cpath id='패스_105' data-name='패스 105' d='M17.725,111.7a7.34,7.34,0,0,1-1.8.513c.289-.049.715-.573.885-.785a3.3,3.3,0,0,0,.6-1.089c.016-.031.028-.07,0-.093a.1.1,0,0,0-.1.008,9.189,9.189,0,0,1-2.135.817.142.142,0,0,1-.147-.039,1.789,1.789,0,0,0-.187-.191,3.764,3.764,0,0,0-1.034-.633,3.6,3.6,0,0,0-1.586-.255,3.791,3.791,0,0,0-1.5.425,3.872,3.872,0,0,0-1.213.991,3.721,3.721,0,0,0-.725,1.452,3.938,3.938,0,0,0-.038,1.532c.012.086,0,.1-.074.086A11.4,11.4,0,0,1,1.333,110.7c-.086-.1-.132-.1-.2.007a3.718,3.718,0,0,0,.634,4.394c.144.136.292.272.451.4a3.732,3.732,0,0,1-1.415-.4c-.086-.054-.129-.023-.137.074a2.267,2.267,0,0,0,.023.42,3.76,3.76,0,0,0,2.318,3,2.173,2.173,0,0,0,.47.144,4.187,4.187,0,0,1-1.388.043c-.1-.02-.14.031-.1.128A3.9,3.9,0,0,0,4.9,121.354c.132.023.264.023.4.054-.008.012-.016.012-.023.023a4.617,4.617,0,0,1-1.991,1.055,7.13,7.13,0,0,1-3.024.387c-.163-.024-.2-.022-.241,0s-.006.067.047.109c.206.136.416.257.63.373a9.984,9.984,0,0,0,2.021.809,10.767,10.767,0,0,0,10.454-2.445,10.97,10.97,0,0,0,2.894-8c0-.115.136-.178.216-.239A7.081,7.081,0,0,0,17.7,112a.449.449,0,0,0,.094-.283V111.7c0-.047,0-.033-.073,0' transform='translate(1480.158 3782.749)' fill='%23fff'/%3E%3Cg id='타원_25' data-name='타원 25' transform='translate(1473 3883.846)' fill='none' stroke='%23fff' stroke-width='1'%3E%3Ccircle cx='16' cy='16' r='16' stroke='none'/%3E%3Ccircle cx='16' cy='16' r='15.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+}
+footer .sns ul li.naver a::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33' height='32' viewBox='0 0 33 32'%3E%3Cg id='그룹_44' data-name='그룹 44' transform='translate(-1515 -3883.846)'%3E%3Cg id='그룹_30' data-name='그룹 30' transform='translate(1523.477 3892.692)'%3E%3Cg id='그룹_31' data-name='그룹 31' transform='translate(0 0)'%3E%3Cpath id='패스_103' data-name='패스 103' d='M45.365,31.662V46.311H40.018l-5.24-7.374v7.374H29.432V31.662h5.347l5.24,7.672V31.662Z' transform='translate(-29.432 -31.662)' fill='%23fff'/%3E%3C/g%3E%3C/g%3E%3Cg id='타원_26' data-name='타원 26' transform='translate(1515 3883.846)' fill='none' stroke='%23fff' stroke-width='1'%3E%3Cellipse cx='16.5' cy='16' rx='16.5' ry='16' stroke='none'/%3E%3Cellipse cx='16.5' cy='16' rx='16' ry='15.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+}
+footer .sns ul li.daum a::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='32' height='32' viewBox='0 0 32 32'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='사각형_99' data-name='사각형 99' width='14.205' height='14.649' fill='%23fff'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='그룹_45' data-name='그룹 45' transform='translate(-1558 -3883.846)'%3E%3Cg id='그룹_33' data-name='그룹 33' transform='translate(1567.387 3892.605)'%3E%3Cg id='그룹_32' data-name='그룹 32' transform='translate(0 0)' clip-path='url(%23clip-path)'%3E%3Cpath id='패스_104' data-name='패스 104' d='M6.881,0H0V14.649H6.881A7.325,7.325,0,0,0,6.881,0m.142,9.957H4.55V4.692H7.023a2.632,2.632,0,0,1,0,5.265' transform='translate(0 0)' fill='%23fff'/%3E%3C/g%3E%3C/g%3E%3Cg id='타원_27' data-name='타원 27' transform='translate(1558 3883.846)' fill='none' stroke='%23fff' stroke-width='1'%3E%3Ccircle cx='16' cy='16' r='16' stroke='none'/%3E%3Ccircle cx='16' cy='16' r='15.5' fill='none'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+}
+footer .f_nav ul {
+    margin: 0 0 16px 0;
+    display: flex;
+    gap: 38px;
+}
+footer .f_nav ul li {
+    position: relative; /*after 정렬의 기준*/
+}
+footer .f_nav ul li::after {
+    position: absolute;
+    right: -19px;
+    top: 4px;
+    width: 1px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    content: "";
+}
+footer .f_nav ul li:last-child:after {
+    display: none; /*마지막 li의 after는 숨김*/
+}
+footer .family_site {
+    position: absolute;
+    right: 0; /*wrapper를 기준으로 정렬*/
+    top: 0;
+}
+footer .family_site button {
+    display: none; /*모바일에서 나타남*/
+}
+footer .family_site .list ul li a {
+    text-align: right;
+    display: block;
+}
+footer .family_site .list ul li a span {
+    padding-right: 19px;
+    /*아이콘이 들어갈 여백*/
+    position: relative; /*after 정렬의 기준*/
+    line-height: 2.3;
+}
+footer .family_site .list ul li a span::after {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    right: 0;
+    top: 3px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.343' height='12.343' viewBox='0 0 12.343 12.343'%3E%3Cpath id='open_in_new_24dp_FILL0_wght300_GRAD0_opsz24' d='M141.313-807.657a1.267,1.267,0,0,1-.931-.381,1.267,1.267,0,0,1-.381-.931v-9.718a1.267,1.267,0,0,1,.381-.931,1.267,1.267,0,0,1,.931-.381h4.035a.527.527,0,0,1,.388.156.527.527,0,0,1,.156.388.527.527,0,0,1-.156.388.527.527,0,0,1-.388.156h-4.035a.213.213,0,0,0-.154.07.213.213,0,0,0-.07.154v9.718a.213.213,0,0,0,.07.154.213.213,0,0,0,.154.07h9.718a.213.213,0,0,0,.154-.07.213.213,0,0,0,.07-.154V-813a.527.527,0,0,1,.156-.388.527.527,0,0,1,.388-.156.527.527,0,0,1,.388.156.527.527,0,0,1,.156.388v4.035a1.267,1.267,0,0,1-.381.931,1.267,1.267,0,0,1-.931.381Zm9.942-10.489L144.9-811.79a.527.527,0,0,1-.379.154.513.513,0,0,1-.386-.154.521.521,0,0,1-.158-.383.521.521,0,0,1,.158-.383l6.356-6.356h-2.321a.526.526,0,0,1-.388-.156.527.527,0,0,1-.156-.388.526.526,0,0,1,.156-.388.526.526,0,0,1,.388-.156h3.519a.635.635,0,0,1,.469.188.636.636,0,0,1,.188.469v3.519a.527.527,0,0,1-.156.388.527.527,0,0,1-.388.156.527.527,0,0,1-.388-.156.527.527,0,0,1-.156-.388Z' transform='translate(-140 820)' fill='%23fff'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+footer .copyright {
+    margin: 112px 0 0 0;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+        @media screen and (max-width:768px){
+            footer {
+                padding: 75px 0 75px 0;
+            }
+            footer .sns {
+                position: relative; /*absolute 해제*/
+                right: auto; /*해제*/
+                bottom: auto;
+            }
+            footer .sns ul {
+                justify-content: center;
+            }
+            footer .f_nav {
+                margin: 35px 0 61px 0;
+            }
+            footer .f_nav ul {
+                justify-content: center;
+                margin: 0 0 23px 0;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            footer .f_nav ul li {
+                margin: 0 25px 0 0;
+            }
+            footer .f_nav ul li::after {
+                position: absolute;
+                right: -20px;
+                top: 4px;
+                width: 3px;
+                height: 3px;
+                border-radius: 50%;
+                background-color: rgba(255, 255, 255, 0.2);
+                content: "";
+            }
+            footer .f_nav ul li:last-child:after {
+                display: none; /*마지막 li의 after는 숨김*/
+            }
+            footer .family_site {
+                position: relative;
+                right: auto; /*해제*/
+                top: auto;
+                margin: 30px 0 0 0;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            footer .family_site button.open::after {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' viewBox='0 0 13 13'%3E%3Cpath id='add_24dp_FILL0_wght300_GRAD0_opsz24_1_' data-name='add_24dp_FILL0_wght300_GRAD0_opsz24 (1)' d='M225.75-732.75h-5a.725.725,0,0,1-.534-.216A.726.726,0,0,1,220-733.5a.725.725,0,0,1,.216-.534.726.726,0,0,1,.534-.215h5v-5a.725.725,0,0,1,.216-.534A.726.726,0,0,1,226.5-740a.725.725,0,0,1,.534.216.726.726,0,0,1,.215.534v5h5a.725.725,0,0,1,.534.216.726.726,0,0,1,.216.534.725.725,0,0,1-.216.534.726.726,0,0,1-.534.215h-5v5a.725.725,0,0,1-.216.534.726.726,0,0,1-.534.216.725.725,0,0,1-.534-.216.726.726,0,0,1-.215-.534Z' transform='translate(-220 740)' fill='%23fff'/%3E%3C/svg%3E%0A");
+            }
+            footer .family_site button.close::after {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='1.5' viewBox='0 0 13 1.5'%3E%3Cpath id='remove_24dp_5F6368_FILL0_wght300_GRAD0_opsz24' d='M220.75-508.5a.725.725,0,0,1-.534-.216.726.726,0,0,1-.216-.535.724.724,0,0,1,.216-.534.725.725,0,0,1,.534-.216h11.5a.725.725,0,0,1,.534.216.726.726,0,0,1,.216.534.724.724,0,0,1-.216.534.725.725,0,0,1-.534.216Z' transform='translate(-220 510)' fill='%23fff'/%3E%3C/svg%3E%0A");
+            }
+            footer .family_site button {
+                display: block; /*모바일에서 나타남*/
+                width: 100%;
+                height: 36px;
+                background-color: #646464;
+                text-align: left;
+                padding: 0 0 0 20px;
+                position: relative; /*after 정렬의 기준*/
+                margin: 39px 0 0 0;
+            }
+            footer .family_site button.close {
+                display: none;
+            }
+            footer .family_site button::after {
+                position: absolute;
+                right: 13px;
+                top: 11px;
+                width: 13px;
+                height: 13px;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                content: "";
+            }
+            footer .family_site .list {
+                display: none;
+                position: absolute; /*famimy_site를 기준으로 정렬*/
+                left: 0;
+                top: 40px;
+                z-index: 20;
+                width: 100%;
+                background-color: #646464;
+                padding: 20px;
+            }
+            footer .family_site .list ul li a {
+                text-align: left;
+            }
+            footer .family_site .list ul li a span::after {
+                position: absolute;
+                width: 12px;
+                height: 12px;
+            }
+            /*family_site가 열렸을때*/
+            footer .family_site.on button.open {
+                display: none; /*숨김*/
+            }
+            footer .family_site.on button.close {
+                display: block;
+            }
+            footer .family_site.on .list {
+                display: block; /*나타남*/
+            }
+            footer .copyright {
+                margin: 61px 0 0 0;
+                text-align: center;
+                color: rgba(255, 255, 255, 0.6);
+            }
+        }/*media*/
