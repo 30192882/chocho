@@ -1,0 +1,35 @@
+@import url(fonts.css);
+@import url(default.css);
+@import url(common.css);
+
+.visual h2 {
+    display: none; /*숨*/
+}
+.visual ul li {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh; /*브라우저 높이만큼*/
+    min-height: 430px; /*최소 높이*/
+    color: #fff;
+    text-align: center;
+}
+.visual ul li.bg1 {
+    background-image: url(../images/visual_bg1.png);
+}
+.visual ul li.bg2 {
+    background-image: url(../images/visual_bg2.png);
+}
+.visual ul li.bg3 {
+    background-image: url(../images/visual_bg3.png);
+}
+.visual ul li h3 {
+    margin: 30vh 0 0 0;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1
+}
+.visual ul li p {
+    margin: 28px 0 0 0;
+    font-size: 20px;
+}
