@@ -21,7 +21,25 @@ $(document).ready(function(){
         },
 
     });
-    visual_swiper.autoplay.stop();  /* 일시정지 기능 */
-    visual_swiper.autoplay.start();  /* 재생 기능 */
+    
+    /*  .visual .btn_wrap button.btn_stop
+        일시정지 버튼을 클릭하면
+        1. 팝업 일시정지
+        2. 일시정지 버튼은 숨김, 재생버튼 나타남
+        
+        .visual .btn_wrap button.btn_play
+        재생버튼을 클릭하면
+        1. 팝업은 다시 시작
+        2. 재생버튼은 숨김, 일시정지 버튼은 나타남 */
 
+    $('.visual .btn_wrap button.btn_stop').on('click', function(){
+        visual_swiper.autoplay.stop();  /* 일시정지 기능 */
+        $(this).hide()
+        $('.visual .btn_wrap button.btn_play').show() //보이기
+    })
+    $('.visual .btn_wrap button.btn_play').on('click', function(){
+        visual_swiper.autoplay.start();  /* 재생 기능 */
+        $(this).hide()
+        $('.visual .btn_wrap button.btn_stop').show() //보이기
+    })
 })
