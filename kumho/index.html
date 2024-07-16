@@ -7,6 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/common.js"></script>
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <title>금호건설</title>
@@ -19,14 +20,15 @@
             메뉴에 마우스를 오버하면 하위 메뉴가 나타남 - menu_over
             모바일에서 메뉴를 열면 - menu_open
         -->
-        <header class="fixed menu_over">
+        <header class="menu_open">
             <h1 class="logo"><a href="index.html">금호건설</a></h1>
             <nav class="gnb">
                 <button class="gnb_open">메뉴열기</button>
                 <div class="gnb_wrap">
                     <ul class="depth1">
-                        <!--li메뉴에 마우스를 오버하면 li에 on클래스 추가-->
-                        <li class="on">
+                        <!--pc모드일때 li메뉴에 마우스를 오버하면 li에 on클래스 추가
+                            mobile모드일때 1차메뉴를 클릭하면 li에 open클래스 추가-->
+                        <li class="">
                             <a href="#n"><span>회사소개</span></a>
                             <ul class="depth2">
                                 <li><a href="#n"><span>기업정보</span></a></li>
@@ -77,7 +79,7 @@
                                 <li><a href="#n"><span>금호역사관</span></a></li>
                                 <li><a href="#n"><span>직무가이드</span></a></li>
                                 <li><a href="#n"><span>채용/면접 Tip</span></a></li>
-                                <li><a href="https://kumhoenc.recruiter.co.kr/appsite/company/index" target="_blank" title="새창열림"><span>인재채용___</span></a></li>
+                                <li><a href="https://kumhoenc.recruiter.co.kr/appsite/company/index" target="_blank" title="새창열림"><span>인재채용</span></a></li>
                             </ul>
                         </li>
                     </ul>
