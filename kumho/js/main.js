@@ -42,4 +42,22 @@ $(document).ready(function(){
         $(this).hide()
         $('.visual .btn_wrap button.btn_stop').show() //보이기
     })
-})
+
+    /*
+        -- pc일때
+        .biz .list ul li에 마우스를 올리면
+        마우스를 올린 li는 on클래스 추가
+        마우스를 올리지 않은 나머지 li는 off클래스 추가
+    */
+    
+    $('.biz .list ul li').on('mouseenter', function(){
+        $('.biz .list ul li').removeClass('on')
+        $('.biz .list ul li').addClass('off')
+        $(this).removeClass('off')
+        $(this).addClass('on')
+    })
+    $('.biz .list').on('mouseleave', function(){
+        $('.biz .list ul li').removeClass('on')
+        $('.biz .list ul li').removeClass('off')
+    })
+})//document.ready
