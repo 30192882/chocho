@@ -419,5 +419,155 @@ header.fixed {
 }/*media*/
 
 footer {
-    height: 200vh;
+    padding: 105px 0 149px 0;
+    background-color: #1d1d1d;
+    color: #fff;
+}
+footer .wrapper {
+    position: relative; /*familysite의 youtube 정렬의 기준*/
+}
+footer .youtube {
+    position: absolute;
+    right: 0;
+    top: -146px;
+}
+footer .youtube a {
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #FF3535;
+    padding-top: 34px;
+    text-align: center;
+    font-size: 14px;
+    position: relative; /*before 정렬의 기준*/
+}
+footer .youtube a::before {
+    position: absolute;
+    left: 50%;
+    top: 15px;
+    transform: translate(-50%, 0);
+    width: 24px;
+    height: 16px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='25' height='17' viewBox='0 0 25 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_33_356)'%3E%3Cpath d='M24.9766 5.90209C24.9766 3.13019 22.6163 0.888672 19.7125 0.888672H6.24065C3.33678 0.888672 0.976562 3.1365 0.976562 5.90209V11.8689C0.976562 14.6408 3.33678 16.8824 6.24065 16.8824H19.7058C22.6163 16.8824 24.9699 14.6345 24.9699 11.8689V5.90209H24.9766ZM17.0539 9.33698L11.0141 12.1846C10.7755 12.3046 9.97325 12.1404 9.97325 11.8879V6.04731C9.97325 5.78844 10.7821 5.62427 11.0208 5.75055L16.802 8.74345C17.0473 8.87604 17.2992 9.21069 17.0539 9.33698Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_33_356'%3E%3Crect width='24' height='16' fill='white' transform='translate(0.976562 0.888672)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    content: "";
+}
+footer .familysite {
+    position: absolute;
+    right: 0;
+    top: 32px;
+    width: 192px;
+}
+footer .familysite button {
+    width: 100%;
+    height: 36px;
+    background-color: rgba(29,29,29,0.8);
+    border: 1px solid #fff;
+    text-align: left;
+    padding-left: 22px;
+    position: relative; /*after 정렬의 기준*/
+}
+footer .familysite button::after {
+    position: absolute;
+    right: 15px;
+    top: 6px;
+    width: 21px;
+    height: 21px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+footer .familysite button.family_open::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_33_329' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='22' height='22'%3E%3Crect x='0.322266' y='0.618164' width='21' height='21' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_33_329)'%3E%3Cpath d='M10.166 11.7744H5.79102C5.60508 11.7744 5.44926 11.7115 5.32355 11.5856C5.19769 11.4598 5.13477 11.3039 5.13477 11.1179C5.13477 10.9319 5.19769 10.776 5.32355 10.6505C5.44926 10.5248 5.60508 10.4619 5.79102 10.4619H10.166V6.08691C10.166 5.90098 10.2289 5.74515 10.3548 5.61945C10.4807 5.49359 10.6365 5.43066 10.8225 5.43066C11.0086 5.43066 11.1644 5.49359 11.29 5.61945C11.4157 5.74515 11.4785 5.90098 11.4785 6.08691V10.4619H15.8535C16.0395 10.4619 16.1953 10.5248 16.321 10.6507C16.4468 10.7765 16.5098 10.9324 16.5098 11.1184C16.5098 11.3045 16.4468 11.4603 16.321 11.5859C16.1953 11.7116 16.0395 11.7744 15.8535 11.7744H11.4785V16.1494C11.4785 16.3354 11.4156 16.4912 11.2897 16.6169C11.1639 16.7427 11.008 16.8057 10.822 16.8057C10.636 16.8057 10.4801 16.7427 10.3546 16.6169C10.2289 16.4912 10.166 16.3354 10.166 16.1494V11.7744Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+footer .familysite button.family_close::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='21' height='22' viewBox='0 0 21 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_34_459' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='21' height='22'%3E%3Crect y='0.618164' width='21' height='21' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_34_459)'%3E%3Cpath d='M5.46875 11.7744C5.28281 11.7744 5.12699 11.7115 5.00128 11.5856C4.87543 11.4598 4.8125 11.3039 4.8125 11.1179C4.8125 10.9319 4.87543 10.776 5.00128 10.6505C5.12699 10.5248 5.28281 10.4619 5.46875 10.4619H15.5312C15.7172 10.4619 15.873 10.5248 15.9987 10.6507C16.1246 10.7765 16.1875 10.9324 16.1875 11.1184C16.1875 11.3045 16.1246 11.4603 15.9987 11.5859C15.873 11.7116 15.7172 11.7744 15.5312 11.7744H5.46875Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+footer .familysite ul {
+    display: none; /*숨김*/
+    position: absolute; /*familysite를 기준으로 정렬*/
+    left: 0;
+    bottom: 35px;
+    width: 100%;
+    background-color: rgba(29,29,29,0.8);
+    border: 1px solid #fff;
+    padding: 17px 23px;
+}
+footer .familysite ul li a {
+    display: block;
+    line-height: 2;
+}
+footer .familysite .family_close {
+    display: none; /*숨김*/
+}
+footer .familysite.open .family_open {
+    display: none; /*숨김*/
+}
+footer .familysite.open .family_close {
+    display: block;
+}
+footer .f_nav ul {
+    display: flex;
+}
+footer .f_nav ul li {
+    margin-right: 40px;
+    position: relative; /*after 정렬의 기준*/
+}
+footer .f_nav ul li::after {
+    position: absolute;
+    right: -22px;
+    top: 7px;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    content: "";
+}
+footer .f_nav ul li:last-child:after {
+    display: none;
+}
+footer .copyright {
+    margin-top: 28px;
+    color: rgba(255, 255, 255, 0.6);
+}
+@media screen and (max-width:768px){
+    footer {
+        padding: 0 0 63px 0;
+    }
+    footer .youtube {
+        position: relative;
+        right: auto;
+        top: -40px;
+        text-align: center;
+    }
+    footer .youtube a {
+        display: inline-block;
+    }
+    footer .familysite {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: auto;
+        margin: 40px auto 0 0;
+    }
+    footer .f_nav {
+        margin: 49px 0 0 0;
+    }
+    footer .f_nav ul {
+        flex-wrap: wrap; /*줄바꿈 허용*/
+    }
+    footer .f_nav ul li {
+        margin: 0 30px 37px 0;
+    }
+    footer .f_nav ul li::after {
+        right: -16px;
+        top: 6px;
+    }
+    footer .copyright {
+        margin-top: 27px;
+    }
 }

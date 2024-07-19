@@ -101,4 +101,23 @@ $(document).ready(function(){
         $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
     })
 
+    /* 
+        footer .familysite .family_open을 클릭하면
+    1. footer familysite에 open 클래스 추가
+    2. footer .familysite ul을 열어줌
+    
+        footer .familysite .family_close를 클릭하면
+    1. footer familysite에 open 클래스 삭제
+    2. footer .familysite ul을 닫아줌  
+    */
+
+    $('footer .familysite .family_open').on('click', function(){
+        $('footer .familysite').addClass('open')
+        $('footer .familysite ul').slideDown()
+    })
+    $('footer .familysite .family_close').on('click', function(){
+        $('footer .familysite').removeClass('open')
+        $('footer .familysite ul').slideUp()
+    })
+
 })//document.ready
