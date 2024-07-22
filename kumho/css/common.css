@@ -44,3 +44,10 @@ html, body {
         font-size: 13px;
     }
 }/* media */
+
+/*클릭하는 요소 a button - focus가 되었을 때 스타일 변경*/
+
+a:focus,
+button:focus {
+    outline: 2px dashed #FF3535;
+}
