@@ -595,3 +595,143 @@ footer .copyright {
         margin-top: 27px;
     }
 }
+
+/*서브페이지 레이아웃 코딩*/
+.sub_visual {
+    height: 600px;
+    background: url(../images/common/sub_visual01.png) no-repeat center center / cover;
+    color: #fff;
+}
+/*1차메뉴마다 배경이 다른 이미지가 적용
+    bg1 - 회사소개
+    bg2 - esg
+    bg3 - 사업분야
+    bg4 - ir
+    bg5 - 홍보센터
+    기본적으로 하나의 이미지는 미리 적용*/
+.sub_visual.bg1 {
+    background-image: url(../images/common/sub_visual01.png);
+}
+.sub_visual.bg2 {
+    background-image: url(../images/common/sub_visual02.png);
+}
+.sub_visual.bg3 {
+    background-image: url(../images/common/sub_visual03.png);
+}
+.sub_visual.bg4 {
+    background-image: url(../images/common/sub_visual04.png);
+}
+.sub_visual.bg5 {
+    background-image: url(../images/common/sub_visual05.png);
+}
+.sub_visual strong {
+    display: block;
+    font-size: 45px;
+    font-weight: 700;
+    padding: 290px 0 10px 0;
+}
+.sub_menu {
+    background-color: #FF3535;
+    color: #fff;
+    height: 50px;
+}
+.sub_menu .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.sub_menu .lnb ul {
+    display: flex;
+}
+.sub_menu .lnb ul li a {
+    display: block;
+    line-height: 50px;
+    padding: 0 23px;
+}
+.sub_menu .lnb ul li:first-child a {
+    padding-left: 0;
+}
+.sub_menu .lnb ul li.active a,
+.sub_menu .lnb ul li a:hover {
+    font-weight: 700;
+    position: relative; /*after 정렬의 기준*/
+
+}
+.sub_menu .lnb ul li.active a::after,
+.sub_menu .lnb ul li a:hover::after {
+    position: absolute;
+    right: 17px;
+    top: 15px;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #fff;
+    content: "";
+}
+.sub_menu .breadcrumb ol {
+    display: flex;
+}
+.sub_menu .breadcrumb ol li {
+    margin-right: 27px;
+    position: relative; /*after 정렬의 기준*/
+}
+.sub_menu .breadcrumb ol li::after {
+    position: absolute;
+    left: 35px;
+    top: 18px;
+    width: 6px;
+    height: 11px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='7' height='12' viewBox='0 0 7 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.94577 5.99952L0.872524 1.92652C0.73419 1.78802 0.663357 1.61394 0.660023 1.40427C0.656857 1.19477 0.72769 1.01752 0.872524 0.872524C1.01752 0.72769 1.19319 0.655273 1.39952 0.655273C1.60586 0.655273 1.78152 0.72769 1.92652 0.872524L6.42077 5.36677C6.51427 5.46044 6.58027 5.55919 6.61877 5.66302C6.65727 5.76686 6.67652 5.87902 6.67652 5.99952C6.67652 6.12002 6.65727 6.23219 6.61877 6.33602C6.58027 6.43986 6.51427 6.53861 6.42077 6.63227L1.92652 11.1265C1.78802 11.2649 1.61394 11.3357 1.40427 11.339C1.19477 11.3422 1.01752 11.2714 0.872524 11.1265C0.72769 10.9815 0.655273 10.8059 0.655273 10.5995C0.655273 10.3932 0.72769 10.2175 0.872524 10.0725L4.94577 5.99952Z' fill='white'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+.sub_menu .breadcrumb ol li:last-child:after {
+    display: none;
+}
+.sub_menu .breadcrumb ol li a {
+    display: block;
+    line-height: 50px;
+}
+.sub_menu .breadcrumb ol li.home a {
+    font-size: 0;
+    line-height: 0;
+    width: 24px;
+    height: 50px;
+    position: relative;
+}
+.sub_menu .breadcrumb ol li.home a::before {
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_161_167' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='25' height='25'%3E%3Crect x='0.00683594' y='0.320312' width='24.3223' height='24.3223' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_161_167)'%3E%3Cpath d='M6.08752 19.5755H9.47871V14.4694C9.47871 14.2099 9.56645 13.9924 9.74194 13.8167C9.91761 13.6412 10.1352 13.5535 10.3946 13.5535H13.9416C14.201 13.5535 14.4186 13.6412 14.5942 13.8167C14.7697 13.9924 14.8575 14.2099 14.8575 14.4694V19.5755H18.2487V10.6105C18.2487 10.5586 18.2373 10.5116 18.2145 10.4694C18.1918 10.4271 18.161 10.3897 18.122 10.3571L12.3533 6.02091C12.3013 5.97548 12.2395 5.95276 12.1681 5.95276C12.0966 5.95276 12.0349 5.97548 11.9829 6.02091L6.2142 10.3571C6.17519 10.3897 6.14436 10.4271 6.12173 10.4694C6.09893 10.5116 6.08752 10.5586 6.08752 10.6105V19.5755ZM4.56738 19.5755V10.6105C4.56738 10.3205 4.63224 10.0457 4.76196 9.7863C4.89185 9.5267 5.07123 9.31295 5.30009 9.14506L11.069 4.79897C11.3891 4.55474 11.755 4.43262 12.1666 4.43262C12.5782 4.43262 12.9451 4.55474 13.2672 4.79897L19.0361 9.14506C19.265 9.31295 19.4443 9.5267 19.5742 9.7863C19.7039 10.0457 19.7688 10.3205 19.7688 10.6105V19.5755C19.7688 19.99 19.6191 20.347 19.3196 20.6464C19.0201 20.9459 18.6631 21.0956 18.2487 21.0956H14.2535C13.9939 21.0956 13.7763 21.0078 13.6008 20.8322C13.4252 20.6567 13.3373 20.4391 13.3373 20.1795V15.0736H10.9988V20.1795C10.9988 20.4391 10.911 20.6567 10.7354 20.8322C10.5599 21.0078 10.3423 21.0956 10.0827 21.0956H6.08752C5.67303 21.0956 5.31605 20.9459 5.01658 20.6464C4.71712 20.347 4.56738 19.99 4.56738 19.5755Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+.sub_menu .breadcrumb ol li.now a {
+    position: relative;
+}
+.sub_menu .breadcrumb ol li.now a::after {
+    position: absolute;
+    left: 0;
+    bottom: 13px;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.6);
+    content: "";
+}
+
+.sub_contents .sub_title h2 {
+    color: #FF3535;
+    font-weight: 700;
+    margin: 111px 0 2px 0;
+}
+.sub_contents .sub_title p {
+    color: #1d1d1d;
+    font-size: 45px;
+    font-weight: 700;
+}
