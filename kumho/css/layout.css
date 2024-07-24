@@ -86,6 +86,18 @@ header.fixed {
         font-size: 20px;
         font-weight: 700;
     }
+    header .gnb .gnb_wrap ul.depth1 > li.active > a > span::before {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 3px;
+        background-color: #FF3535;
+        content: "";
+    }
+    header.menu_over .gnb .gnb_wrap ul.depth1 > li.active > a > span::before {
+        display: none;
+    }
     header .gnb .gnb_wrap ul.depth1 > li.on > a {
         color: #FF3535;
     }
@@ -332,6 +344,10 @@ header.fixed {
         font-size: 16px;
         color: #3d3d3d;
     }
+    header .gnb .gnb_wrap ul.depth2 > li.active > a {
+        color: #FF3535;
+        font-weight: 700;
+    }
     header .gnb .gnb_close {
         display: none; /*숨김*/
         position: absolute; /*header를 기준으로 정렬*/
@@ -359,7 +375,7 @@ header.fixed {
         display: none; /*숨김*/
         position: absolute;
         left: 20px;
-        top: 16px;
+        top: 37px;
         color: #1d1d1d;
         align-items: center;
     }
@@ -439,6 +455,9 @@ header.fixed {
     header .gnb .gnb_wrap ul.depth1 {
         margin-top: 50px; /*header 높이만큼*/
         height: calc(100vh - 100px);
+    }
+    header .tnb {
+        top: 12px;
     }
 }/*media*/
 
@@ -630,6 +649,9 @@ footer .copyright {
     font-weight: 700;
     padding: 290px 0 10px 0;
 }
+.sub_visual p br {
+    display: none;
+}
 .sub_menu {
     background-color: #FF3535;
     color: #fff;
@@ -676,7 +698,7 @@ footer .copyright {
 }
 .sub_menu .breadcrumb ol li::after {
     position: absolute;
-    left: 35px;
+    right: -16px;
     top: 18px;
     width: 6px;
     height: 11px;
@@ -725,6 +747,12 @@ footer .copyright {
     content: "";
 }
 
+.sub_contents {
+    min-height: 400px;
+    /*콘텐츠의 최소높이
+    - 아직 콘텐츠를 코딩하지 않았을 때
+    페이지만 생성되어 있어서 페이지의 여백이 없어 디자인이 이상하게 보임*/
+}
 .sub_contents .sub_title h2 {
     color: #FF3535;
     font-weight: 700;
@@ -735,3 +763,66 @@ footer .copyright {
     font-size: 45px;
     font-weight: 700;
 }
+
+@media screen and (max-width:1300px) {
+    .sub_visual strong {
+        font-size: 40px;
+    }
+}/*media*/
+@media screen and (max-width:1024px) {
+    .sub_visual strong {
+        font-size: 32px;
+    }
+    .sub_menu {
+        position: relative; /*after 정렬의 기준*/
+    }
+    .sub_menu::after {
+        position: absolute;
+        right: 20px; /*오른쪽 wrapper의 여백*/
+        top: 0;
+        width: 54px;
+        height: 100%;
+        background-image: linear-gradient(90deg, rgba(255,53,53,0), rgba(255,53,53,1));
+        content: "";
+    }
+    .sub_menu .wrapper {
+        /*만약 모바일에서 메뉴의 수가 많아서 한번에 모두 표현되지 않으면
+        가로 스크롤바가 생성되어야 함 - 메뉴를 감싸는 요소 flex를 준 요소*/
+        overflow-x: auto; /*내부 컨텐츠가 감싸는 요소보다 더 넓어지면 가로스크롤바 생성*/
+    }
+    .sub_menu lnb {
+        margin-right: 33px; /*오른쪽 그라데이션 준 만큼 추가 여백 - 마지막 메뉴가 그라데이션에 가리지 않도록*/
+    }
+    .sub_menu .wrapper::-webkit-scrollbar {
+        height: 0;
+        background-color: transparent; /*투명*/
+    }
+    .sub_menu .wrapper::-webkit-scrollbar-thumb {
+        background-color: transparent; /*투명*/
+    }
+    .sub_menu .wrapper::-webkit-scrollbar-track {
+        background-color: transparent; /*투명*/
+    }
+    .sub_menu .breadcrumb {
+        display: none;
+    }
+}/*media*/
+@media screen and (max-width:768px) {
+    .sub_visual {
+        height: 396px;
+    }
+    .sub_visual strong {
+        font-size: 28px;
+        padding: 270px 0 10px 0;
+    }
+    .sub_visual p br {
+        display: block;
+    }
+    .sub_contents .sub_title h2 {
+        font-size: 15px;
+        margin: 57px 0 2px 0;
+    }
+    .sub_contents .sub_title p {
+        font-size: 28px;
+    }
+}/*media*/

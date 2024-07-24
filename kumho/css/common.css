@@ -26,16 +26,13 @@ html, body {
         font-size: 14px;
     }
     .wrapper {
-        width: auto;
+        width: calc(100% - 40px);
     }
 }/* media */
 
 @media screen and (max-width:1024px){
     html, body {
         font-size: 14px;
-    }
-    .wrapper {
-        width: auto;
     }
 }/* media */
 
@@ -49,5 +46,5 @@ html, body {
 
 a:focus,
 button:focus {
-    outline: 2px dashed #FF3535;
+    outline: 1px dashed #FF3535;
 }

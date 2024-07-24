@@ -24,16 +24,13 @@ html, body {
         font-size: 14px;
     }
     .wrapper {
-        width: auto;
+        width: calc(100% - 40px);
     }
 }/* media */
 
 @media screen and (max-width:1024px){
     html, body {
         font-size: 14px;
-    }
-    .wrapper {
-        width: auto;
     }
 }/* media */
 

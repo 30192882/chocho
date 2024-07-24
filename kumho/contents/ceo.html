@@ -23,13 +23,14 @@
                 <button class="gnb_open">메뉴열기</button>
                 <div class="gnb_wrap">
                     <ul class="depth1">
-                        <!--pc모드일때 li메뉴에 마우스를 오버하면 li에 on클래스 추가
-                            mobile모드일때 1차메뉴를 클릭하면 li에 open클래스 추가-->
-                        <li class="">
+                        <!--서브페이지에서는 현재 열려있는 1차 메뉴의 디자인을 변경
+                            모바일에서 메뉴를 여는 클래스명 open과 pc에서 사용할 active-->
+                        <li class="open active">
                             <a href="info.html"><span>회사소개</span></a>
                             <ul class="depth2">
+                                <!--현재 선택되어있는 메뉴의 디자인 변경-->
                                 <li><a href="info.html"><span>기업정보</span></a></li>
-                                <li><a href="ceo.html"><span>CEO인사말</span></a></li>
+                                <li class="active"><a href="ceo.html"><span>CEO인사말</span></a></li>
                                 <li><a href="history.html"><span>연혁</span></a></li>
                                 <li><a href="org.html"><span>조직도</span></a></li>
                                 <li><a href="tech.html"><span>기술혁신</span></a></li>
@@ -93,7 +94,7 @@
                 <div class="wrapper">
                     <!--만약 subvisual에 1차메뉴명이나 현재 메뉴명을 입력했다면 heading 태그를 사용. 그냥 슬로건을 입력했다면 heading태그 사용 X-->
                     <strong>회사소개</strong>
-                    <p>금호건설은 사람과 자연이 어우러지는 건설철학을 펼쳐나갑니다.</p>
+                    <p>금호건설은 사람과 자연이 어우러지는 <br>건설철학을 펼쳐나갑니다.</p>
                 </div>
             </div><!--sub_visual-->
             <div class="sub_menu">
