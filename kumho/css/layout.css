@@ -668,6 +668,7 @@ footer .copyright {
     display: block;
     line-height: 50px;
     padding: 0 23px;
+    white-space: nowrap; /*줄바꿈금지*/
 }
 .sub_menu .lnb ul li:first-child a {
     padding-left: 0;
@@ -768,6 +769,9 @@ footer .copyright {
     .sub_visual strong {
         font-size: 40px;
     }
+    .sub_contents .sub_title p {
+        font-size: 40px;
+    }
 }/*media*/
 @media screen and (max-width:1024px) {
     .sub_visual strong {
@@ -805,6 +809,9 @@ footer .copyright {
     }
     .sub_menu .breadcrumb {
         display: none;
+    }
+    .sub_contents .sub_title p {
+        font-size: 32px;
     }
 }/*media*/
 @media screen and (max-width:768px) {

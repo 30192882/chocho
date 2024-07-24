@@ -2,3 +2,63 @@
 @import url(default.css);
 @import url(common.css);
 @import url(layout.css);
+
+
+/*
+    각각의 서브 콘텐츠 페이지의 콘텐츠 내용을 코딩
+    제일 중요한 것은 절대 이름이 겹치면 안된다는 것
+    규칙 cts_페이지명 으로 해서 절대 겹치지 않도록 함
+*/
+
+/*회사소개 - CEO인사말*/
+.cts_ceo {
+    margin: 135px 0 360px 0;
+}
+.cts_ceo .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.cts_ceo .photo_wrap {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+.cts_ceo .photo_wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cts_ceo .txt_wrap {
+    width: 48.8%;
+}
+.cts_ceo .tit span {
+    font-size: 24px;
+}
+.cts_ceo .tit {
+    margin-bottom: 91px;
+    font-weight: 700;
+}
+.cts_ceo .txt {
+    margin-bottom: 113px;
+}
+.cts_ceo .txt p strong {
+    font-weight: 700;
+}
+.cts_ceo .sign {
+    text-align: right;
+}
+
+@media screen and (max-width:768px) {
+    .cts_ceo .wrapper {
+        display: block;
+    }
+    .cts_ceo .photo_wrap {
+        margin-bottom: 81px;
+    }
+    .cts_ceo .txt_wrap {
+        width: auto;
+    }
+    .cts_ceo .tit span {
+        font-size: 20px;
+    }
+}
