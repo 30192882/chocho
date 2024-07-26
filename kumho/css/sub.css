@@ -80,3 +80,229 @@
         margin-left: 0;
     }
 }
+
+/*회사소개 - 연혁*/
+.cts_history {
+    margin: 111px 0 236px 0;
+}
+.cts_history .tab_area .tab_btn {
+    overflow-x: auto;
+    /*만약 ul의 넓이가 .tab_btn보다 넓어지면 스크롤바 발생*/
+    overflow-y: hidden; /*세로스크롤바 금지*/
+}
+.cts_history .tab_area .tab_btn ul {
+    display: flex;
+}
+.cts_history .tab_area .tab_btn ul li button {
+    width: 315px;
+    height: 72px;
+    padding: 18px 102px;
+    font-size: 24px;
+    border-bottom: 1px solid #666;
+    position: relative;
+    white-space: nowrap;
+}
+.cts_history .tab_area .tab_btn ul li.active button,
+.cts_history .tab_area .tab_btn ul li button:hover {
+    border-bottom: 4px solid #FF3535;
+    color: #FF3535;
+    font-weight: 700;
+}
+/*div 중에서 role="tabpanel" 속성을 갖춘 div 선택*/
+.cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit {
+    height: 350px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/contents/history_tit_bg1.png);
+    color: #fff;
+    text-align: center;
+    margin-top: 74px;
+}
+.cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit.bg1 {
+    background-image: url(../images/contents/history_tit_bg1.png);
+}
+.cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit.bg2 {
+    background-image: url(../images/contents/history_tit_bg2.png);
+}
+.cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit.bg3 {
+    background-image: url(../images/contents/history_tit_bg3.png);
+}
+.cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit.bg4 {
+    background-image: url(../images/contents/history_tit_bg4.png);
+}
+.cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit strong {
+    display: block;
+    padding: 140px 0 0 0;
+    font-size: 15px;
+}
+.cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit h3 {
+    font-size: 45px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+.cts_history .history_list {
+    margin: 92px 0 0 0;
+    position: relative; /*before, after 기준*/
+}
+.cts_history .history_list::before {
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    width: 1px;
+    height: calc(100% - 20px);
+    background-color: #666;
+    content: "";
+}
+.cts_history .history_list .year_wrap {
+    margin-bottom: 80px;
+}
+.cts_history .history_list .year_wrap:last-child {
+    margin-bottom: 0;
+    position: relative; /*before 정렬의 기준*/
+}
+.cts_history .history_list .year_wrap:last-child::before {
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    width: 5px;
+    height: 100%;
+    background-color: #fff;
+    content: "";
+}
+.cts_history .history_list .year_wrap.right {
+    padding-left: calc(50% + 53px);
+}
+.cts_history .history_list .year_wrap.left {
+    text-align: right;
+    padding-right: calc(50% + 53px);
+}
+.cts_history .history_list .year_wrap.left li {
+    flex-direction: row-reverse
+    /*좌우 순서를 반전시켜줌*/
+}
+.cts_history .history_list .year_wrap h4 {
+    color: #FF3535;
+    font-size: 45px;
+    font-weight: 700;
+    margin: 0 0 71px 0;
+    position: relative; /*before 정렬의 기준*/
+}
+.cts_history .history_list .year_wrap h4:before {
+    position: absolute;
+    left: -60px;
+    top: 20px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #FF3535;
+    content: "";
+}
+.cts_history .history_list .year_wrap.left h4:before {
+    left: auto; /*취소*/
+    right: -60px;
+}
+.cts_history .history_list .year_wrap ul li {
+    display: flex;
+    margin: 0 0 16px 0;
+}
+.cts_history .history_list .year_wrap ul li strong {
+    color: #1d1d1d;
+    font-weight: 700;
+    width: 4.5em;
+}
+.cts_history .history_list .year_wrap ul li span {
+    width: calc(100% - 4.5em);
+}
+
+@media screen and (max-width:1300px) {
+    .cts_history .tab_area .tab_btn ul {
+        justify-content: flex-start;
+    }
+    .cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit h3 {
+        font-size: 40px;
+    }
+    .cts_history .history_list .year_wrap h4 {
+        font-size: 40px;
+        margin: 0 0 50px 0;
+    }
+}
+@media screen and (max-width:1024px) {
+    .cts_history .history_list .year_wrap h4 {
+        font-size: 32px;
+        margin: 0 0 35px 0;
+    }
+    .cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit h3 {
+        font-size: 32px;
+    }
+}   
+@media screen and (max-width:768px) {
+    .cts_history {
+        margin: 57px 0 154px 0;
+    }
+    .cts_history .tab_area .tab_btn ul li button {
+        width: 128px;
+        height: 53px;
+        padding: 13px 20px;
+        font-size: 18px;
+        border-bottom: 1px solid #666;
+    }
+    .cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit {
+        height: 202px;
+        margin-top: 45px;
+    }
+    .cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit strong {
+        padding: 81px 0 0 0;
+        font-size: 13px;
+    }
+    .cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit h3 {
+        font-size: 28px;
+    }
+    .cts_history .history_list {
+        margin: 92px 0 0 0;
+        position: relative; /*before, after 기준*/
+    }
+    .cts_history .history_list::before {
+        left: 9px;
+        top: 17px;
+        height: calc(100% - 17px);
+    }
+    .cts_history .history_list .year_wrap {
+        margin-bottom: 80px;
+    }
+    .cts_history .history_list .year_wrap:last-child {
+        margin-bottom: 0;
+        position: relative; /*before 정렬의 기준*/
+    }
+    .cts_history .history_list .year_wrap:last-child::before {
+        left: 9px;
+        top: 15px;
+        height: calc(100% - 15px);
+    }
+    .cts_history .history_list .year_wrap.right {
+        padding-left: 27px;
+    }
+    .cts_history .history_list .year_wrap.left {
+        text-align: left;
+        padding-right: 0;
+        padding-left: 27px;
+    }
+    .cts_history .history_list .year_wrap.left li {
+        flex-direction: row
+        /*좌우 순서를 반전시켜줌*/
+    }
+    .cts_history .history_list .year_wrap h4 {
+        font-size: 28px;
+        margin: 0 0 30px 0;
+    }
+    .cts_history .history_list .year_wrap h4:before {
+        left: -24px;
+        top: 11px;
+        width: 12px;
+        height: 12px;
+    }
+    .cts_history .history_list .year_wrap.left h4:before {
+        left: -24px;
+        right: auto; /*취소*/
+    }
+}

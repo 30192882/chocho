@@ -794,7 +794,7 @@ footer .copyright {
         가로 스크롤바가 생성되어야 함 - 메뉴를 감싸는 요소 flex를 준 요소*/
         overflow-x: auto; /*내부 컨텐츠가 감싸는 요소보다 더 넓어지면 가로스크롤바 생성*/
     }
-    .sub_menu lnb {
+    .sub_menu .lnb {
         margin-right: 33px; /*오른쪽 그라데이션 준 만큼 추가 여백 - 마지막 메뉴가 그라데이션에 가리지 않도록*/
     }
     .sub_menu .wrapper::-webkit-scrollbar {

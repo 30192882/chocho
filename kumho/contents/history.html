@@ -129,19 +129,147 @@
                 </div>
                 <div class="cts_history">
                     <!--각 페이지의 콘텐츠 클래스 네이밍 규칙
-                        cts_페이지 html 파일명(cts - contents 약자)-->
+                        cts_페이지 html 파일명(cts - contents 약자)
+                    
+                        <ul role="tablist"> -- 탭 리스트
+                            <li aria-selected="true"></li>
+                        </ul>
+                        <div role="tabpanel"> -- 탭 안내문
+                    -->
                     <div class="wrapper">
                         <div class="tab_area">
                             <div class="tab_btn">
                                 <ul role="tablist">
-                                    <li id="tab_01" aria-selected="true" aria-controls="panel_01" class="active"><button><span>현재 - 2011</span></button></li>
-                                    <li id="tab_02" aria-selected="false" aria-controls="panel_02"><button><span>2010 - 2001</span></button></li>
+                                    <li id="tab_01" aria-selected="true" aria-controls="panel_01" role=”tab” class="active"><button><span>현재 - 2011</span></button></li>
+                                    <li id="tab_02" aria-selected="false" aria-controls="panel_02" role=”tab”><button><span>2010 - 2001</span></button></li>
+                                    <li id="tab_03" aria-selected="false" aria-controls="panel_03" role=”tab”><button><span>2000 - 1991</span></button></li>
+                                    <li id="tab_04" aria-selected="false" aria-controls="panel_04" role=”tab”><button><span>1990 - 1960</span></button></li>
                                 </ul>
                             </div><!--tab_btn-->
                             <div class="tab_cnt">
-                                <div id="panel_01" role="tabpanel" aria-labelledby="tab_01">
-                                
-                                </div><!--panel_login_01-->
+                                <div id="panel_01" role="tabpanel" aria-labelledby="tab_01" class="active">
+                                    <div class="history_tit bg1">
+                                        <strong>1967년부터 금호건설 반세기의 역사</strong>
+                                        <h3><span>현재 - 2011</span></h3>
+                                    </div>
+                                    <div class="history_list">
+                                        <div class="year_wrap right">
+                                            <h4>2024 - 2021</h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>2024. 06.</strong>
+                                                    <span>조경특화 브랜드 '아트시스' 출시</span>
+                                                </li>
+                                                <li>
+                                                    <strong>2024. 05.</strong>
+                                                    <span>금호건설 주거 브랜드 아테라 런칭</span>
+                                                </li>
+                                                <li>
+                                                    <strong>2023. 12.</strong>
+                                                    <span>조완석 사장 체제로 조직 개편</span>
+                                                </li>
+                                                <li>
+                                                    <strong>2023. 09.</strong>
+                                                    <span>임직원 기부활동 "DOVE's (Do Love, Sustainable)" 전개</span>
+                                                </li>
+                                                <li>
+                                                    <strong>2021. 03.</strong>
+                                                    <span>금호건설(주)로 상호변경</span>
+                                                </li>
+                                            </ul>
+                                        </div><!--year_wrap-->
+                                        <div class="year_wrap left">
+                                            <h4>2020 - 2013</h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>2018. 10.</strong>
+                                                    <span>건설업계 최초 자회사형 장애인 표준사업장 설립 협약 체결</span>
+                                                </li>
+                                                <li>
+                                                    <strong>2016. 07.</strong>
+                                                    <span>서재환 사장 체제로 조직 개편</span>
+                                                </li>
+                                                <li>
+                                                    <strong>2014. 07.</strong>
+                                                    <span>충북 증평군 사곡리마을과 1社1村 자매결연</span>
+                                                </li>
+                                                <li>
+                                                    <strong>2013. 01.</strong>
+                                                    <span>원일우 사장 체제로 조직 개편</span>
+                                                </li>
+                                            </ul>
+                                        </div><!--year_wrap-->
+                                        <div class="year_wrap right">
+                                            <h4>2012 - 2011</h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>2012. 03.</strong>
+                                                    <span>다기능 스마트 스위치, 레드닷 디자인 어워드 수상</span>
+                                                </li>
+                                                <li>
+                                                    <strong>2011. 10.</strong>
+                                                    <span>베트남 21개 현지 협력사와 ‘우수 협력사 Partnership 강화’ MOU 체결</span>
+                                                </li>
+                                                <li>
+                                                    <strong>2011. 04.</strong>
+                                                    <span>UAE 아부다비 공항 관제탑 그랜드 오픈(Grand Open)</span>
+                                                </li>
+                                                <li>
+                                                    <strong>2011. 04.</strong>
+                                                    <span>경기도 화성시 신천마을과 1社1村 자매결연식</span>
+                                                </li>
+                                            </ul>
+                                        </div><!--year_wrap-->
+                                    </div><!--history_list-->
+                                </div>
+                                <div id="panel_02" role="tabpanel" aria-labelledby="tab_02">
+                                    <div class="history_tit bg2">
+                                        <strong>1967년부터 금호건설 반세기의 역사</strong>
+                                        <h3>2010 - 2001</h3>
+                                    </div>
+                                    <div class="history_list">
+                                        <div class="year_wrap right">
+                                            <ul>
+                                                <li>
+                                                    <strong></strong>
+                                                    <span></span>
+                                                </li>
+                                            </ul>
+                                        </div><!--year_wrap-->
+                                    </div><!--history_list-->
+                                </div>
+                                <div id="panel_03" role="tabpanel" aria-labelledby="tab_03">
+                                    <div class="history_tit bg3">
+                                        <strong>1967년부터 금호건설 반세기의 역사</strong>
+                                        <h3>2000 - 1991</h3>
+                                    </div>
+                                    <div class="history_list">
+                                        <div class="year_wrap right">
+                                            <ul>
+                                                <li>
+                                                    <strong></strong>
+                                                    <span></span>
+                                                </li>
+                                            </ul>
+                                        </div><!--year_wrap-->
+                                    </div><!--history_list-->
+                                </div>
+                                <div id="panel_04" role="tabpanel" aria-labelledby="tab_04">
+                                    <div class="history_tit bg4">
+                                        <strong>1967년부터 금호건설 반세기의 역사</strong>
+                                        <h3>1990 - 1960</h3>
+                                    </div>
+                                    <div class="history_list">
+                                        <div class="year_wrap right">
+                                            <ul>
+                                                <li>
+                                                    <strong></strong>
+                                                    <span></span>
+                                                </li>
+                                            </ul>
+                                        </div><!--year_wrap-->
+                                    </div><!--history_list-->
+                                </div>
                             </div><!--tab_cnt-->
                         </div>
                     </div><!--wrapper-->
