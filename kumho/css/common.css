@@ -34,7 +34,7 @@ html, body {
     }
     .wrapper {
         width: auto;
-        margin: 0 20px; /* 좌우에 20px */
+        margin: 0 10px; /* 좌우에 20px */
     }
 }/* media */
 @media screen and (max-width:1024px){
