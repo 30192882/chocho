@@ -119,6 +119,12 @@
     text-align: center;
     margin-top: 74px;
 }
+.cts_history .tab_area .tab_cnt div[role="tabpanel"] {
+    display: none; /*숨김*/
+}
+.cts_history .tab_area .tab_cnt div[role="tabpanel"].active {
+    display: block; /*보임*/
+}
 .cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit.bg1 {
     background-image: url(../images/contents/history_tit_bg1.png);
 }
