@@ -325,7 +325,7 @@
     justify-content: space-between;
     margin-bottom: 150px;
 }
-.cts_map .loca .tit p {
+.cts_map .loca .tit h3 {
     font-size: 45px;
     font-weight: 700;
     color: #1d1d1d;
@@ -386,13 +386,13 @@
 .cts_map .public {
     margin-bottom: 300px;
 }
-.cts_map .public .list strong {
+.cts_map .public .list h4 {
     font-weight: 700;
 }
 .cts_map .public .list li {
     margin-bottom: 10px;
 }
-.cts_map .public .tit p {
+.cts_map .public .tit h3 {
     font-size: 45px;
     font-weight: 700;
     color: #1d1d1d;
@@ -406,7 +406,7 @@
 .cts_map .public .bus {
     display: flex;
     align-items: center;
-    width: 618px;
+    width: calc(50% - 12px);
     border: 1px solid #666;
     border-radius: 20px;
     padding: 30px;
@@ -415,13 +415,13 @@
     width: auto;
     text-align: center;
 }
-.cts_map .public .sub_tit p {
+.cts_map .public .sub_tit h4 {
     font-size: 20px;
     font-weight: 700;
     position: relative;
 }
 .cts_map .public .sub_list {
-    margin-left: 54px;
+    width: calc(100% - 300px)
 }
 
 @media screen and (max-width:768px) {
