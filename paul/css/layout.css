@@ -23,3 +23,109 @@
     top: 100px; /*a가 포커스 되면 올라간 만큼 다시 내려옴*/
 }
 
+header {
+    position: relative;
+    z-index: 100; /*z-index를 적용하려면 position이 있어야함*/
+}
+
+/*1024 이상 - pc버전*/
+@media screen and (min-width:1025px){
+    header .header_top {
+        height: 97px;
+        display: flex;
+        justify-content: space-between;
+    }
+    header .header_top .tnb ul {
+        display: flex;
+    }
+    header .header_top .tnb ul li a {
+        display: block;
+        padding: 1.500rem 1.250rem;
+        font-size: 0.938rem;
+        color: var(--txt-color-gray);
+        position: relative; /*before 정렬의 기준*/
+    }
+    header .header_top .tnb ul li a:hover {
+        color: var(--color-main1);
+    }
+    header .header_top .tnb ul li:first-child a {
+        padding-left: 0;
+    }
+    header .header_top .tnb ul li:last-child a {
+        padding-right: 0;
+    }
+    header .header_top .tnb ul li a::before {
+        position: absolute;
+        left: 0;
+        top: calc(50% - 2px);
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        background-color: #ccc;
+        content: "";
+    }
+    header .header_top .tnb ul li:first-child a::before {
+        display: none;
+    }
+    header .header_sub {
+        height: 53px;
+        position: relative; /*logo 정렬의 기준*/
+        font-family: 'pretendard';
+    }
+    header .header_sub .logo {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        /*좌우의 가운데*/
+        top: -73px;
+    }
+    header .header_sub .logo a {
+        display: block;
+        width: 82px;
+        height: 57px;
+        font-size: 0;
+        line-height: 0;
+        position: relative; /*before 정렬기준*/
+    }
+    header .header_sub .logo a::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../images/common/paul_logo.svg) no-repeat center center / contain;
+        content: "";
+    }
+    header .header_sub .gnb ul.depth1 {
+        display: flex;
+    }
+    header .header_sub .gnb ul.depth1 > li {
+        width: 16.66%;
+        text-align: center;
+        position: relative; /*depth 정렬의 기준*/
+    }
+    header .header_sub .gnb ul.depth1 > li > a {
+        font-size: 1.125rem;
+        color: var(--txt-color-tit);
+        line-height: 53px;
+        display: block;
+    }
+    header .header_sub .gnb ul.depth2 {
+        /*header 밖에 존재하는 요소 position:absolute*/
+        position: absolute;
+        left: 0;
+        top: 53px;
+        width: 100%;
+        display: none;
+    }
+}/*media*/
+
+/*1024 이하 - 모바일*/
+@media screen and (max-width:1025px){
+    header .header_top {
+        display: none;
+    }
+    header .header_top .gnb {
+        display: none;
+    }
+}/*media*/

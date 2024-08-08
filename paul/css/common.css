@@ -10,7 +10,7 @@ html, body {
     font-weight: 400;
     font-size: 16px;
     letter-spacing: -0.7px; /* 자간 */
-    line-height: 1.2; /* 배수 - 글자크기에 1.4배 */
+    line-height: 1.1; /* 배수 - 글자크기에 1.4배 */
     color: #3d3d3d; /* 글자 색상 */
     word-break: keep-all; /* 단어별로 줄바꿈 */
     word-wrap: break-word; /* 만약 단어가 엄청 길면 강제로 줄바꿈 실행 */
@@ -55,7 +55,6 @@ html, body {
     color: #fff;
 }
 
-
 /*
     기본이 16px일때
     100px - 6.250rem
@@ -66,6 +65,8 @@ html, body {
 */
 
 :root {
+    --color-main1 : #e80a4d;
+    --color-main2 : #333a19;
     --txt-color-tit : #1d1d1d;
     --txt-color-gray : #666;
     --txt-color-white : #fff;

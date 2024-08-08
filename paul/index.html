@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <!--slick을 돌아가게 하는 값-->
+    <script src="js/slick.min.js"></script>
+    <link rel="stylesheet" href="css/slick.css">
     <title>PaulBassett</title>
 </head>
 <body>
@@ -13,12 +18,101 @@
         <a href="#skip_menu">대메뉴 바로가기</a>
     </div>
     <div id="wrap">
+        <!--
+            pc버전에서 메뉴에 마우스를 오버했을 때 menu_over
+            모바일버전에서 메뉴를 클릭해서 열었을 때 menu_open
+            상단에 메뉴가 고정될 때 fixed
+        -->
         <header>
-            <div class="wrapper"></div>
+            <div class="wrapper">
+                <div class="header_top">
+                    <div class="tnb">
+                        <ul>
+                            <li><a href="#n">신규입점제의</a></li>
+                            <li><a href="#n">납품문의</a></li>
+                        </ul>
+                    </div><!--tnb1-->
+                    <div class="tnb">
+                        <ul>
+                            <li><a href="#n">로그인</a></li>
+                            <li><a href="#n">문의하기</a></li>
+                            <li><a href="#n">고객센터</a></li>
+                        </ul>
+                    </div><!--tnb2-->
+                </div>
+                <div class="header_sub">
+                    <h1 class="logo"><a href="index.html">폴바셋</a></h1>
+                    <nav class="gnb">
+                        <ul class="depth1">
+                            <li>
+                                <a href="#n"><span>ABOUT US</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#n"><span>Brand</span></a></li>
+                                    <li><a href="#n"><span>회사소개</span></a></li>
+                                    <li><a href="#n"><span>CSR</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#n"><span>MENU</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#n"><span>NEW</span></a></li>
+                                    <li><a href="#n"><span>COFFEE</span></a></li>
+                                    <li><a href="#n"><span>BEVERAGE</span></a></li>
+                                    <li><a href="#n"><span>ICE-CREAM</span></a></li>
+                                    <li><a href="#n"><span>FOOD</span></a></li>
+                                    <li><a href="#n"><span>PRODUCT</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#n"><span>STORE</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#n"><span>매장찾기</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#n"><span>SOCIETY</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#n"><span>Paul Bassett Society</span></a></li>
+                                    <li><a href="#n"><span>회원 등급 혜택</span></a></li>
+                                    <li><a href="#n"><span>e-Card 선물</span></a></li>
+                                    <li><a href="#n"><span>모바일 App 안내</span></a></li>
+                                    <li><a href="#n"><span>제휴혜택 안내</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#n"><span>WHAT'S NEW</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#n"><span>Event / News</span></a></li>
+                                    <li><a href="#n"><span>Notice</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#n"><span>E-SHOP</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#n"><span>E-SHOP 소개</span></a></li>
+                                </ul>
+                            </li>
+                        </ul><!--depth1-->
+                    </nav>
+                </div>
+            </div>
         </header>
         <main class="container" id="skip_contents">
             <section class="visual_popup">
-                <div class="wrapper"></div>
+                <div class="popup">
+                    <div class="popup_item">
+                        <img src="images/main/popup01.png" class="pc" alt="지구인들아 힘내">
+                        <img src="images/main/popup_m_01.png" class="mo" alt="지구인들아 힘내">
+                    </div>
+                    <div class="popup_item">
+                        <img src="images/main/popup02.png" class="pc" alt="지금 내 정보 푸시 & 수신동의 하면 혜택이 팡팡">
+                        <img src="images/main/popup_m_02.png" class="mo" alt="지금 내 정보 푸시 & 수신동의 하면 혜택이 팡팡">
+                    </div>
+                    <div class="popup_item">
+                        <img src="images/main/popup03.png" class="pc" alt="모든 혜택 배달데이">
+                        <img src="images/main/popup_m_03.png" class="mo" alt="모든 혜택 배달데이">
+                    </div>
+                </div>
             </section>
             <section class="menu">
                 <div class="wrapper"></div>
