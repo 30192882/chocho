@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+html, body {
+    font-family: '맑은고딕', 'Malgun Gothic', '돋움', 'Dotum';
+    font-size: 15px;
+    color: #333333;
+    background-color: #ffffff;
+}
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+header {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 100;
+}
+header h1 {
+    padding-top: 20px;
+}
+header .gnb .depth1 {
+    display: flex;
+}
+header .gnb .depth1 > li {
+    width: 165px;
+    text-align: center;
+    position: relative;
+}
+header .gnb .depth1 > li > a {
+    font-size: 20px;
+    display: block;
+    line-height: 100px;
+    font-weight: 700;
+}
+header .gnb .depth1 > li:hover > a {
+    color: #0066ad;
+}
+header .gnb .depth1 > li.over .depth2 {
+    display: block;
+}
+header .gnb .depth2 {
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    display: none;
+}
+header .gnb .depth2 > li > a {
+    display: block;
+    background-color: #0066ad;
+    color: #ffffff;
+    line-height: 50px;
+}
+header .gnb .depth2 > li > a:hover {
+    background-color: #30a3f3;
+}
+.popup {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+.popup ul {
+    width: 3600px;
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    padding-top: 20px;
+}
+.news {
+    width: 400px;
+    position: relative;
+}
+.news .tab {
+    display: flex;
+}
+.news .tab > li > button {
+    background-color: #ededed;
+    font-size: 18px;
+    border: 0;
+    padding: 5px 10px;
+}
+.news .tab > li.active > button {
+    /*border : 1px solid #0066ad;
+    border-bottom : 0;
+    background-color: #ffffff;
+    선으로 줄때*/
+    background-color: #0066ad;
+    color: #ffffff;
+}
+.news .tab > li.active .detail {
+    display: block;
+}
+.news .detail {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+}
+.news .notice ul li a {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+.news .notice ul li a:hover {
+    color: #0066ad;
+    text-decoration: underline;
+}
+.news .gallery ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+.news .gallery ul li a:hover img {
+    opacity: 0.5;
+}
+.banner {
+    width: 380px;
+    background-color: #ededed;
+}
+.link {
+    width: 380px;
+}
+.layer_popup {
+    display: none;
+    position: absolute;
+    left: calc(50% - 250px);
+    top: 200px;
+    z-index: 200;
+    width: 500px;
+    background-color: #0066ad;
+    color: #ffffff;
+    padding: 30px 40px;
+}
+.layer_popup h2 {
+    font-size: 25px;
+}
+.layer_popup p {
+    font-size: 16px;
+    margin: 30px 0;
+}
+.layer_popup button {
+    background-color: #ffffff;
+    font-size: 20px;
+    padding: 5px 10px;
+    border: 0;
+}
+footer {
+    height: 100px;
+    padding-top: 20px;
+    background-color: #ededed;
+    display: flex;
+}
+footer .f_logo {
+    margin: 0 20px;
+}
+footer .f_logo img {
+    width: 150px;
+}
+footer .f_nav {
+    display: flex;
+
+}
+footer .f_nav li {
+    margin-right: 20px;
+}
+footer .copy {
+    margin: 10px 0 0 0;
+    color: #666666;
+}

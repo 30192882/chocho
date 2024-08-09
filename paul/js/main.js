@@ -80,4 +80,8 @@ $(document).ready(function(){
         $('header').removeClass('menu_over')
         $('header .header_sub .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
     })
+    $('header .header_sub .gnb .gnb_wrap ul.depth1 > li:last-child ul.depth2 > li:last-child').on('focusout', function(){
+        $('header').removeClass('menu_over')
+        $('header .header_sub .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
+    })
 })//$(document).ready
