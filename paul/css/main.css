@@ -39,3 +39,69 @@
         display: block;
     }
 }
+
+.menu .tit {
+    text-align: center;
+    margin: 140px 0 100px 0;
+}
+.menu .tit h2 {
+    font-family: 'Marcellus';
+    font-size: var(--txt-size-tit);
+    color: var(--txt-color-tit);
+}
+.menu .tit p {
+    font-family: 'Jeju Myeongjo';
+    font-size: 1.250rem;
+    padding: 15px 0 0 0;
+}
+.menu .list .popup .popup_item {
+    font-family: 'Jeju Myeongjo';
+    margin: 0 12px;
+    position: relative; /*before 정렬의 기준*/
+    text-align: center;
+    padding-bottom: 20px;
+    width: 297px;
+}
+.menu .list .popup .popup_item::before {
+    position: absolute;
+    left: 0;
+    top: 94px;
+    z-index: -1;
+    width: 100%;
+    height: calc(100% - 100px); /*top값 + border 두배*/
+    border: 3px solid #1d1d1d;
+    content: "";
+}
+.menu .list .popup .popup_item .photo {
+    overflow: hidden;
+    margin: 0 5%;
+}
+.menu .list .popup .popup_item .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /*이미지를 자르지 않고 모두 보이도록*/
+}
+.menu .list .popup .popup_item h3 {
+    font-size: 1.375rem;
+    line-height: 1.375rem;
+    padding: 0 10px;
+    color: var(--txt-color-tit);
+    /*제목 무조건 사용*/
+    height: 2.750rem;
+    overflow: hidden;
+    margin: 24px 0 12px 0;
+}
+.menu .list .popup .popup_item strong {
+    display: block;
+    padding: 0 10px;
+    overflow : hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@media screen and (max-width:1024px){
+    .menu .list .popup .popup_item {
+        width: 200px;
+        margin: 0 8px;
+    }
+}
