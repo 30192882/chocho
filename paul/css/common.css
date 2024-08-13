@@ -73,20 +73,24 @@ html, body {
     --txt-color-w80 : rgba(255,255,255,0.8);
     --txt-color-w60 : rgba(255,255,255,0.6);
     --txt-size-tit : 6.250rem;
+    --margin-tit : 144px 0 100px 0;
 }
 
 @media screen and (max-width:1300px) {
     :root {
-        --txt-size-tit :6.250rem
+        --txt-size-tit :6.250rem;
+        --margin-tit :130px 0 90px 0;
     }
 }
 @media screen and (max-width:1000px) {
     :root {
-        --txt-size-tit :5rem
+        --txt-size-tit :5rem;
+        --margin-tit :110px 0 75px 0;
     }
 }
-@media screen and (max-width:1000px) {
+@media screen and (max-width:768px) {
     :root {
-        --txt-size-tit :3.5rem
+        --txt-size-tit :3.5rem;
+        --margin-tit :103px 0 45px 0;
     }
 }

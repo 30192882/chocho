@@ -100,8 +100,209 @@
 }
 
 @media screen and (max-width:1024px){
+    .menu .tit {
+        margin: 103px 0 28px 0;
+    }
+    .menu .tit p {
+        padding: 5px 0 0 0;
+    }
     .menu .list .popup .popup_item {
         width: 200px;
         margin: 0 8px;
     }
+}
+
+.brand {
+    margin: 170px 0 0 0;
+} 
+.brand .inner {
+    padding: 410px 0 0 329px;
+    height: 690px;
+    background: url(../images/main/brand_bg.png) no-repeat center center / cover ;
+    color: #fff;
+    font-family: 'Jeju Myeongjo'; 
+}
+.brand .inner h2 {
+    font-family: 'Marcellus';
+    font-size: 3.438rem;
+    padding-bottom: 20px;
+}
+.brand .inner span {
+    font-size: 1.250rem;
+}
+.brand .inner p {
+    padding: 40px 0 30px 0;
+}
+/*
+loop 애니메이션을 줄때
+
+    <div>  -- 감싸는 요소
+        <span></span>
+    </div>
+
+움직일 요소는 white-space nowrap;으로 만듦
+넓이가 온전하게 인식되어야함
+브라우저 크기를 초과하는 넓이가 완전히 인식되어야 함
+    --- 넓이가 완전히 인식되지 않는 경우 position:absolute;를 줘야함
+*/
+
+.brand .loop {
+    height: 6.250rem;
+    background-color: var(--txt-color-tit);
+    color: #fff;
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-size: 3.750rem;
+    position: relative; /*span 정렬의 기준*/
+}
+.brand .loop span {
+    white-space: nowrap; /*줄바꿈금지*/
+    position: absolute;
+    left: 0;
+    top: 1.250rem;
+    animation-name: brand_loop;
+    animation-duration: 8s;
+    animation-iteration-count: infinite; /*무한반복*/
+    animation-timing-function: linear; /*가속도 삭제*/
+}
+@keyframes brand_loop {
+    0% {
+        transform: translate(0, 0)
+    }
+    100% {
+        transform: translate(-50.2%, 0);
+    } /*첫글자가 다시 맨 앞으로 도달한 값*/
+}
+
+@media screen and (max-width:1300px){
+    .brand .inner {
+        padding: 410px 5% 0 5%;
+    }
+}
+@media screen and (max-width:1024px){
+    .brand {
+        margin-top: 70px;
+    } 
+    .brand .inner {
+        padding: 282px 0 0 4%;
+        height: 432px;
+    }
+    .brand .inner p {
+        display: none;
+    }
+    .brand .inner h2 {
+        padding-bottom: 10px;
+        font-size: 2.188rem;
+    }
+    .brand .loop {
+        height: 2.875rem;
+        font-size: 1.563rem;
+    }
+    .brand .loop span {
+        top: 0.563rem;
+    }
+}
+
+.product {
+    font-family: 'Jeju Myeongjo';
+}
+.product .tit {
+    text-align: center;
+    margin: var(--margin-tit);
+}
+.product .tit h2 {
+    font-family: 'Marcellus';
+    line-height: 1;
+    font-size: var(--txt-size-tit);
+    color: var(--txt-color-tit);
+}
+.product .tit p {
+    padding-top: 1rem;
+    font-size: 1.250rem;
+}
+.product .list .popup .popup_item {
+    margin: 0 12px;
+    width: 297px;
+    text-align: center;
+}
+.product .list .popup .popup_item .photo {
+    overflow: hidden;
+    margin: 0 2%;
+}
+.product .list .popup .popup_item .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /*이미지가 하나도 안 잘리고 모두 나오게*/
+    margin-bottom: 1.250rem;
+}
+.product .list .popup .popup_item h3 {
+    color: var(--txt-color-tit);
+}
+
+.event .tit {
+    margin: 200px 0 80px 0;
+}
+.event .tit h2 {
+    display: none;
+}
+.event .tit ul {
+    display: flex;
+    justify-content: flex-end;
+}
+.event .tit ul li a {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    margin-left: 10px;
+    width: 36px;
+    height: 36px;
+    border: 3px solid #666;
+    border-radius: 50%;
+    position: relative; /*before 정렬의 기준*/
+}
+.event .tit ul li a:before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+.event .tit ul li.facebook a:before {
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='19px' height='34px'%3E%3Cimage x='0px' y='0px' width='19px' height='34px' xlink:href='data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAiCAQAAAAXfypPAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoCA0MMDAEXF9oAAABJklEQVQ4y42TPUpEMRSFvxseDkwzg6Wr8G8RVu5hQIzY2g+4AltfY+MOdAd2FoKVWtqojQwiA6KI12J8k/8XX5XcfOfk5CZPlPizIybssMUqhh9eeeFRYsxOOGEUS004PTjiLIYEIXCz21xjQNBet6mbS+jodHbIjEHgNedG3hRoPMWmDgR10DmH7Xwx9DBdw8/0LHunX7lswyDOlYOShnjxP3v6lj9nkM1LmVQaOy5kW7Fj6UTfsp9IBY3v4cJ0OVwaTbe9N10pzeNJHwonjY5yZ6QH89w0LcZuT+17w8ayuMuxJ7lk+od9QNPedkt2PXCauZXosso5A0wzowxW9oswLYBJe7WOSWZUcPvHpu5taN1Nam6LJ6n1bLqEK5vmm1L+T4PvF5cETsa3clNHAAAAAElFTkSuQmCC' /%3E%3C/svg%3E");
+}
+.event .tit ul li.insta a:before {
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='34px' height='34px'%3E%3Cimage x='0px' y='0px' width='34px' height='34px' xlink:href='data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAQAAACQTsNJAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoCA0MMRVWQ7puAAADKElEQVRIx63WTYiVVRjA8d+5XBMjL33tLE3GSATHIqyMXJQSjKuGgZpVtfKdipIgSGicKGdhixYRladVFsQ0MBhBClG2MDKUyGYgDBFhSqiFfWgUaPi0eN873vveGT+gZ/FyeM57/uf54jxPCm0pmmnQUGyw3KVl1iFT9uZ/24rUhhQD3tRHEtrfhSWJE57N+zsgRfKq0a5feladu4QkpPEYy0ETOhDTJs3EmfaB6EW1Yq1H9UOMYgcpFANpX0jirMJEvrQfpevJsGwp2JL3p61Nx/ThrI35+8sD5kDrHLQUJ6xuGtRXaq8MMfJwvEV6Jn82UsSH6DPYMFTFYuLKLIj3rLIq9hATpiENNW0Ak/PFomhab4WmXx3Of1bKJe1vjmIy9QcbmlVpzfQAbvKSJ91QZed88amxPIPnvIttkGZIYnmjOnOmhnjQj54vEZAWecTR4kXyB1paeQ/EmRCqOqmXVPGA/RZX8CPOxRor0LCruCbvzOfrVjdSeVMn4joTFuNvT7s5b85b8m02O06SXhm5vxuQ0AhEtyXbLMM/NuV32rfmL9zjhxApdnUjAo26HaQnII3nbzq1+Q+Pg43Fyo6EI5WQTjuKW+N2XIjddc/zt6nEPlSrHI2LnlWyDJzMv/XWTXwHbukJLKkrO8nCstBejztxCqwsbpzHkrvAz3V0Q61G8k+Oo2Gkjhi5233gwAIx6SLvAaPFvZ3a4vp4H9LBfLLbvVTGpNvbeMMpLHFg5KliUWXFJoetIUVs77ShrJRmuex0Kf9VDPs8LY5r4227iiPOKcse8XL+uu6MeVKM/JWBOA2pZZOBCnHB9rxzvnxV7kSrezN/6Q6v+z3a+PM+Tuvya7Xwtcr9ptlYjrU+qWFOe6HYbn2s0PSLI3OPUqesJZhNWyc8hul05+4reOe78pUc1Y+PGqZI9Mfw1SEwrD/B1P/QMtLqFIoB+8DZVMRVNK+0lCibV6DYaTSV/XXapJmLL26qNdIkWqo2mgTjeUe7F48lMUrQX3bZ9rF5evGcJhg3Rs9okdr9nssMF+qjRYVpGjSkGnK635iu9axDacre3XNDzn9qtyg45QQyOgAAAABJRU5ErkJggg==' /%3E%3C/svg%3E");
+}
+.event .tit ul li.youtube a:before {
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='36px' height='24px'%3E%3Cimage x='0px' y='0px' width='36px' height='24px' xlink:href='data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAYCAQAAAA4sZfFAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoCA0MMSeelOvuAAABvklEQVQ4y42VPUskQRCGn2r0DywYiCCYGIiRMiqI4gWC0SUitxgsJjqGRqI/w8wO3UAMzC4xXDTwdAOziw42OJYFQWNB2DKYnenpnp7FGpjpqa5667tblIzSHVpsMo0BEHJ+7d+QAfe07d2Iq0A6zTVbVEjQAMQBFXsd9u0AREnneGCGb1AcmL5sXPbkyPDISlzp2+BdXTM0YzAEMFIDIhlUQtPQiilIRClmLHuAliEpi2nwLauMhU4MDamz+MRPLvgIg5EYYMNk1hWtivyxv+0J81j5zA1pyTf1imIcqo76I1fK3va/PdYFrrSmiLmOCXOixZ/j2X/2gEVu/QSIl1lTZcfJ/rV7LOldvACST5aU2PWA9kUOeY0HOOGHJtFCZ5TOc0qLSZdTSloT1QxFQZblTHazEa/KKeQe+eTPWfqDc7Z9r33JwqNsqilmeyQ4m07Jup6xWjWSh6aOc/RGIx7O+PkPjpR3QzdWK5fMcU2hbr9raPs1kFEzOGHx4N2wePttww3PfvI08EUDDzQAVuhyY+yQJn0/nIrjUdhi3eeXHRqwPRLpUNvZEqz9w086JLaHazH/OhpfLaByHX0BVtepRvxfCFwAAAAASUVORK5CYII=' /%3E%3C/svg%3E");
+}
+
+.event .list .popup .popup_item {
+    margin: 0 2px;
+    width: 297px;
+}
+.event .list .popup .popup_item .photo {
+    overflow: hidden;
+    margin: 0 2%;
+}
+.event .list .popup .popup_item .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /*이미지가 하나도 안 잘리고 모두 나오게*/
+    margin-bottom: 1rem;
+}
+.event .list .popup .popup_item h3 {
+    color: var(--txt-color-tit);
+}
+.event .list .popup .popup_item strong {
+    font-family: 'Jeju Myeongjo';
 }
