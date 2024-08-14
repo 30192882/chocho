@@ -10,6 +10,8 @@
     <!--slick을 돌아가게 하는 값-->
     <script src="js/slick.min.js"></script>
     <link rel="stylesheet" href="css/slick.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
     <title>PaulBassett</title>
 </head>
 <body>
@@ -368,7 +370,7 @@
                 </div>
                 <div class="f_info">
                     <span>엠즈씨드(주) 대표이사 : 권익범</span>
-                    <address>주소 : 서울특별시 강남구 도산대로 75길 22 (청담동)</address>
+                    <address>주소 : 서울특별시 강남구 도산대로 75길 22 (청담동)</address><br>
                     <span>사업자등록번호 211-88-95935</span>
                     <span>대표번호 1899-8829</span>
                     <span>개인정보관리책임자 : 정보문</span>
@@ -377,5 +379,12 @@
             </div>
         </footer>
     </div>
+    <script>
+        AOS.init({
+        offset: 0, // 해당 콘텐츠가 하단에서 몇 px 위로 올라와에 나타나는 효과가 나타날지 셋팅하는 값
+        duration: 500, // 애니메이션 효과가 작동되는 시간
+        easing: 'ease', // 가속도
+        });
+    </script>
 </body>
 </html>
