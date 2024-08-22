@@ -21,7 +21,7 @@ $(document).ready(function(){
 
     let idx = 1
     let obj_left = 0
-
+    
     setInterval(function(){
         if(idx < 3){
             idx++
