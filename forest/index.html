@@ -6,6 +6,8 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/fullpage.min.js"></script><!--fullpage-->
     <script src="js/main.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/fullpage.css"><!--fullpage-->
     <link rel="stylesheet" href="css/main.css">
     <title>생명의숲</title>
@@ -36,9 +38,57 @@
             <a href="#n" class="search">검색페이지 이동</a>
         </div>
     </header>
+    <aside class="fp_nav">
+        <ul>
+            <!--현재 선택된 section은 li에 active 클래스-->
+            <li class="active"><a href="#visual"><span>Main</span></a></li>
+            <li><a href="#tree"><span>나무심기</span></a></li>
+            <li><a href="#forest"><span>숲 활동</span></a></li>
+            <li><a href="#story"><span>활동이야기</span></a></li>
+        </ul>
+    </aside>
+    <aside class="quick_menu">
+        <ul>
+            <li class="quick1"><a href="#n"><span>마이트리</span></a></li>
+            <li class="quick2"><a href="#n"><span>해피빈</span></a></li>
+            <li class="quick3"><a href="#n"><span>같이가치</span></a></li>
+            <li class="quick4"><a href="#n"><span>나무세상</span></a></li>
+            <li class="top"><button><span>top</span></button></li>
+        </ul>
+    </aside>
     <div id="fullpage">
         <section class="section fp-auto-height-responsive visual">
-            visual<br>
+            <h2>팝업</h2>
+            <div class="swiper">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide popup1">
+                        <div class="inner">
+                            <h3>특별한 날을 기념하는<br>새로운 방법</h3>
+                            <p>기념하고 싶은 날! 서울 곳곳에<br>나무 한 그루 심어보는 건 어떠세요?</p>
+                        </div>
+                    </li>
+                    <li class="swiper-slide popup2">
+                        <div class="inner"></div>
+                            <h3>누구나 일상에서<br>건강한 숲을 누리도록</h3>
+                            <p>도시 속 나무심기를 위한<br>#같이가치 #매달기부</p>
+                        </div>
+                    </li>
+                    <li class="swiper-slide popup3">
+                        <div class="inner"></div>
+                            <h3>우리가 지켜야 할<br>고목나무 이야기</h3>
+                            <p>생명의숲과<br>나무 할아버지 박상진교수</p>
+                        </div>
+                    </li>
+                    <li class="swiper-slide popup4">
+                        <div class="inner">
+                            <h3>숲을 움직이는 시민의 힘<br>자원활동으로 실현됩니다</h3>
+                            <p>생명의숲 시민 활동 플랫폼 '숲친'<br>지금 함께해요!</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="paging"></div>
+            </div>
+            visual
         </section><!--visual-->
         <section class="section fp-auto-height-responsive tree">
             tree
