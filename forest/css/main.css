@@ -68,16 +68,16 @@ body #fp-nav .fp-sr-only {
     text-align: center;
     color: #fff;
 }
-.visual .swiper .swiper-slide .popup1 {
+.visual .swiper .swiper-slide.popup1 {
     background-image: url(../images/popup_bg01.png);
 }
-.visual .swiper .swiper-slide .popup2 {
+.visual .swiper .swiper-slide.popup2 {
     background-image: url(../images/popup_bg02.png);
 }
-.visual .swiper .swiper-slide .popup3 {
+.visual .swiper .swiper-slide.popup3 {
     background-image: url(../images/popup_bg03.png);
 }
-.visual .swiper .swiper-slide .popup4 {
+.visual .swiper .swiper-slide.popup4 {
     background-image: url(../images/popup_bg04.png);
 }
 .visual .swiper .swiper-slide .inner {
@@ -88,49 +88,52 @@ body #fp-nav .fp-sr-only {
 .visual .swiper .swiper-slide .inner h3 {
     font-size: 70px;
     font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 20px;
+    line-height: 1.2;
+    margin-bottom: 27px;
 }
 .visual .swiper .swiper-slide .inner p {
     font-size: 20px;
 }
-.visual .swiper .paging {
+.visual .swiper .paing {
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
     z-index: 10;
     display: flex;
+}
+.visual .swiper .paing .item {
+    width: 25%;
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+    font-size: 20px;
+    margin: 0;
+    display: block;
     border-radius: 0;
     background-color: transparent;
     opacity: 1;
     text-align: center;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     border-width: 1px 1px 0 0;
     border-style: solid;
-    border-color: rgba(255,255,255,0.2);
+    border-color: rgba(255,255,255,0.5);
 }
-.visual .swiper .paging .item.swiper-pagination-bullet-active,
-.visual .swiper .paging .item:hover {
+.visual .swiper .paing .item.swiper-pagination-bullet-active,
+.visual .swiper .paing .item:hover {
     background-color: var(--color-main2);
     border-color: var(--color-main2);
 }
-.visual .swiper .paging .item {
-    width: 25%;
-    height: 61px;
-    color: #fff;
-    font-size: 20px;
-}
-.visual .swiper .paging .item .txt1::before {
+.visual .swiper .paing .item .txt1::before {
     content: "마이트리 내 나무 갖기";
 }
-.visual .swiper .paging .item .txt2::before {
+.visual .swiper .paing .item .txt2::before {
     content: "#같이가치 #매달기부";
 }
-.visual .swiper .paging .item .txt3::before {
+.visual .swiper .paing .item .txt3::before {
     content: "고목나무 이야기";
 }
-.visual .swiper .paging .item .txt4::before {
+.visual .swiper .paing .item .txt4::before {
     content: "자원봉사 활동";
 }
 
@@ -156,25 +159,24 @@ body #fp-nav .fp-sr-only {
     .visual .swiper .swiper-slide .inner p {
         font-size: 13px;
     }
-    .visual .swiper .paging {
+    .visual .swiper .paing {
         bottom: 24px;
         left: 50%;
         width: auto;
         transform: translateX(-50%);
     }
-    .visual .swiper .paging .item {
+    .visual .swiper .paing .item {
         width: 20px;
-        z-index: 8px;
+        height: 8px;
         line-height: 0;
-        border-radius: 0;
         font-size: 0;
-        background-color: rgba(255,255,255,0.5);
+        background-color: rgba(255, 255, 255, 0.5);
         backdrop-filter: blur(5px);
         border-width: 0;
-        border-radius: 5px;
+        border-radius: 4px;
         margin: 0 2px;
     }
-    .visual .swiper .paging .item.swiper-pagination-bullet-active {
+    .visual .swiper .paing .item.swiper-pagination-bullet-active {
         width: 50px;
     }
 }
