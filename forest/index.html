@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/fullpage.min.js"></script><!--fullpage-->
+    <script src="js/counter.js"></script><!--숫자를 증가시킴-->
     <script src="js/main.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
@@ -88,16 +90,97 @@
                 </ul>
                 <div class="paing"></div>
             </div>
-            visual
         </section><!--visual-->
         <section class="section fp-auto-height-responsive tree">
-            tree
+            <div class="wrapper">
+                <div class="count"><span data-start="0" data-end="89272">89,272</span></div>
+                <h2>2023년 심은 나무</h2>
+                <p>생명의 숲은 기후위기시대 나무를 잘 심고, 잘 가꾸며<br>
+                    건강한 숲, 지속가능한 사회를 만들어 갑니다.</p>
+            </div>
         </section><!--tree-->
         <section class="section fp-auto-height-responsive forest">
-            forest
+            <div class="wrapper">
+                <div class="tit">
+                    <h2>Forest for Life<br>
+                        생명의숲</h2>
+                    <p>생명의숲은 시민의 힘으로 나무를 심고 숲을 가꾸고 보전하며,<br>
+                        숲의 공공성을 높여 누구나 숲의 가치를 누리는<br>
+                        건강한 사회를 만들어가는 시민단체입니다.</p>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li class="forest01"><a href="#n"><span>도시숲</span></a></li>
+                        <li class="forest02"><a href="#n"><span>학교숲</span></a></li>
+                        <li class="forest03"><a href="#n"><span>사회복지숲</span></a></li>
+                        <li class="forest04"><a href="#n"><span>숲환경교육</span></a></li>
+                        <li class="forest05"><a href="#n"><span>숲길</span></a></li>
+                        <li class="forest06"><a href="#n"><span>공존숲</span></a></li>
+                    </ul>
+                </div>
+            </div>
         </section><!--forest-->
         <section class="section fp-auto-height-responsive story">
-            story
+            <div class="wrapper">
+                <div class="tit">
+                    <h2>생명의숲 활동이야기</h2>
+                    <p>숲 가꾸기 운동을 시작으로 현재는 숲문화운동, 도시 숲 운동,<br>
+                        학교 숲 운동, 정책운동 등 다양한 영역에서 숲 운동을 펼치고 있습니다.</p>
+                </div>
+                <div class="list">
+                    <div class="swiper">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <h3>우리의 숲, 함께 가꾸는 이야기 - Chapter1. FOREST CREW 캠페인의 시작</h3>
+                                    <p>생명의숲은 지난 봄부터 "Make Us Green in Forest - FOREST CREW" 캠페인을 전국에서 실행하고 있습니다.</p>
+                                    <span class="date">2024.07.30</span>
+                                    <div class="photo">
+                                        <span class="cate">캠페인 이야기</span>
+                                        <img src="images/story01.png" alt="기사사진">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <h3>서로배움학교 숲문화쌀롱 1회차 - 숲과 나무의 이야기를 담은 영화 로렉스를 중심으로 -</h3>
+                                    <p>서로배움학교는 생명의숲 활동가 역량강화의 일환으로 진행되는 스터디 그룹 프로그램입니다. ‘일 기반 학습, 일을 통한 성장' 범위 내에서 주최자가 주제를 선정하고,</p>
+                                    <span class="date">2024.07.19</span>
+                                    <div class="photo">
+                                        <span class="cate">사무처 이야기</span>
+                                        <img src="images/story02.png" alt="기사사진">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <h3>[산불대응] 다시 숲에 싹을 틔운 2년의 시간, 함께 만나보세요!</h3>
+                                    <p>2022년부터 2024년까지 2년간, 다시 숲에 싹을 틔운 이야기 # 2022년 3월 13일, 213시간만에 꺼진 산불</p>
+                                    <span class="date">2024.04.18</span>
+                                    <div class="photo">
+                                        <span class="cate">캠페인 이야기</span>
+                                        <img src="images/story03.png" alt="기사사진">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <h3>서울마이트리, 시민과 함께 만드는 도시정원</h3>
+                                    <p>메마른 겨울이 지나고 초록 싹이 슬슬 보이는 4월. 흩날리는 벚꽃잎 속에서 어김없이 올해 식목일에도 생명의 숲은 시민분들과 함께 나무를 심었습니다.</p>
+                                    <span class="date">2024.04.11</span>
+                                    <div class="photo">
+                                        <span class="cate">도시숲</span>
+                                        <img src="images/story04.png" alt="기사사진">
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="more">
+                    <a href="#n">전체보기</a>
+                </div>
+            </div>
         </section><!--story-->
         <footer class="section fp-auto-height-responsive fp-auto-height">footer</footer>
     </div>

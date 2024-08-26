@@ -176,6 +176,10 @@
     color: var(--color-main2);
     font-weight: 800;
 }
+.fp_nav ul li.active a span,
+.fp_nav ul li a:hover span {
+    position: relative;
+}
 .fp_nav ul li.active a::before,
 .fp_nav ul li a:hover::before {
     background-color: var(--color-main2);
@@ -184,7 +188,7 @@
 .fp_nav ul li a:hover span::after {
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -1px;
     width: 100%;
     height: 1px;
     background-color: var(--color-main2);

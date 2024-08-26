@@ -26,20 +26,25 @@ html, body {
     width: 1260px; 
     margin: 0 auto; /* 가운데정렬 */
 }
+@media screen and (max-width:1600px){
+    .wrapper {
+        width: auto;
+        margin: 0 136px; /* 좌우에 20px */
+    }
+}
 /* 1260px 나의 wrapper의 넓이에 좌우 여백 20px씩 추가한 사이즈부터
    반응형 */
 @media screen and (max-width:1300px){
     #wrap {
         min-width: 100%;
     }
-    .wrapper {
-        width: auto;
-        margin: 0 10px; /* 좌우에 20px */
-    }
 }/* media */
-@media screen and (max-width:1024px){
+@media screen and (max-width:1024px){ /* 모바일 */
     html, body {
         font-size: 14px;
+    }
+    .wrapper {
+        margin: 0 20px;
     }
 }
 @media screen and (max-width:640px){ /* 모바일 반응형 */
@@ -77,11 +82,11 @@ html, body {
 }
 
 @media screen and (max-width:1300px) {
-
+    :root {--tit-txt-size : 45px;}
 }
 @media screen and (max-width:1024px) {
-
+    :root {--tit-txt-size : 25px;}
 }
 @media screen and (max-width:768px) {
-
+    
 }
