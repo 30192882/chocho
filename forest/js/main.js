@@ -61,15 +61,15 @@ $(document).ready(function(){
 		spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
 		breakpoints: {
 			640: {    /* 640px 이상일때 적용 */
-				slidesPerView: 1,
+				slidesPerView: 2,
 				spaceBetween: 20,
 			},
 			768: {    /* 768px 이상일때 적용 */
-				slidesPerView: 2,
+				slidesPerView: 3,
 				spaceBetween: 30,
 			},
 			1024: {   /* 1024px 이상일때 적용 */
-				slidesPerView: 3,
+				slidesPerView: 4,
 				spaceBetween: 40,
 			},
 			1280: {    /* 1280px 이상일때 적용 */

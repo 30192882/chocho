@@ -341,7 +341,7 @@ body #fp-nav .fp-sr-only {
 }
 .forest .list ul li a::after {
     position: absolute;
-    right: 10%;
+    right: 8%;
     bottom: 32px;
     width: 28px;
     height: 28px;
@@ -421,7 +421,7 @@ body #fp-nav .fp-sr-only {
     .forest .list ul li a {
         height: 63px;
         font-size: 15px;
-        padding: 17px 0 0 70px;
+        padding: 21px 0 0 70px;
         margin-top: 15px;
         font-size: 18px;
         font-weight: 400;
@@ -431,7 +431,7 @@ body #fp-nav .fp-sr-only {
     }
     .forest .list ul li a span::before {
         left: -46px;
-        top: 0;
+        top: -3px;
         width: 30px;
         height: 30px;
     }
@@ -443,6 +443,7 @@ body #fp-nav .fp-sr-only {
 .story {
     font-size: 17px;
     text-align: left;
+    padding: 200px 0;
 }
 .story .tit h2 {
     font-size: var(--tit-txt-size);
@@ -452,6 +453,9 @@ body #fp-nav .fp-sr-only {
 .story .tit p {
     margin: 7px 0 64px 0;
     font-size: 17px;
+}
+.story .list ul {
+    margin-top: 19px;
 }
 .story .list ul li a {
     display: block;
@@ -491,6 +495,8 @@ body #fp-nav .fp-sr-only {
 .story .list ul li a .photo {
     overflow: hidden;
     position: relative;
+    font-size: 0;
+    line-height: 0;
 }
 .story .list ul li a .photo .img {
     width: 100%;
@@ -503,13 +509,109 @@ body #fp-nav .fp-sr-only {
     top: 0;
     background-color: var(--color-main2);
     color: #fff;
+    font-size: 17px;
+    line-height: 1.2;
     font-weight: 800;
     padding: 5px 11px;
     content: "";
 }
-
-footer {
-    background-color: #1d1d1d;
+/*마우스 오버의 경우*/
+.story .list ul li:hover::after {
+    position: absolute;
+    right: 7%;
+    bottom: 32px;
+    width: 54px;
+    height: 54px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='54' height='54' viewBox='0 0 54 54' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_5_370' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='54' height='54'%3E%3Crect width='54' height='54' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_5_370)'%3E%3Cpath d='M17.6758 17.5584V36C17.6758 36.4781 17.514 36.8788 17.1903 37.2021C16.8667 37.5257 16.4658 37.6875 15.9877 37.6875C15.5092 37.6875 15.1085 37.5257 14.7857 37.2021C14.4624 36.8788 14.3008 36.4781 14.3008 36V13.8459C14.3008 13.2699 14.4958 12.7869 14.8858 12.3969C15.2754 12.0073 15.7584 11.8125 16.3348 11.8125H38.4883C38.9664 11.8125 39.3673 11.9743 39.6909 12.2979C40.0142 12.6216 40.1758 13.0224 40.1758 13.5006C40.1758 13.9791 40.0142 14.3798 39.6909 14.7026C39.3673 15.0259 38.9664 15.1875 38.4883 15.1875H20.0467L41.024 36.1862C41.3353 36.4978 41.4873 36.8893 41.4802 37.3607C41.4731 37.8324 41.3137 38.2241 41.0021 38.5357C40.6908 38.847 40.3029 39.0026 39.8383 39.0026C39.374 39.0026 38.9861 38.847 38.6745 38.5357L17.6758 17.5584Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+.story .list ul li:hover a {
+    transform: translate(0, -20px);
+}
+.story .list ul li:hover a::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-main2);
+    content: "";
+}
+.story .list ul li:hover a h3 {
+    position: relative;
+    z-index: 10;
     color: #fff;
-    height: 300px;
+    padding: 0 7%;
+}
+.story .list ul li:hover a p {
+    position: relative;
+    z-index: 10;
+    color: #fff;
+    padding: 0 7%;
+}
+
+.story .more {
+    text-align: center; /*a를 가운데 정렬*/
+}
+.story .more a {
+    position: relative;
+    display: inline-block;
+    margin-top: 48px;
+    padding: 6px 43px 6px 22px;
+    border: 1px solid var(--color-main2);
+    border-radius: 30px;
+    color: var(--color-main2);
+}
+.story .more a::after {
+    position: absolute;
+    right: 16px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_5_158' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_5_158)'%3E%3Cpath d='M9.16699 10.8332H5.00033C4.76421 10.8332 4.5663 10.7533 4.40658 10.5936C4.24685 10.4339 4.16699 10.2359 4.16699 9.99984C4.16699 9.76373 4.24685 9.56581 4.40658 9.40609C4.5663 9.24637 4.76421 9.1665 5.00033 9.1665H9.16699V4.99984C9.16699 4.76373 9.24685 4.56581 9.40658 4.40609C9.5663 4.24637 9.76421 4.1665 10.0003 4.1665C10.2364 4.1665 10.4344 4.24637 10.5941 4.40609C10.7538 4.56581 10.8337 4.76373 10.8337 4.99984V9.1665H15.0003C15.2364 9.1665 15.4344 9.24637 15.5941 9.40609C15.7538 9.56581 15.8337 9.76373 15.8337 9.99984C15.8337 10.2359 15.7538 10.4339 15.5941 10.5936C15.4344 10.7533 15.2364 10.8332 15.0003 10.8332H10.8337V14.9998C10.8337 15.2359 10.7538 15.4339 10.5941 15.5936C10.4344 15.7533 10.2364 15.8332 10.0003 15.8332C9.76421 15.8332 9.5663 15.7533 9.40658 15.5936C9.24685 15.4339 9.16699 15.2359 9.16699 14.9998V10.8332Z' fill='%2332C7A1'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+    transition: 0.5s;
+}
+.story .more a:hover {
+    background-color: var(--color-main2);
+    color: #fff;
+}
+.story .more a:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_5_349' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_5_349)'%3E%3Cpath d='M9.16699 10.8332H5.00033C4.76421 10.8332 4.5663 10.7533 4.40658 10.5936C4.24685 10.4339 4.16699 10.2359 4.16699 9.99984C4.16699 9.76373 4.24685 9.56581 4.40658 9.40609C4.5663 9.24637 4.76421 9.1665 5.00033 9.1665H9.16699V4.99984C9.16699 4.76373 9.24685 4.56581 9.40658 4.40609C9.5663 4.24637 9.76421 4.1665 10.0003 4.1665C10.2364 4.1665 10.4344 4.24637 10.5941 4.40609C10.7538 4.56581 10.8337 4.76373 10.8337 4.99984V9.1665H15.0003C15.2364 9.1665 15.4344 9.24637 15.5941 9.40609C15.7538 9.56581 15.8337 9.76373 15.8337 9.99984C15.8337 10.2359 15.7538 10.4339 15.5941 10.5936C15.4344 10.7533 15.2364 10.8332 15.0003 10.8332H10.8337V14.9998C10.8337 15.2359 10.7538 15.4339 10.5941 15.5936C10.4344 15.7533 10.2364 15.8332 10.0003 15.8332C9.76421 15.8332 9.5663 15.7533 9.40658 15.5936C9.24685 15.4339 9.16699 15.2359 9.16699 14.9998V10.8332Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    /*transform: rotate(360deg);*/
+    animation-name: story_more;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes story_more {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+@media screen and (max-width:1024px) {
+    .story {
+        padding: 100px 0;
+    }
+    .story .tit p {
+        margin: 5px 0 50px 0;
+    }
+    .story .list ul {
+        margin-top: 15px;
+    }
+    .story .list ul li a h3 {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:768px) {
+    .story .tit p {
+        margin: 5px 0 30px 0;
+    }
 }
