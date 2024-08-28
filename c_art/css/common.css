@@ -1,0 +1,92 @@
+
+/* 글자의 스타일은 상속받음. 기본글자의 스타일은 
+모든 태그를 감싸는 html body에 선언 
+폰트를 여러개를 선언... 첫번째 폰트를 1순위로 적용.. 만약 지원이 안되면 2순위 폰트를 적용
+영문만 지원하는 폰트를 1순위로 쓰고 2순위로 한글이 지원되는 서체를 선언
+영문,순자,특수문자는 영문 폰트가 적용, 나머지 한글은 한글 폰트 적용
+*/
+html, body {
+    font-family: 'Paperlogy', "nsr", "Malgun Gothic", "맑은 고딕", Dotum, 돋움, Helvetica, "Apple SD Gothic Neo", "애플 SD 산돌고딕 Neo", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: -0.7px; /* 자간 */
+    line-height: 1.1; /* 배수 - 글자크기에 1.4배 */
+    color: #3d3d3d; /* 글자 색상 */
+    word-break: keep-all; /* 단어별로 줄바꿈 */
+    word-wrap: break-word; /* 만약 단어가 엄청 길면 강제로 줄바꿈 실행 */
+}
+/* 홈페이지 전체를 감싸는 요소 - 
+   가로스크롤바가 생겼을때 배경이 짤리는 현상을 막음 */
+#wrap {
+    min-width: 1260px;
+    overflow: hidden;
+}
+/* 홈페이지의 넓이를 제한하고 가운데정렬 */
+.wrapper {
+    width: 1260px; 
+    margin: 0 auto; /* 가운데정렬 */
+}
+@media screen and (max-width:1600px){
+    .wrapper {
+        width: auto;
+        margin: 0 136px; /* 좌우에 20px */
+    }
+}
+/* 1260px 나의 wrapper의 넓이에 좌우 여백 20px씩 추가한 사이즈부터
+   반응형 */
+@media screen and (max-width:1300px){
+    #wrap {
+        min-width: 100%;
+    }
+}/* media */
+@media screen and (max-width:1024px){ /* 모바일 */
+    html, body {
+        font-size: 14px;
+    }
+    .wrapper {
+        margin: 0 20px;
+    }
+}
+@media screen and (max-width:640px){ /* 모바일 반응형 */
+    html, body {
+        font-size: 13px;
+    }
+}/* media */
+
+/*클릭하는 요소 a button - focus가 되었을 때 스타일 변경*/
+
+::selection {
+    background-color: #35763C;
+    color: #fff;
+}
+
+/*
+    기본이 16px일때
+    100px - 6.250rem
+    20px - 1.250rem
+    22px - 1.375rem
+    18px - 1.125rem
+    16px - 1rem
+*/
+
+:root {
+    --color-main1 : #014D8B;
+    --color-main2 : #32C7A1;
+    --txt-color-tit : #1d1d1d;
+    --txt-color-gray : #666;
+    --txt-color-white : #fff;
+    --txt-color-w80 : rgba(255,255,255,0.8);
+    --txt-color-w60 : rgba(255,255,255,0.6);
+    --tit-txt-size : 4.375rem;
+    --margin-tit : 50px 0 35px 0;
+}
+
+@media screen and (max-width:1300px) {
+    :root {--tit-txt-size : 45px;}
+}
+@media screen and (max-width:1024px) {
+    :root {--tit-txt-size : 25px;}
+}
+@media screen and (max-width:768px) {
+    
+}
