@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>천안예술의전당</title>
+</head>
+<body>
+    <div class="skip_nav">
+        <a href="#skip_contents">본문 바로가기</a>
+        <a href="#skip_menu">대메뉴 바로가기</a>
+    </div>
+    <div id="wrap">
+        <header>
+            <div class="header_top">
+                <div class="tnb">
+                    <ul>
+                        <li><a href="#n">로그인</a></li>
+                        <li><a href="#n">회원가입</a></li>
+                        <li><a href="#n">ENGLISH</a></li>
+                        <li><a href="#n" class="culture">문화예술기관</a></li>
+                    </ul>
+                </div><!--tnb-->
+            </div>
+            <div class="header_sub">
+                <h1 class="logo"><a href="index.html">천안예술의전당</a></h1>
+                <nav class="gnb" id="#skip_menu">
+                    <button class="gnb_open">메뉴열기</button>
+                    <div class="gnb_wrap">
+                        <ul class="depth1">
+                            <!--pc버전에서 메뉴에 마우스를 오버하면 on
+                            모바일 버전에서 메뉴가 열리면 open-->
+                            <li>
+                                <a href="#n"><span>천안예술의전당</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#n"><span>천안예술의전당소개</span></a></li>
+                                    <li><a href="#n"><span>연혁</span></a></li>
+                                    <li><a href="#n"><span>조직 및 업무분장</span></a></li>
+                                    <li><a href="#n"><span>시설안내</span></a></li>
+                                    <li><a href="#n"><span>CI</span></a></li>
+                                    <li><a href="#n"><span>오시는길</span></a></li>
+                                    <li><a href="#n"><span>주차 및 출차안내</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#n"><span>공연안내</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#n"><span>공연안내</span></a></li>
+                                    <li><a href="#n"><span>객석안내</span></a></li>
+                                    <li><a href="#n"><span>연간일정</span></a></li>
+                                    <li><a href="#n"><span>월간일정</span></a></li>
+                                    <li><a href="#n"><span>공연관람예절</span></a></li>
+                                    <li><a href="#n"><span>공연실황 LIVE</span></a></li>
+                                    <li><a href="#n"><span>공연상영관</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#n"><span>문화센터</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#n"><span>교육안내</span></a></li>
+                                    <li><a href="#n"><span>수강신청내역</span></a></li>
+                                    <li><a href="#n"><span>시설안내</span></a></li>
+                                    <li><a href="#n"><span>연간일정</span></a></li>
+                                    <li><a href="#n"><span>월간일정</span></a></li>
+                                    <li><a href="#n"><span>게시판</span></a></li>
+                                    <li><a href="#n"><span>이전교육안내</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#n"><span>예매안내</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#n"><span>할인/취소/환불</span></a></li>
+                                    <li><a href="#n"><span>예매확인/취소</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#n"><span>대관안내</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#n"><span>대관운영조례</span></a></li>
+                                    <li><a href="#n"><span>대관절차안내</span></a></li>
+                                    <li><a href="#n"><span>구비서류</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#n"><span>커뮤니티</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#n"><span>공지사항</span></a></li>
+                                    <li><a href="#n"><span>공연후기</span></a></li>
+                                    <li><a href="#n"><span>질문과답변</span></a></li>
+                                    <li><a href="#n"><span>보도자료</span></a></li>
+                                    <li><a href="#n"><span>FAQ</span></a></li>
+                                </ul>
+                            </li>
+                        </ul><!--depth1-->
+                    </div>
+                    <button class="gnb_close">메뉴닫기</button>
+                </nav>
+                <div class="search">
+                    <form> <!--form fieldset은 개발자가 삭제할수도 있음. 그래서 -->
+                        <fieldset>
+                            <div class="search_box">
+                                <legend>검색어입력</legend>
+                                <label for="keyword">검색어</label>
+                                <input type="text" id="keyword" placeholder="검색어를 입력하세요">
+                                <input type="submit">
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </header>
+        <main class="container">
+            <section class="visual">
+                <div class="v_photo">
+                    <img src="images/visual_01.png" alt="개관 기념공연 스위스 로잔 체임버 오케스트라
+                    with 르노 카퓌송, 한재민, 이진상">
+                </div>
+                <div class="v_txt">
+                    <h1>개관 기념공연 스위스 로잔 체임버 오케스트라
+                    with 르노 카퓌송, 한재민, 이진상</h1>
+                <p>2024년 8월 30일(금) 19:30</p>
+                <a href="#n" class="more">MORE</a>
+            </div>
+            </section>
+            <section class="show">
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2>What's ON</h2>
+                        <a href="#n" class="more"><span>전체보기</span></a>
+                    </div>
+                    <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                        <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/play_01.png" alt="개관 기념공연 스위스 로잔 체임버 오케스트라 with 르노 카퓌송, 한재민, 이진상"></div>
+                                    <h3>개관 기념공연 스위스 로잔 체임버 오케스트라 with 르노 카퓌송, 한재민, 이진상</h3>
+                                    <strong>2024년 8월 30일(금) 19:30</strong>
+                                </a>
+                            </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/play_03.png" alt="천안시립흥타령풍물단 제16회 정기공연"></div>
+                                    <h3>천안시립흥타령풍물단 제16회 정기공연</h3>
+                                    <strong>2024년 8월 30일(금) 19:30</strong>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/play_02.png" alt="제57회 천안시립교향악단 정기연주회"></div>
+                                    <h3>제57회 천안시립교향악단 정기연주회</h3>
+                                    <strong>2024년 9월 6일(금) 19:30</strong>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/play_04.png" alt="K-클래식 콘서트 5 ＜문화예술컴퍼니 아레나〉"></div>
+                                    <h3>K-클래식 콘서트 5 ＜문화예술컴퍼니 아레나〉</h3>
+                                    <strong>2024년 9월 6일(금) 19:30</strong>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/play_05.png" alt="동화오페라 〈신 별주부전〉"></div>
+                                    <h3>동화오페라 〈신 별주부전〉</h3>
+                                    <strong>2024.09.12(목) 19:30</strong>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/play_06.png" alt="천안예술의전당 개관12주년 기념공연〈케이필하모닉오케스트라 with 서선영, 길병민, 하만택, 국악앙상블〉"></div>
+                                    <h3>천안예술의전당 개관12주년 기념공연〈케이필하모닉오케스트라 with 서선영, 길병민, 하만택, 국악앙상블〉</h3>
+                                    <strong>2024.10.05(토) 17:00</strong>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/play_07.png" alt="2024 김창옥 토크콘서트 시즌4"></div>
+                                    <h3>2024 김창옥 토크콘서트 시즌4</h3>
+                                    <strong>2024.10.27(일)</strong>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/play_08.png" alt="뮤지컬 〈시카고〉"></div>
+                                    <h3>뮤지컬 〈시카고〉</h3>
+                                    <strong>2024.11.08 ~ 2024.11.10</strong>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="event">
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2>교육·행사</h2>
+                        <a href="#n" class="more"><span>전체보기</span></a>
+                    </div>
+                </div>
+                    <div class="list">
+                        <div class="wrapper">
+                            <div class="txt">
+                                <ul>
+                                    <li>
+                                        <strong>접수중</strong>
+                                        <h4>국립발레단X천안예술의전당과 함께하는 ＜꿈나무 교실＞</h4>
+                                        <p>2024년 03월 06일 ~ 2024년 10월 10일 (수요일, 금요일)</p>
+                                        <img src="images/event_01.jpg" alt="국립발레단X천안예술의전당과 함께하는 ＜꿈나무 교실＞">
+                                    </li>
+                                    <li>
+                                        <strong>접수중</strong>
+                                        <h4>이동섭의 예술인문학 - 소설과 뮤지컬</h4>
+                                        <p>2024년 09월 03일 ~ 2024년 12월 03일 (매주 화요일)</p>
+                                        <img src="images/event_02.jpg" alt="국립발레단X천안예술의전당과 함께하는 ＜꿈나무 교실＞">
+                                    </li>
+                                    <li>
+                                        <strong>접수중</strong>
+                                        <h4>오르세, 프랑스 현대를 향하는 기차역</h4>
+                                        <p>2024년 00월 04일 ~ 2024년 12월 04일 (매주 수요일)</p>
+                                        <img src="images/event_03.jpg" alt="국립발레단X천안예술의전당과 함께하는 ＜꿈나무 교실＞">
+                                    </li>
+                                    <li>
+                                        <strong>접수중</strong>
+                                        <h4>조희창의 음악사 - 악기와 명연주자의 역사</h4>
+                                        <p>2024년 09월 05일 ~ 2024년 11월 23일 (매주 목요일)</p>
+                                        <img src="images/event_04.jpg" alt="국립발레단X천안예술의전당과 함께하는 ＜꿈나무 교실＞">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="menu">
+                <div class="wrapper">
+                    <ul>
+                        <li class="seat"><a href="#n"><span>좌석배치도</span></a></li>
+                        <li class="tic"><a href="#n"><span>예매안내</span></a></li>
+                        <li class="map"><a href="#n"><span>오시는길</span></a></li>
+                        <li class="con"><a href="#n"><span>편의시설</span></a></li>
+                        <li class="eve"><a href="#n"><span>이벤트</span></a></li>
+                        <li class="faq"><a href="#n"><span>FAQ</span></a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="word">
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2>새소식</h2>
+                        <a href="#n"><span>MORE</span></a>
+                    </div><!--tit-->
+                    <div class="tab">
+                        <ul>
+                            <li class="notice on">
+                                <button class="tab_menu">공지사항</button>
+                                <div class="tab_detail">
+                                    <ul>
+                                        <li class="list">
+                                            <a href="#n">
+                                                <div class="txt">
+                                                    <strong class="date">08.28</strong>
+                                                    <p>9월 공연 귀가셔틀버스 운행 안내</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="#n">
+                                                <div class="txt">
+                                                    <strong class="date">08.25</strong>
+                                                    <p>사과드립니다.(2024년 8월 17일 냉방관련)</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="#n">
+                                                <div class="txt">
+                                                    <strong class="date">07.31</strong>
+                                                    <p>8월 공연 귀가셔틀버스 운행 안내</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="#n">
+                                                <div class="txt">
+                                                    <strong class="date">06.30</strong>
+                                                    <p>7월 공연 귀가셔틀버스 운행 안내</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="reser">
+                                <button class="tab_menu">대관공고</button>
+                                <div class="tab_detail">
+                                    <ul>
+                                        <li class="list">
+                                            <a href="#n">
+                                                <div class="txt">
+                                                    <strong class="date">08.12</strong>
+                                                    <p>천안예술의전당 2024년 하반기 2차 수시대관 공고</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="#n">
+                                                <div class="txt">
+                                                    <strong class="date">04.08</strong>
+                                                    <p>천안예술의전당 2024년 하반기 정기대관 공고</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="#n">
+                                                <div class="txt">
+                                                    <strong class="date">10.13</strong>
+                                                    <p>2024년 천안예술의전당 상반기 임시휴관 안내</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="#n">
+                                                <div class="txt">
+                                                    <strong class="date">10.11</strong>
+                                                    <p>천안예술의전당 2024년 상반기 정기대관 공고</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="news">
+                                <button class="tab_menu">보도자료</button>
+                                <div class="tab_detail">
+                                    <ul>
+                                        <li class="list">
+                                            <a href="#n">
+                                                <div class="txt">
+                                                    <strong class="date">08.26</strong>
+                                                    <p>바이올리니스트 르노 카퓌송, 천안예술의전당 내한공연</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="#n">
+                                                <div class="txt">
+                                                    <strong class="date">08.01</strong>
+                                                    <p>천안예술의전당, 클래식 뮤지컬 '독립군가' 공연 개최</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="#n">
+                                                <div class="txt">
+                                                    <strong class="date">07.16</strong>
+                                                    <p>2024 천안예술의전당 회원음악회, 반 클라이번 콩쿠르 위너스 콘서트</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="#n">
+                                                <div class="txt">
+                                                    <strong class="date">06.25</strong>
+                                                    <p>천안예술의전당 기획공연 창작오페라,‘코스모스를 죽였다’</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="contact">
+                <img src="images/contact01.png" alt="극장 전체 모습">
+                <div class="wrapper">
+                    <div class="tit"><h2>CONTACT</h2></div>
+                    <div class="rental">
+                        <p>충청남도 천안시 동남구 성남면 종합휴양지로 185번지<br>
+                            khkh@cfac.or.kr / 041.900.1858</p>
+                        <a href="#n"><span>대관문의</span></a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>  
+            <div class="sitemap">
+                <div class="wrapper">
+                    <nav class="f_gnb">
+                        <div class="f_gnb_wrap">
+                            <ul class="depth1">
+                                <!--pc버전에서 메뉴에 마우스를 오버하면 on
+                                모바일 버전에서 메뉴가 열리면 open-->
+                                <li>
+                                    <a href="#n"><span>천안예술의전당</span></a>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>천안예술의전당소개</span></a></li>
+                                        <li><a href="#n"><span>연혁</span></a></li>
+                                        <li><a href="#n"><span>조직 및 업무분장</span></a></li>
+                                        <li><a href="#n"><span>시설안내</span></a></li>
+                                        <li><a href="#n"><span>CI</span></a></li>
+                                        <li><a href="#n"><span>오시는길</span></a></li>
+                                        <li><a href="#n"><span>주차 및 출차안내</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n"><span>공연안내</span></a>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>공연안내</span></a></li>
+                                        <li><a href="#n"><span>객석안내</span></a></li>
+                                        <li><a href="#n"><span>연간일정</span></a></li>
+                                        <li><a href="#n"><span>월간일정</span></a></li>
+                                        <li><a href="#n"><span>공연관람예절</span></a></li>
+                                        <li><a href="#n"><span>공연실황 LIVE</span></a></li>
+                                        <li><a href="#n"><span>공연상영관</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n"><span>문화센터</span></a>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>교육안내</span></a></li>
+                                        <li><a href="#n"><span>수강신청내역</span></a></li>
+                                        <li><a href="#n"><span>시설안내</span></a></li>
+                                        <li><a href="#n"><span>연간일정</span></a></li>
+                                        <li><a href="#n"><span>월간일정</span></a></li>
+                                        <li><a href="#n"><span>게시판</span></a></li>
+                                        <li><a href="#n"><span>이전교육안내</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n"><span>예매안내</span></a>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>할인/취소/환불</span></a></li>
+                                        <li><a href="#n"><span>예매확인/취소</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n"><span>대관안내</span></a>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>대관운영조례</span></a></li>
+                                        <li><a href="#n"><span>대관절차안내</span></a></li>
+                                        <li><a href="#n"><span>구비서류</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n"><span>커뮤니티</span></a>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>공지사항</span></a></li>
+                                        <li><a href="#n"><span>공연후기</span></a></li>
+                                        <li><a href="#n"><span>질문과답변</span></a></li>
+                                        <li><a href="#n"><span>보도자료</span></a></li>
+                                        <li><a href="#n"><span>FAQ</span></a></li>
+                                    </ul>
+                                </li>
+                            </ul><!--depth1-->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+                <div class="f_cont">
+                    <div class="wrapper">
+                        <div class="f_logo"><span>천안예술의전당</span></div>
+                        <div class="sns">
+                            <ul>
+                                <li class="face"><a href="https://www.facebook.com/CAartscenter">페이스북</a></li>
+                                <li class="insta"><a href="https://www.instagram.com/cheonanartscenter/">인스타그램</a></li>
+                                <li class="twit"><a href="https://x.com/gocaac">트위터</a></li>
+                                <li class="kakao"><a href="https://pf.kakao.com/_aexcJC">카카오톡</a></li>
+                                <li class="youtube"><a href="https://www.youtube.com/channel/UCJ00q8wVtUn63Ln0AvmhINQ">유튜브</a></li>
+                                <li class="blog"><a href="https://blog.naver.com/caactalk">블로그</a></li>
+                            </ul>
+                        </div>
+                        <div class="inner">
+                            <div class="f_nav">
+                                <li class="privacy"><a href="#n">개인정보처리방침</a></li>
+                                <li><a href="#n">회원서비스약관</a></li>
+                                <li><a href="#n">이메일무단수집거부</a></li>
+                                <li><a href="#n">찾아오시는길</a></li>
+                            </div>
+                            <div class="copyright">ⓒ Cheonan arts center ALL RIGHT RESERVED.</div>
+                            <div class="f_info">
+                                <address>31246 충청남도 천안시 동남구 성남면 종합휴양지로 185번지</address>
+                                <span>대표전화 1566-0155</span>
+                            </div>
+                            <div class="copy">
+                                홈페이지에 게시된 이메일주소가 자동수집되는 것을 거부하며<br>
+                                이를 위반시 정보통신망법에 의해 처벌됨을 유념하시기 바랍니다.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
