@@ -117,16 +117,53 @@
         </header>
         <main class="container">
             <section class="visual">
-                <div class="v_photo">
-                    <img src="images/visual_01.png" alt="개관 기념공연 스위스 로잔 체임버 오케스트라
-                    with 르노 카퓌송, 한재민, 이진상">
+                <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                    <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                        <li class="swiper-slide">
+                            <div class="v_photo">
+                                <img src="images/visual_01.png" alt="개관 기념공연 스위스 로잔 체임버 오케스트라
+                                with 르노 카퓌송, 한재민, 이진상">
+                            </div>
+                            <div class="v_txt">
+                                <h1>개관 기념공연 스위스 로잔 체임버 오케스트라
+                                with 르노 카퓌송, 한재민, 이진상</h1>
+                                <p>2024년 8월 30일(금) 19:30</p>
+                                <a href="#n" class="more">MORE</a>
+                            </div>
+                        </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                        <li class="swiper-slide">
+                            <div class="v_photo">
+                                <img src="images/visual_02.png" alt="제57회 천안시립교향악단 정기연주회">
+                            </div>
+                            <div class="v_txt">
+                                <h1>제57회 천안시립교향악단 정기연주회</h1>
+                                <p>2024년 8월 30일(금) 19:30</p>
+                                <a href="#n" class="more">MORE</a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="v_photo">
+                                <img src="images/visual_03.png" alt="천안시립흥타령풍물단 제16회 정기공연">
+                            </div>
+                            <div class="v_txt">
+                                <h1>천안시립흥타령풍물단 제16회 정기공연</h1>
+                                <p>2024년 8월 30일(금) 19:30</p>
+                                <a href="#n" class="more">MORE</a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="v_photo">
+                                <img src="images/visual_04.png" alt="K-클래식 콘서트 5 ＜문화예술컴퍼니 아레나＞">
+                            </div>
+                            <div class="v_txt">
+                                <h1>K-클래식 콘서트 5 ＜문화예술컴퍼니 아레나＞</h1>
+                                <p>2024년 9월 6일(금) 19:30</p>
+                                <a href="#n" class="more">MORE</a>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-                <div class="v_txt">
-                    <h1>개관 기념공연 스위스 로잔 체임버 오케스트라
-                    with 르노 카퓌송, 한재민, 이진상</h1>
-                <p>2024년 8월 30일(금) 19:30</p>
-                <a href="#n" class="more">MORE</a>
-            </div>
+                
             </section>
             <section class="show">
                 <div class="wrapper">
@@ -205,37 +242,48 @@
                 </div>
                     <div class="list">
                         <div class="wrapper">
-                            <div class="txt">
-                                <ul>
-                                    <li>
+                            <div class="swiper e_txt"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                                <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                                    <li class="swiper-slide">
                                         <strong>접수중</strong>
-                                        <h4>국립발레단X천안예술의전당과 함께하는 ＜꿈나무 교실＞</h4>
+                                        <h3>국립발레단X천안예술의전당과 함께하는<br>＜꿈나무 교실＞</h3>
                                         <p>2024년 03월 06일 ~ 2024년 10월 10일 (수요일, 금요일)</p>
+                                    </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                                    <li class="swiper-slide">
+                                            <strong>접수중</strong>
+                                            <h3>이동섭의 예술인문학<br> - 소설과 뮤지컬</h3>
+                                            <p>2024년 09월 03일 ~ 2024년 12월 03일 (매주 화요일)</p>
+                                    </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                                    <li class="swiper-slide">
+                                            <strong>접수중</strong>
+                                            <h3>오르세,<br> 프랑스 현대를 향하는 기차역</h3>
+                                            <p>2024년 00월 04일 ~ 2024년 12월 04일 (매주 수요일)</p>
+                                    </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                                    <li class="swiper-slide">
+                                            <strong>접수중</strong>
+                                            <h3>조희창의 음악사<br> - 악기와 명연주자의 역사</h3>
+                                            <p>2024년 09월 05일 ~ 2024년 11월 23일 (매주 목요일)</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="swiper e_photo">
+                                <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                                    <li class="swiper-slide">
                                         <img src="images/event_01.jpg" alt="국립발레단X천안예술의전당과 함께하는 ＜꿈나무 교실＞">
                                     </li>
-                                    <li>
-                                        <strong>접수중</strong>
-                                        <h4>이동섭의 예술인문학 - 소설과 뮤지컬</h4>
-                                        <p>2024년 09월 03일 ~ 2024년 12월 03일 (매주 화요일)</p>
-                                        <img src="images/event_02.jpg" alt="국립발레단X천안예술의전당과 함께하는 ＜꿈나무 교실＞">
+                                    <li class="swiper-slide">
+                                            <img src="images/event_02.jpg" alt="이동섭의 예술인문학 - 소설과 뮤지컬">
                                     </li>
-                                    <li>
-                                        <strong>접수중</strong>
-                                        <h4>오르세, 프랑스 현대를 향하는 기차역</h4>
-                                        <p>2024년 00월 04일 ~ 2024년 12월 04일 (매주 수요일)</p>
-                                        <img src="images/event_03.jpg" alt="국립발레단X천안예술의전당과 함께하는 ＜꿈나무 교실＞">
+                                    <li class="swiper-slide">
+                                            <img src="images/event_03.jpg" alt="오르세, 프랑스 현대를 향하는 기차역">
                                     </li>
-                                    <li>
-                                        <strong>접수중</strong>
-                                        <h4>조희창의 음악사 - 악기와 명연주자의 역사</h4>
-                                        <p>2024년 09월 05일 ~ 2024년 11월 23일 (매주 목요일)</p>
-                                        <img src="images/event_04.jpg" alt="국립발레단X천안예술의전당과 함께하는 ＜꿈나무 교실＞">
+                                    <li class="swiper-slide">
+                                            <img src="images/event_04.jpg" alt="조희창의 음악사 - 악기와 명연주자의 역사">
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                </div>
             </section>
             <section class="menu">
                 <div class="wrapper">
@@ -469,12 +517,12 @@
                         <div class="f_logo"><span>천안예술의전당</span></div>
                         <div class="sns">
                             <ul>
-                                <li class="face"><a href="https://www.facebook.com/CAartscenter">페이스북</a></li>
-                                <li class="insta"><a href="https://www.instagram.com/cheonanartscenter/">인스타그램</a></li>
-                                <li class="twit"><a href="https://x.com/gocaac">트위터</a></li>
-                                <li class="kakao"><a href="https://pf.kakao.com/_aexcJC">카카오톡</a></li>
-                                <li class="youtube"><a href="https://www.youtube.com/channel/UCJ00q8wVtUn63Ln0AvmhINQ">유튜브</a></li>
-                                <li class="blog"><a href="https://blog.naver.com/caactalk">블로그</a></li>
+                                <li class="face"><a href="https://www.facebook.com/CAartscenter" target="_blank" title="새창열림">페이스북</a></li>
+                                <li class="insta"><a href="https://www.instagram.com/cheonanartscenter/" target="_blank" title="새창열림">인스타그램</a></li>
+                                <li class="twit"><a href="https://x.com/gocaac" target="_blank" title="새창열림">트위터</a></li>
+                                <li class="kakao"><a href="https://pf.kakao.com/_aexcJC" target="_blank" title="새창열림">카카오톡</a></li>
+                                <li class="youtube"><a href="https://www.youtube.com/channel/UCJ00q8wVtUn63Ln0AvmhINQ" target="_blank" title="새창열림">유튜브</a></li>
+                                <li class="blog"><a href="https://blog.naver.com/caactalk" target="_blank" title="새창열림">블로그</a></li>
                             </ul>
                         </div>
                         <div class="inner">
@@ -494,6 +542,38 @@
                                 이를 위반시 정보통신망법에 의해 처벌됨을 유념하시기 바랍니다.
                             </div>
                         </div>
+                        <div class="familysite">
+                            <div class="culture">
+                                <button class="culture_open">문화예술기관</button>
+                                <ul>
+                                    <li><a href="#n" target="_blank" title="새창열림">LG아트센터</a></li>
+                                    <li><a href="#n" target="_blank" title="새창열림">국립극장</a></li>
+                                    <li><a href="#n" target="_blank" title="새창열림">거제문화예술회관</a></li>
+                                    <li><a href="#n" target="_blank" title="새창열림">경기도문화예술회관</a></li>
+                                    <li><a href="#n" target="_blank" title="새창열림">광주문화예술회관</a></li>
+                                    <li><a href="#n" target="_blank" title="새창열림">동숭아트센터</a></li>
+                                    <li><a href="#n" target="_blank" title="새창열림">대구문화예술회관</a></li>
+                                    <li><a href="#n" target="_blank" title="새창열림">대구오페라하우스</a></li>
+                                    <li><a href="#n" target="_blank" title="새창열림">대전문화예술의전당</a></li>
+                                </ul>
+                                <button class="culture_close">문화예술기관</button>
+                            </div><!--culture-->
+                            <div class="family">
+                                <button class="family_open">Familysite</button>
+                                    <ul>
+                                        <li><a href="#n" target="_blank" title="새창열림">충남도청</a></li>
+                                        <li><a href="#n" target="_blank" title="새창열림">천안시청</a></li>
+                                        <li><a href="#n" target="_blank" title="새창열림">천안시 동남구청</a></li>
+                                        <li><a href="#n" target="_blank" title="새창열림">천안시 문화공연</a></li>
+                                        <li><a href="#n" target="_blank" title="새창열림">천안시 시립예술단</a></li>
+                                        <li><a href="#n" target="_blank" title="새창열림">천안시 서북구청</a></li>
+                                        <li><a href="#n" target="_blank" title="새창열림">영상미디어센터 비채</a></li>
+                                        <li><a href="#n" target="_blank" title="새창열림">천안흥타령춤축제</a></li>
+                                        <li><a href="#n" target="_blank" title="새창열림">성환문화회관</a></li>
+                                    </ul>
+                                <button class="family_close">Familysite</button>
+                            </div><!--family-->
+                        </div><!--familysite-->
                     </div>
                 </div>
             </div>
