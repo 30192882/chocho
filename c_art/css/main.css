@@ -501,10 +501,6 @@
     .menu ul li a span {
         padding-top: 69px;
     }
-    .menu ul li.con a,
-    .menu ul li.faq a {
-        display: none;
-    }
     .menu ul li a::before {
         z-index: 10;
         left: 28px;
@@ -520,6 +516,12 @@
     }
     .menu .wrapper ul li a span {
         font-size: 0.813rem;
+    }
+}
+@media screen and (max-width:560px) {
+    .menu ul li.con a,
+    .menu ul li.faq a {
+        display: none;
     }
 }
 
@@ -556,7 +558,7 @@
     color: var(--color-main1);
 }
 .word .tit a:hover span::after {
-    background-image: url("data:image/svg+xml,%3Csvg width='68' height='68' viewBox='0 0 68 68' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_45_2' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='68' height='68'%3E%3Crect width='67.6709' height='67.6709' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_45_2)'%3E%3Cpath d='M32.4257 53.5728V19.5153L16.0937 35.8473L14.0981 33.8355L33.8355 14.0981L53.5728 33.8355L51.5772 35.8473L35.2453 19.5153V53.5728H32.4257Z' fill='%23E54E21'/%3E%3C/g%3E%3C/svg%3E%0A");    
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_19_1031' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_19_1031)'%3E%3Cpath d='M16.627 12.75H4.5V11.25H16.627L10.9308 5.55375L12 4.5L19.5 12L12 19.5L10.9308 18.4462L16.627 12.75Z' fill='%23E54E21'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
 .word .tab {
     position: relative; /* tab 메뉴 정렬의 중심 */

@@ -149,6 +149,15 @@ header.fixed + .container {
     margin-top: 50px;
 }
 
+@media screen and (max-width:1520px){
+    header .header_sub .gnb .gnb_wrap ul.depth1 > li {
+        width: 150px;
+    }
+    header .header_sub .gnb .gnb_wrap ul.depth1 > li > a {
+        font-size: 1rem;
+    }
+            
+}
 @media screen and (max-width:1024px) {
     header {
         height: 50px;
@@ -157,6 +166,7 @@ header.fixed + .container {
         display: none;
     }
     header .header_sub {
+        font-family: 'SUITE';
         height: 50px;
     }
     header .header_sub .logo {
@@ -187,7 +197,6 @@ header.fixed + .container {
         width: 100%;
         height: 100vh; /*브라우저 높이*/
         background-color: #fff;
-        font-family: 'pretendard';
     }
     header .header_sub .gnb .gnb_wrap .depth1 {
         display: block;
@@ -212,22 +221,22 @@ header.fixed + .container {
         font-size: 1.125rem;
     }
     header .header_sub .gnb .gnb_wrap .depth1 > li > a > span::after {
-        position: relative;
-        right: -19px;
-        top: 5px;
-        width: 11px;
-        height: 6px;
+        position: absolute;
+        right: -30px;
+        top: -1px;
+        width: 24px;
+        height: 24px;
         background-position: center center;
         background-repeat: no-repeat;
         background-size: contain;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='11px' height='6px'%3E%3Cimage x='0px' y='0px' width='11px' height='6px' xlink:href='data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAGCAQAAAC/O6xzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfoCAwKBwl3b2yDAAAATElEQVQI113KsRFAQABE0efIZRKjAVWo5HJ9GQXoRC6VKsDMGQGBs+H7W3S9xn9r5TRpM5zFYDPYc5QCWZhFicAnvEhZP6/D4jI+yA2OoxQTvfTRVQAAAABJRU5ErkJggg==' /%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_23_1452' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect x='24' y='24' width='24' height='24' transform='rotate(-180 24 24)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_23_1452)'%3E%3Cpath d='M16.4038 10.2501L12.0001 14.6539L7.59631 10.2501L16.4038 10.2501Z' fill='%231D1D1D'/%3E%3C/g%3E%3C/svg%3E%0A");
         content: "";
     }
     header .header_sub .gnb .gnb_wrap .depth1 > li.open > a > span {
         color: var(--color-main1);
     }
     header .header_sub .gnb .gnb_wrap .depth1 > li.open > a > span::after {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='10px' height='6px'%3E%3Cimage x='0px' y='0px' width='10px' height='6px' xlink:href='data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGBAMAAAAI3hL1AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAD1BMVEXoCk3oCk3oCk3oCk3///+PTxigAAAAA3RSTlMAAZeNBvN4AAAAAWJLR0QEj2jZUQAAAAd0SU1FB+gIDAoQEWGAcEMAAAAkSURBVAjXY2BgEGQAAkYlASApZKwIZCobGwkAmcZAjjKQNAIAInoC/lvJ6rkAAAAASUVORK5CYII=' /%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_23_1449' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_23_1449)'%3E%3Cpath d='M7.59619 13.7499L11.9999 9.34614L16.4037 13.7499L7.59619 13.7499Z' fill='%23E54E21'/%3E%3C/g%3E%3C/svg%3E%0A");
     }
     header .header_sub .gnb .gnb_wrap .depth2 {
         display: none;
@@ -239,11 +248,25 @@ header.fixed + .container {
     header .header_sub .gnb .gnb_wrap .depth1 > li.open .depth2 {
         display: block;
     }
+    header .header_sub .gnb .gnb_wrap ul.depth2 {
+        position: relative;
+        top: 0;
+        width: 100%;
+        display: none;
+        font-size: 1.125rem;
+        padding: 15px 0;
+        border: 0;
+        background-color: transparent;
+        color: #1d1d1d;
+    }
     header .header_sub .gnb .gnb_wrap .depth2 > li > a {
         display: block;
         line-height: 2.5;
+        padding-left: 10px;
     }
-
+    header .header_sub .gnb .gnb_wrap .depth2 > li > a:hover {
+        color: var(--color-main1);
+    }
     header.menu_open .header_sub .gnb .gnb_open {
         display: none;
     }
@@ -302,7 +325,6 @@ header.fixed + .container {
     header .search {
         margin-right: 50px;
     }
-
     header.fixed {
         position: fixed;
         left: 0;
@@ -406,11 +428,13 @@ footer .f_cont .wrapper .sns ul li.blog a {
     background-image: url("data:image/svg+xml,%3Csvg width='18' height='27' viewBox='0 0 18 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.1 26V0.379998H5.21V8.57C5.95667 8.43 6.63333 8.325 7.24 8.255C7.87 8.16167 8.69833 8.115 9.725 8.115C12.455 8.115 14.3683 8.90833 15.465 10.495C16.585 12.0583 17.145 14.31 17.145 17.25C17.145 18.51 17.0167 19.6883 16.76 20.785C16.5033 21.8817 16.095 22.85 15.535 23.69C14.975 24.5067 14.2517 25.1717 13.365 25.685C12.4783 26.175 11.4167 26.4317 10.18 26.455C8.71 26.455 7.53167 26.2683 6.645 25.895C5.78167 25.5217 5.19833 25.125 4.895 24.705L4.65 26H0.1ZM8.57 12.175C7.82333 12.175 7.12333 12.2333 6.47 12.35C5.84 12.4667 5.42 12.5483 5.21 12.595V20.47C5.49 20.96 5.93333 21.4033 6.54 21.8C7.14667 22.1967 7.91667 22.395 8.85 22.395C9.69 22.395 10.4133 21.9517 11.02 21.065C11.65 20.1783 11.965 18.9183 11.965 17.285C11.965 16.655 11.9067 16.0367 11.79 15.43C11.6967 14.8233 11.5217 14.275 11.265 13.785C10.985 13.3183 10.6233 12.9333 10.18 12.63C9.76 12.3267 9.22333 12.175 8.57 12.175Z' fill='%23E54E21'/%3E%3C/svg%3E%0A");
 }
 footer .inner {
+    width: 50%;
     padding: 12px 0 0 50px;
     line-height: 1.2;
 }
 footer .inner .f_nav {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     padding-bottom: 30px;
 }
@@ -543,13 +567,13 @@ footer .culture.open .culture_close {
         content: "";
     }
     footer .inner {
+        width: 100%;
         padding: 94px 0 0 0;
         line-height: 1.2;
     }
     footer .inner .f_nav {
         text-align: center;
         justify-content: space-around;
-        flex-wrap: wrap;
         gap: 10px;
         padding-bottom: 30px;
     }

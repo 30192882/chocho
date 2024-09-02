@@ -44,25 +44,25 @@ $(document).ready(function(){
 
   $('header .header_sub .gnb .gnb_wrap ul.depth1 > li').on('mouseenter focusin', function(){
     if(pc_mobile == 'pc'){
-        $('header').addClass('menu_over')
+        $('header .header_sub').addClass('menu_over')
         $('header .header_sub .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
         $(this).addClass('over')
     }
   })
-  $('header').on('mouseleave', function(){
+  $('header .header_sub').on('mouseleave', function(){
     if(pc_mobile == 'pc'){
-      $('header').removeClass('menu_over')
+      $('header .header_sub').removeClass('menu_over')
       $('header .header_sub .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
     }
   })
   $('header .header_sub .gnb .gnb_wrap ul.depth1 > li:last-child ul.depth2 > li:last-child').on('focusout', function(){
     if(pc_mobile == 'pc'){
-      $('header').removeClass('menu_over')
+      $('header .header_sub').removeClass('menu_over')
       $('header .header_sub .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
   }
   })
 
-  $('header .header_sub .gnb .gnb_wrap .depth1 > li').on('click', function(e){
+  $('header .header_sub .gnb .gnb_wrap .depth1 > li > a').on('click', function(e){
       if(pc_mobile == 'mo'){ //모바일에서만 작동
           e.preventDefault(); /* a 태그의 href를 작동시키지 않음 */
           $(this).parent().toggleClass('open')
@@ -165,11 +165,11 @@ $(document).ready(function(){
       
   });
 
-  // event_swiper_txt.on('slideChange', function(){
-  //   // if(this.activeIndex  != event_swiper_photo.activeIndex ){
-  //   //   event_swiper_photo.slideTo(this.activeIndex )
-  //   // }
-  // });
+//  event_swiper_txt.on('slideChange', function(){
+//    if(this.activeIndex  != event_swiper_photo.activeIndex ){
+//       event_swiper_photo.slideTo(this.activeIndex )
+//    }
+//  });
  
   event_swiper_photo.on('slideChange', function(){
       if(this.realIndex  != event_swiper_txt.realIndex ){
