@@ -113,11 +113,11 @@ $(document).ready(function(){
         spaceBetween: 20,
       },
       768: {    /* 768px 이상일때 적용 */
-        slidesPerView: 3,
+        slidesPerView: 2,
         spaceBetween: 20,
       },
       1024: {   /* 1024px 이상일때 적용 */
-        slidesPerView: 4,
+        slidesPerView: 3,
         spaceBetween: 22,
       },
       1280: {    /* 1280px 이상일때 적용 */

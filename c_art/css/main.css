@@ -216,6 +216,7 @@
     }
     .show .wrapper {
         position: relative;
+        width: calc(100% - 20px);
     }
     .show .tit {
         margin-bottom: 20px;
