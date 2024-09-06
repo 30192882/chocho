@@ -112,34 +112,248 @@
             </div>
         </header>
         <section class="visual">
-            <div class="section"> <!-- 좌우 요소를 감싸는 요소 -->
+            <div class="inner"> <!-- 좌우 요소를 감싸는 요소 -->
                 <div class="tit"><span>MORE HEALTHY</span><span>MORE GOOD LIFE</span></div> <!-- 고정될 요소 -->
                 <div class="cont_wrap"> <!-- 스크롤될 요소를 감싸는 요소 -->
                     <div class="cont"> <!-- 스크롤될 요소 (이 내부에 콘텐츠를 코딩해야함, 스크롤될 요소가 여러개면 안됨) -->
-                        <img src="images/visual01.png" alt="비타500">
-                        <img src="images/visual02.png" alt="광동헛개차">
-                        <img src="images/visual03.png" alt="썬키스트">
+                        <div class="item"><img src="images/visual01.png" alt="비타500"></div>
+                        <div class="item"><img src="images/visual02.png" alt="광동헛개차"></div>
+                        <div class="item"><img src="images/visual03.png" alt="썬키스트"></div>
+                    </div>
+                </div>
+                <div class="txt"><p>We create a new value to contribute to<br>
+                    the healthy life of our customers.</p></div>
+            </div>
+                
+        </section>
+        <section class="search">
+            <div class="wrapper">
+                <div class="left">
+                    <div class="l_tit">
+                        <h2>휴먼헬스케어 산업을 선도하는<br>
+                        초일류 제약기업의 실현</h2>
+                        <form> <!--form fieldset은 개발자가 삭제할수도 있음. 그래서 -->
+                            <fieldset>
+                                <div class="search_box">
+                                    <legend>검색어입력</legend>
+                                    <label for="keyword">검색어</label>
+                                    <input type="text" id="keyword" placeholder="어떤 제품을 찾고 계신가요?">
+                                    <input type="submit">
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="list">
+                        <a href="#n"><span>#일반의약품</span></a>
+                        <a href="#n"><span>#전문의약품</span></a>
+                        <a href="#n"><span>#원료의약품</span></a>
+                        <a href="#n"><span>#의약외품</span></a>
+                        <a href="#n"><span>#약국용드링크</span></a>
+                        <a href="#n"><span>#일반유통식품</span></a>
+                        <a href="#n"><span>#건강기능식품</span></a>
+                        <a href="#n"><span>#일반의약품</span></a>
+                    </div>
+                    <img src="images/search00.png" alt="연구하는 사진">
+                </div>
+                <div class="right">
+                    <div class="pic">
+                        <div class="img01"><img src="images/search01.png" alt="비타500"></div>
+                        <div class="img02"><img src="images/search02.png" alt="루테인 지아잔틴 영양제"></div>
+                        <div class="img03"><img src="images/search03.png" alt="광동 헛개차"></div>
+                        <div class="img04"><img src="images/search04.png" alt="광동 옥수수수염차"></div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="search">
-
-        </section>
         <section class="brand">
-
+            <div class="loop">
+                <span class="l_txt"><strong>HUMAN HEALTH CARE BRAND  </strong>HUMAN HEALTH CARE BRAND<strong>HUMAN HEALTH CARE BRAND  </strong>HUMAN HEALTH CARE BRAND  </span>
+                <span class="r_txt">HUMAN HEALTH CARE BRAND  <strong>HUMAN HEALTH CARE BRAND  </strong>HUMAN HEALTH CARE BRAND  <strong>HUMAN HEALTH CARE BRAND  </strong></span>
+            </div>
+            <div class="info">
+                <div class="logo"><img src="images/brand_logo.png" alt="광동제약 로고"></div>
+                <div class="i_txt">
+                    <h3>광동제약은 새로운 가치를 창출하여<br>
+                        고객의 건강한 삶에 기여합니다.</h3>
+                    <p>“휴먼 헬스케어 브랜드 기업”을 목표로 제약과 식품사업 중심의 다양한 사업영역에서<br>강력한 브랜드 파워를 구축하고 차별화된 가치를 제공함으로써 고객들의 건강한 삶에 기여하고자 합니다.</p>
+                </div>
+            </div>
         </section>
         <section class="mall">
-
+            <div class="l_mall">
+                <a href="#n">
+                <div class="inner">
+                    <div class="txt">
+                        <h3>광동상회</h3>
+                        <p>놀라운 소비자 큐레이션 쇼핑몰</p>
+                    </div>
+                    <div class="more"><span>VIEW MORE</span></div>
+                </div>
+                </a>
+            </div>
+            <div class="r_mall">
+                <a href="#n">
+                    <div class="inner">
+                        <div class="txt">
+                            <h3>KD케어몰</h3>
+                            <p>광동의 건강함을 전합니다.</p>
+                        </div>
+                    <div class="more"><span>VIEW MORE</span></div>
+                </div>
+                </a>
+            </div>
         </section>
         <section class="tech">
-            
+            <div class="wrapper">
+                <div class="tit">
+                    <h3>광동제약은<br>첨단의약기술과 함께합니다.</h3>
+                </div>
+                <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                    <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                        <li class="swiper-slide"></li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                    </ul>
+                </div>
+                <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                    <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                        <li class="swiper-slide">
+                            <img src="images/tech01.png" alt="비타500">
+                            <h4>비타500</h4>
+                            <p>빠른 비타민C 충전을 위한<br>
+                                건강한 한 병 습관</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="images/tech02.png" alt="광동 V라인 옥수수수염차">
+                            <h4>광동 V라인 옥수수수염차</h4>
+                            <p>매일 가볍게 마시는<br>
+                                건강한 V라인</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="images/tech03.png" alt="광동 헛개차">
+                            <h4>광동 헛개차</h4>
+                            <p>많은 사람들이 선택한<br>
+                                숙취해소차 NO.1</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="images/tech04.png" alt="광동 경옥고">
+                            <h4>광동 경옥고</h4>
+                            <p>정성과 귀한 약재로 120시간<br>
+                                달여 만든 자양강장제</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="images/tech05.png" alt="레돌민®정">
+                            <h4>레돌민®정</h4>
+                            <p>하루 한 알, 숙면 관리<br>
+                                생약성분 수면 유도제</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="images/tech06.png" alt="비타500">
+                            <h4>아이톡</h4>
+                            <p>트레할로스의 보습력으로<br>
+                                오래오래 촉촉하게</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="images/tech07.png" alt="광동 치올 페이스트">
+                            <h4>광동 치올 페이스트</h4>
+                            <p>다양한 구강염증에 효과적인<br>
+                                히노키티올 성분의 치약형 잇몸약</p>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="images/tech08.png" alt="비타500">
+                            <h4>CARMEX</h4>
+                            <p>85년 전통의 립케어 전문 브랜드<br>
+                                오랜 전통과 역사를 자랑하는 카멕스</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
         <section class="news">
-
+            <div class="wrapper">
+                <div class="media">
+                    <div class="inner">
+                        <h3><span>MEDIA</span></h3>
+                        <div class="list">
+                            <ul>
+                                <li>
+                                    <a href="#n">
+                                        <strong>YOUTUBE</strong>
+                                        <h4>비타 500 ZERO 광고 촬영 현장 카리나</h4>
+                                        <span class="date">2024. 02. 05</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#n">
+                                        <strong>YOUTUBE</strong>
+                                        <h4>[광동 녹황당황칠 X 김갑수] 갑대갑 편</h4>
+                                        <span class="date">2024. 02. 05</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#n">
+                                        <strong>YOUTUBE</strong>
+                                        <h4>[광동 견옥고] 우리 반려견도 항상 우리 가족과 함께</h4>
+                                        <span class="date">2024. 02. 05</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="more"><a href="#n"><span>VIEW MORE</span></a></div>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="inner">
+                        <h3><span>POST</span></h3>
+                        <div class="list">
+                            <ul>
+                                <li>
+                                    <a href="#n">
+                                        <strong>시리즈 Life Style</strong>
+                                        <h4>응답하라! 레트로 미용법 - 오이팩, 우유 마사지, </h4>
+                                        <span class="date">2024.08.30</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#n">
+                                        <strong>시리즈 Vita Life</strong>
+                                        <h4>편의점에서 찾는 숙취해소에 좋은 음료 - 이온음료,</h4>
+                                        <span class="date">2024.08.29</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#n">
+                                        <strong>시리즈 Kwangdong People</strong>
+                                        <h4>[읽는 브이로그] F&B마케팅부문 BM1팀 직무 인터</h4>
+                                        <span class="date">2024.08.21</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="more"><a href="#n"><span>VIEW MORE</span></a></div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section class="insta_m">
-
+        <section class="insta">
+            <div class="wrapper">
+                <div class="tit"><h3><span>INSTAGRAM</span></h3></div>
+            </div>
+            <div class="list">
+                <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                    <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                        <li class="swiper-slide"><a href=""><img src="images/ins01.png" alt="광동제약 인스타그램 게시물01"></img></a></li>
+                        <li class="swiper-slide"><a href=""><img src="images/ins02.png" alt="광동제약 인스타그램 게시물02"></img></a></li>
+                        <li class="swiper-slide"><a href=""><img src="images/ins03.png" alt="광동제약 인스타그램 게시물03"></img></a></li>
+                        <li class="swiper-slide"><a href=""><img src="images/ins04.png" alt="광동제약 인스타그램 게시물04"></img></a></li>
+                        <li class="swiper-slide"><a href=""><img src="images/ins05.png" alt="광동제약 인스타그램 게시물05"></img></a></li>
+                        <li class="swiper-slide"><a href=""><img src="images/ins06.png" alt="광동제약 인스타그램 게시물06"></img></a></li>
+                        <li class="swiper-slide"><a href=""><img src="images/ins07.png" alt="광동제약 인스타그램 게시물07"></img></a></li>
+                        <li class="swiper-slide"><a href=""><img src="images/ins08.png" alt="광동제약 인스타그램 게시물08"></img></a></li>
+                        <li class="swiper-slide"><a href=""><img src="images/ins09.png" alt="광동제약 인스타그램 게시물09"></img></a></li>
+                        <li class="swiper-slide"><a href=""><img src="images/ins10.png" alt="광동제약 인스타그램 게시물10"></img></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="more"><a href="#n"><span>VIEW MORE</span></a></div>
         </section>
         <footer>
 
