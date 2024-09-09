@@ -588,7 +588,7 @@ footer .culture.open .culture_close {
         padding: 94px 0 0 0;
         line-height: 1.2;
     }
-    footer .inner .f_nav {
+    footer .inner .f_nav ul {
         text-align: center;
         justify-content: space-around;
         gap: 8px;

@@ -22,7 +22,7 @@
 }
 .visual .inner .tit {
     position: absolute;
-    padding-top: 404px;
+    padding-top: 407px;
     height: calc(100vh - 50%);
     z-index: 5;
     font-size: 3rem;
@@ -77,9 +77,7 @@
     color: rgba(29,29,29,0.5);
 }
 
-
 .visual .inner { display:flex; overflow:hidden; max-height:100vh; } /* 스크롤되면서 보여질 최대높이를 지정해야한다. height로도 가능 */
-
 
 .search {
     margin-top: 130px;
@@ -88,7 +86,6 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 .search .wrapper {
     display: flex;
@@ -322,27 +319,125 @@
     position: relative;
     height: 1000px;
 }
-.tech .tit {
+.tech .tech_head h3 {
     font-size: 2.50rem;
     font-weight: 600;
     padding-top: 118px;
 }
-.tech .wrapper .swiper {
+.tech .tech_head .tech_brand ul {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 600;
+    color: #666;
+}
+.tech .tech_head .tech_brand ul li {
+    margin-left: 26px;
+}
+.tech .tech_head .tech_brand ul li.active span {
+    position: relative;
+    color: #1d1d1d;
+}
+.tech .tech_head .tech_brand ul li.active span::after {
     position: absolute;
     width: 100%;
-    bottom: 159px;
-    left: 40%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(29,29,29,0.5);
+    content: "";
 }
-.tech .wrapper .swiper ul li {
-    opacity: 0.5;
+
+.tech .tech_sub {
+    display: flex;
+    justify-content: space-between;
 }
-.tech .wrapper .swiper ul li.swiper-slide-next {
-    opacity: 0.75;
+.tech .tech_sub .tech_nav {
+    width: 290px;
 }
-.tech .wrapper .swiper ul li.swiper-slide-active {
+.tech .tech_prev,
+.tech .tech_next {
+    margin-left: 39px;
+    width: 30px;
+    height: 30px;
+    font-size: 0;
+    line-height: 0s;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.tech .tech_next {
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_86_282' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='30' height='30'%3E%3Crect y='30' width='30' height='30' transform='rotate(-90 0 30)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_86_282)'%3E%3Cpath d='M27.068 17.5002L15.0008 29.5674L2.93359 17.5002L4.70766 15.7261L15.0008 26.0196L25.2939 15.7261L27.068 17.5002Z' fill='%23666666'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.tech .tech_prev {
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_86_279' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='30' height='30'%3E%3Crect x='30' width='30' height='30' transform='rotate(90 30 0)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_86_279)'%3E%3Cpath d='M2.93203 12.4998L14.9992 0.432617L27.0664 12.4998L25.2923 14.2739L14.9992 3.98043L4.70609 14.2739L2.93203 12.4998Z' fill='%23666666'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.tech .tech_sub .list {
+    width: calc(100% - 290px);
+    margin: 40px 0 0 245px;
+}
+.tech .paging .swiper-pagination-bullet {
+    display: block;
+    padding-left: 39px;
+    width: 290px;
+    height: 69px;
+    line-height: 69px;
+    background-color: transparent;
+    border-radius: 0;
     opacity: 1;
+    font-size: 1rem;
 }
-.tech .wrapper .swiper ul li {
+.tech .item1.swiper-pagination-bullet::before {
+    content: "비타500";
+}
+.tech .item2.swiper-pagination-bullet::before {
+    content: "광동 V라인 옥수수수염차";
+}
+.tech .item3.swiper-pagination-bullet::before {
+    content: "광동 헛개차";
+}
+.tech .item4.swiper-pagination-bullet::before {
+    content: "광동 경옥고";
+}
+.tech .item5.swiper-pagination-bullet::before {
+    content: "레돌민®정";
+}
+.tech .item6.swiper-pagination-bullet::before {
+    content: "아이톡";
+}
+.tech .item7.swiper-pagination-bullet::before {
+    content: "광동 치올 페이스트";
+}
+.tech .item8.swiper-pagination-bullet::before {
+    content: "CARMEX";
+}
+.tech .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+    transform: scale(1);
+    position: relative;
+}
+.tech .swiper-pagination-bullet-active-prev,
+.tech .swiper-pagination-bullet-active-prev-prev,
+.tech .swiper-pagination-bullet-active-next,
+.tech .swiper-pagination-bullet-active-next-next {
+    transform: scale(0.7)
+}
+.tech .paging .swiper-pagination-bullet-active {
+    background-color: var(--color-main1);
+    border-radius: 15px;
+    color: #fff;
+    position: relative;
+}
+.tech .swiper-pagination-bullet-active::after {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 28px;
+    left: 15px;
+    background-color: #fff;
+    border-radius: 50%; 
+    content: "";
+}
+
+.tech .swiper ul li {
     width: 297px;
     height: 469px;
     text-align: center;
@@ -350,17 +445,17 @@
     border-radius: 15px;
     padding-top: 42px;
 }
-.tech .wrapper .swiper ul li img {
+.tech .swiper ul li img {
     width: 253px;
     height: 253px;
     border-radius: 50%;
 }
-.tech .wrapper .swiper ul li h4 {
+.tech .swiper ul li h4 {
     font-size: 1.25rem;
     font-weight: 600;
     padding: 39px 0 16px 0;
 }
-.tech .wrapper .swiper ul li p {
+.tech .swiper ul li p {
     font-size: 0.80rem;
 }
 
@@ -370,6 +465,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(../images/news_bg01.png);
+    margin-bottom: 240px;
 }
 .news .wrapper {
     display: flex;
@@ -479,6 +575,12 @@
     background-image: url("data:image/svg+xml,%3Csvg width='38' height='38' viewBox='0 0 38 38' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_86_315' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='-1' y='0' width='39' height='38'%3E%3Crect x='-0.00195312' y='38' width='38' height='38' transform='rotate(-90 -0.00195312 38)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_86_315)'%3E%3Cpath d='M29.5018 18.9999L20.5501 27.9517L18.8816 26.2832L26.1404 18.9999L18.8816 11.7166L20.5501 10.0481L29.5018 18.9999ZM20.0323 18.9999L11.0805 27.9517L9.41211 26.2832L16.6709 18.9999L9.41211 11.7166L11.0805 10.0481L20.0323 18.9999Z' fill='%23007D57'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
 
+
+.insta {
+    position: relative;
+    height: 385px;
+}
+
 .insta .wrapper {
     position: relative;
 }
@@ -497,18 +599,54 @@
     background-color: #666;
     content: "";
 }
-.insta .list .swiper ul li {
+.insta .loop .swiper {
+    white-space: nowrap; /*줄바꿈금지*/
+    position: absolute;
+    left: 0;
+    top: 67px;
+    animation-name: insta_loop;
+    animation-duration: 25s;
+    animation-iteration-count: infinite; /*무한반복*/
+    animation-timing-function: linear; /*가속도 삭제*/
+}
+@keyframes insta_loop {
+    0% {
+        transform: translate(-50%, 0)
+    }
+    100% {
+        transform: translate(10%, 0);
+    } /*첫글자가 다시 맨 앞으로 도달한 값*/
+}
+.insta .loop .swiper ul li {
     width: 318px;
 }
-.insta .list .swiper ul li a {
+.insta .loop .swiper ul li a {
     display: block;
     height: 318px;
 }
 .insta .more {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 16%;
     width: 133px;
-    height: 36px;
-
+    height: 38px;
+    font-size: 0.80rem;
+}
+.insta .more a {
+    position: relative;
+    display: block;
+    width: 138px;
+    line-height: 38px;
+}
+.insta .more a::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 38px;
+    height: 38px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='38' height='38' viewBox='0 0 38 38' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_86_262' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='38' height='38'%3E%3Crect y='38' width='38' height='38' transform='rotate(-90 0 38)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_86_262)'%3E%3Cpath d='M29.5038 18.9999L20.552 27.9517L18.8836 26.2832L26.1424 18.9999L18.8836 11.7166L20.552 10.0481L29.5038 18.9999ZM20.0343 18.9999L11.0825 27.9517L9.41406 26.2832L16.6729 18.9999L9.41406 11.7166L11.0825 10.0481L20.0343 18.9999Z' fill='%231D1D1D'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
 }
