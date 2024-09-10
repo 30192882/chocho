@@ -246,7 +246,6 @@
         padding-top: 80px;
     }
     .show .wrapper {
-        position: relative;
         width: calc(100% - 20px);
     }
     .show .tit {

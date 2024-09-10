@@ -132,7 +132,6 @@ header.fixed + .container {
 header .tnb {
     width: 330px;
     height: 100px;
-    font-weight: 600;
     color: var(--txt-color-gray);
     display: flex;
     justify-content: space-between;
@@ -181,9 +180,12 @@ footer .f_logo a {
 }
 footer .inner .f_nav ul {
     display: flex;
-    gap: 42px;
+    flex-wrap: wrap;
     padding-top: 63px;
     color: rgba(255,255,255,0.6);
+}
+footer .inner .f_nav ul li {
+    margin-right: 42px;
 }
 footer .inner .f_nav ul li.privacy {
     color: #fff;
@@ -294,4 +296,59 @@ footer .sns ul li.f_insta {
 }
 footer .sns ul li.youtube {
     background-image: url("data:image/svg+xml,%3Csvg width='37' height='37' viewBox='0 0 37 37' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_86_246)'%3E%3Cpath d='M20.9309 18.2798L16.2309 15.7298C16.0409 15.6198 15.3809 15.7598 15.3809 15.9798V20.9598C15.3809 21.1798 16.0309 21.3198 16.2309 21.2098L21.1309 18.7798C21.3309 18.6698 21.1309 18.3898 20.9309 18.2798Z' fill='white'/%3E%3Cpath d='M26.94 0H9.13C4.09 0 0 4.09 0 9.13V26.94C0 31.98 4.09 36.07 9.13 36.07H26.94C31.98 36.07 36.07 31.98 36.07 26.94V9.13C36.07 4.09 31.98 0 26.94 0ZM27.57 20.95C27.57 23.31 25.65 25.23 23.29 25.23H12.35C9.99 25.23 8.07 23.32 8.07 20.95V15.86C8.07 13.5 9.98 11.58 12.35 11.58H23.29C25.65 11.58 27.57 13.5 27.57 15.86V20.95Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_86_246'%3E%3Crect width='36.07' height='36.07' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+
+@media screen and (max-width:768px){
+    footer {
+        padding: 63px 0 195px 0;
+    } 
+    footer .inner .f_nav ul {
+        padding-top: 31px;
+        font-size: 0.80rem;
+    }
+    footer .inner .f_info {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 14px 0 32px 0;
+        font-size: 0.65rem;
+    }
+    footer .copyright {
+        padding-top: 29px;
+        font-size: 0.65rem;
+    }
+
+    footer .familysite {
+        position: relative;
+        margin-top: 28px;
+    }
+    footer .familysite button {
+        width: 238px;
+        height: 40px;
+        border-radius: 10px;
+        padding-right: 39px;
+        font-size: 0.80rem;
+    }
+    footer .familysite button.family_open::after,
+    footer .familysite button.family_close::after {
+        top: 3px;
+        right: 37px;
+        width: 34px;
+        height: 34px;
+    }
+    footer .familysite ul {
+        bottom: 45px;
+        width: 238px;
+        font-size: 0.80rem;
+    }
+    footer .sns ul {
+        gap: 0;
+    }
+    footer .sns ul li {
+        margin-right: 20px;
+    }
+    footer .sns {
+        top: auto;
+        bottom: -64px;
+        left: 0;
+    }
 }

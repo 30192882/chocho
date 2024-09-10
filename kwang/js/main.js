@@ -109,7 +109,7 @@ $(document).ready(function(){
     scrollTrigger: {
       trigger: sections2,
       pin: true,
-      start: "top 30px",
+      start: "top 100px",
       end: () => "+=3000",
       scrub: 0.5, 
       markers: false,
@@ -121,6 +121,12 @@ $(document).ready(function(){
       slidesPerView: "auto", 
       breakpoints: {
         1024: {  
+          spaceBetween: 24,
+        },
+        768: {  
+          spaceBetween: 24,
+        },
+        360: {  
           spaceBetween: 24,
         },
       },
