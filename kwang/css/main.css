@@ -993,6 +993,7 @@
 .insta {
     position: relative;
     padding-top: 40px;
+    height: 386px;
 }
 .insta .wrapper {
     position: relative;
@@ -1068,7 +1069,7 @@
 }
 @media screen and (max-width:768px){
     .insta {
-        height: 245px;
+        height: 256px;
     }
     .insta .loop .swiper ul li {
         width: 180px;

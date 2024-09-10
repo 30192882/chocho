@@ -42,41 +42,56 @@ $(document).ready(function(){
       scroll_chk()
   })
 
-  $('header .gnb .gnb_wrap ul.depth1 > li').on('mouseenter focusin', function(){
-    if(pc_mobile == 'pc'){
-        $('header').addClass('menu_over')
-        $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
-        $(this).addClass('over')
-    }
-  })
-  $('header').on('mouseleave', function(){
-    if(pc_mobile == 'pc'){
-      $('header').removeClass('menu_over')
-      $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
-    }
-  })
-  $('header .gnb .gnb_wrap ul.depth1 > li:last-child ul.depth2 > li:last-child ul.depth3 > li:last-child').on('focusout', function(){
-    if(pc_mobile == 'pc'){
-      $('header').removeClass('menu_over')
-      $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
-  }
-  })
+    $('header .gnb .gnb_wrap ul.depth1 > li').on('mouseenter focusin', function(){
+        if(pc_mobile == 'pc'){
+            $('header').addClass('menu_over')
+            $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('on')
+            $(this).addClass('on')
+        }
+    })
+    $('header').on('mouseleave', function(){
+        if(pc_mobile == 'pc'){
+            $('header').removeClass('menu_over')
+            $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('on')
+        }
+    })
+    $('header .gnb .gnb_wrap ul.depth1 > li:last-child > ul.depth2 > li:last-child > a').on('focusout', function(){
+        if(pc_mobile == 'pc'){
+            $('header').removeClass('menu_over')
+            $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('on')
+        }
+    })    
 
-  $('header .gnb .gnb_wrap .depth1 > li > a').on('click', function(e){
-      if(pc_mobile == 'mo'){ //모바일에서만 작동
-          e.preventDefault(); /* a 태그의 href를 작동시키지 않음 */
-          $(this).parent().toggleClass('open')
-      }
-  })
+    /*
+        모바일 메뉴를 클릭하면
+        1. a링크값을 삭제 (이동을 못하게 막아버림)
+        2. li에 open 클래스를 추가
+           open 없으면 추가
+           open 있으면 삭제
+           --> 한번 클릭하면 열리고 두번 클릭하면 닫힘
+    */
 
-  $('header .gnb .gnb_open').on('click', function(){
-      $('header').addClass('menu_open')//하단 컨텐츠 스크롤 금지
-      $("html, body").css({overflow : "hidden", height : $(window).height()}).bind("scroll touchmove mousewheel", function(e){e.preventDefault();e.stopPropagation();return false;},function(){passive:false});
-  })
-  $('header .gnb .gnb_close').on('click', function(){
-      $('header').removeClass('menu_open')//하단 컨텐츠 스크롤 금지 해제
-      $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
-  })
+    $("header .gnb .gnb_wrap ul.depth1 > li > a").on("click", function(e){
+        if(pc_mobile == 'mobile'){
+            e.preventDefault();		/* a 태그의 href를 작동 시키지 않음 */
+            $(this).parent().toggleClass('open')
+        } 
+    });
+
+    /*
+        header .gnb .gnb_open
+        메뉴열기를 클릭하면 header에 menu_open 클래스 추가
+        메뉴닫기를 클릭하면 header에 menu_opem 삭제
+        header .gnb .gnb_close
+    */
+    $('header .gnb .gnb_open').on('click', function(){
+        $('header').addClass('menu_open')
+        $("html, body").css({overflow : "hidden", height : $(window).height()}).bind("scroll touchmove mousewheel", function(e){e.preventDefault();e.stopPropagation();return false;},function(){passive:false});
+    })
+    $('header .gnb .gnb_close').on('click', function(){
+        $('header').removeClass('menu_open')
+        $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
+    })
 
   gsap.registerPlugin(ScrollTrigger);
   const sections =  document.querySelector(".visual .inner");  //좌우요소를 감싸는 요소
