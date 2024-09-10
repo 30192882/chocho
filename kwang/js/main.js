@@ -141,7 +141,7 @@ $(document).ready(function(){
         768: {  
           spaceBetween: 24,
         },
-        360: {  
+        300: {  
           spaceBetween: 24,
         },
       },

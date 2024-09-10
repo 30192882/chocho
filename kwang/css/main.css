@@ -1079,11 +1079,12 @@
     }
     .insta .more {
         width: 110px;
+        top: 47px;
         font-size: 0.65rem;
     }
     .insta .more a {
         line-height: 30px;
-        width: 138px;
+        width: 110px;
         line-height: 28px;
     }
     .insta .more a::after {
