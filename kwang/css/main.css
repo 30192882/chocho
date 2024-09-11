@@ -144,10 +144,17 @@
 }
 @media screen and (max-width:780px){
     .visual .inner .tit {
+        padding-top: 407px;
         font-size: 1.50rem;
     }
     .visual .txt {
         font-size: 0.65rem;
+    }
+}
+@media screen and (max-width:360px){
+    .visual .inner .tit {
+        padding-top: 228px;
+        font-size: 1.25rem;
     }
 }
 
