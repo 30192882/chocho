@@ -798,8 +798,6 @@
     }
 }
 @media screen and (max-width:768px){
-    .tech {
-    }
     .tech .tech_head h2 {
         font-size: 1.25rem;
     }

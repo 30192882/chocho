@@ -110,7 +110,7 @@ $(document).ready(function(){
       trigger: sections,
       pin: true,
       start: "center center", /* 좌우로 스크롤 될 동안의 위치, top top 상단에 고정, top 20% 상단에서 20% 떨어져서 */
-      end: () => "+=500",
+      end: () => "+=0",
       scrub: 0.5, 
       markers: false,
       invalidateOnRefresh: true,
