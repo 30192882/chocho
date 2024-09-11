@@ -22,7 +22,8 @@
 }
 .visual .inner .tit {
     position: absolute;
-    padding-top: 407px;
+    padding-top: 50%;
+    transform: translate(0, -50%);
     height: calc(100vh - 50%);
     z-index: 5;
     font-size: 3rem;
