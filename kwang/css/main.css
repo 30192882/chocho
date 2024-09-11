@@ -290,7 +290,7 @@
         font-size: 1.25rem;
     }
     .search .left .l_tit .search_box {
-        width: 65%;
+        width: 320px;
         height: 63px;
     }
     .search .left .l_tit .search_box input[type="text"] {
@@ -1098,5 +1098,10 @@
     .insta .more a::after {
         width: 28px;
         height: 28px;
+    }
+}
+@media screen and (max-width:360px){
+    .insta .more {
+        right: 6%;
     }
 }
