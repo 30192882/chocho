@@ -168,7 +168,7 @@
 .search .left .l_tit .search_box {
     display: flex;
     justify-content: center;
-    width: 425px;
+    width: 70%;
     height: 63px;
     align-items: center;
     margin: 72px 0 36px 0;
@@ -178,8 +178,8 @@
     display: none; /* 숨김 */
 }
 .search .left .l_tit .search_box input[type="text"] {
-    width: 356px;
-    height: 18px;
+    width: 85%;
+    line-height: 63px;
     font-size: 1.063rem;
     border: 0;
     background-color: transparent;
@@ -284,14 +284,14 @@
         background-image: none;
     }
     .search .left {
-        width: auto;
+        width: 100%;
     }
     .search .left .l_tit h2 {
         font-size: 1.25rem;
     }
     .search .left .l_tit .search_box {
         width: 320px;
-        height: 63px;
+        height: 50px;
     }
     .search .left .l_tit .search_box input[type="text"] {
         font-size: 0.80rem;
@@ -301,6 +301,11 @@
     }
     .search .left .list {
         font-size: 0.80rem;
+    }
+}
+@media screen and (max-width:768px){
+    .search .left .l_tit .search_box {
+        width: 290px;
     }
 }
 
