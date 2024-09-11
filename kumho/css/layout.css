@@ -128,6 +128,7 @@ header.fixed {
     header .gnb .gnb_wrap ul.depth2 > li > a {
         display: block;
         line-height: 2;
+        width: 160px;
         color: #fff;
     }
     header .gnb .gnb_wrap ul.depth2 > li > a:hover {

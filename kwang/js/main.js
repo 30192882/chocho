@@ -3,7 +3,7 @@ $(document).ready(function(){
   let scrolling
   let scroll_top //header 고정 시작 값
   let window_w
-  let mobile_size = 1024
+  let mobile_size = 1300
   let pc_mobile
 
   function scroll_chk(){
@@ -72,11 +72,18 @@ $(document).ready(function(){
     */
 
     $("header .gnb .gnb_wrap ul.depth1 > li > a").on("click", function(e){
-        if(pc_mobile == 'mobile'){
+        if(pc_mobile == 'mo'){
             e.preventDefault();		/* a 태그의 href를 작동 시키지 않음 */
             $(this).parent().toggleClass('open')
         } 
     });
+    $("header .gnb .gnb_wrap ul.depth2 > li > a").on("click", function(e){
+        if(pc_mobile == 'mo'){
+            e.preventDefault();		/* a 태그의 href를 작동 시키지 않음 */
+            $(this).parent().toggleClass('open')
+        } 
+    });
+
 
     /*
         header .gnb .gnb_open

@@ -142,6 +142,14 @@
         font-size: 0.80rem;
     }
 }
+@media screen and (max-width:780px){
+    .visual .inner .tit {
+        font-size: 1.50rem;
+    }
+    .visual .txt {
+        font-size: 0.65rem;
+    }
+}
 
 .search {
     margin-top: 130px;
@@ -764,7 +772,7 @@
     } 
     .tech .tech_head .tech_brand {
         font-size: 0.80rem;
-        padding-top: 20px;
+        padding-top: 30px;
     }  
     .tech .paging .swiper-pagination-bullet {
         padding-left: 39px;
@@ -788,11 +796,13 @@
     .tech .tech_head h3 {
         font-size: 1.25rem;
     }
+    .tech .tech_head .tech_brand {
+        padding-top: 40px;
+    }  
     .tech .paging .swiper-pagination-bullet {
         padding-left: 39px;
         width: 250px;
         height: 58px;
-
         line-height: 58px;
         font-size: 0.80rem;
     }
@@ -810,8 +820,13 @@
     }
     .tech .tech_sub .list {
         width: calc(100% + 20px);
-        margin: 40px 0 0 0;
+        margin: 20px 0 0 0;
     }
+}
+@media screen and (max-width:360px){
+    .tech .tech_head .tech_brand {
+        font-size: 0.65rem;
+    }  
 }
 
 .news {
@@ -992,7 +1007,7 @@
 
 .insta {
     position: relative;
-    padding-top: 40px;
+    padding-top: 20px;
     height: 386px;
 }
 .insta .wrapper {
@@ -1017,9 +1032,9 @@
     white-space: nowrap; /*줄바꿈금지*/
     position: absolute;
     left: 0;
-    top: 110px;
+    top: 76px;
     animation-name: insta_loop;
-    animation-duration: 25s;
+    animation-duration: 15s;
     animation-iteration-count: infinite; /*무한반복*/
     animation-timing-function: linear; /*가속도 삭제*/
 }
@@ -1028,7 +1043,7 @@
         transform: translate(-50%, 0)
     }
     100% {
-        transform: translate(40%, 0);
+        transform: translate(-70%, 0);
     } /*첫글자가 다시 맨 앞으로 도달한 값*/
 }
 .insta .loop .swiper ul li {
@@ -1043,8 +1058,8 @@
 }
 .insta .more {
     position: absolute;
-    top: 0;
-    right: 16%;
+    top: 22px;
+    right: 12%;
     width: 133px;
     height: 38px;
     font-size: 0.80rem;
@@ -1054,6 +1069,9 @@
     display: block;
     width: 138px;
     line-height: 38px;
+}
+.insta .more a:hover {
+    color: var(--color-main1);
 }
 .insta .more a::after {
     position: absolute;
@@ -1067,9 +1085,15 @@
     background-image: url("data:image/svg+xml,%3Csvg width='38' height='38' viewBox='0 0 38 38' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_86_262' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='38' height='38'%3E%3Crect y='38' width='38' height='38' transform='rotate(-90 0 38)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_86_262)'%3E%3Cpath d='M29.5038 18.9999L20.552 27.9517L18.8836 26.2832L26.1424 18.9999L18.8836 11.7166L20.552 10.0481L29.5038 18.9999ZM20.0343 18.9999L11.0825 27.9517L9.41406 26.2832L16.6729 18.9999L9.41406 11.7166L11.0825 10.0481L20.0343 18.9999Z' fill='%231D1D1D'/%3E%3C/g%3E%3C/svg%3E%0A");
     content: "";
 }
+.insta .more a:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='38' height='38' viewBox='0 0 38 38' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_86_262' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='38' height='38'%3E%3Crect y='38' width='38' height='38' transform='rotate(-90 0 38)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_86_262)'%3E%3Cpath d='M29.5038 18.9999L20.552 27.9517L18.8836 26.2832L26.1424 18.9999L18.8836 11.7166L20.552 10.0481L29.5038 18.9999ZM20.0343 18.9999L11.0825 27.9517L9.41406 26.2832L16.6729 18.9999L9.41406 11.7166L11.0825 10.0481L20.0343 18.9999Z' fill='%23007D57'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
 @media screen and (max-width:768px){
     .insta {
         height: 256px;
+    }
+    .insta .wrapper .tit h3 span {
+        font-size: 1.25rem;
     }
     .insta .loop .swiper ul li {
         width: 180px;
