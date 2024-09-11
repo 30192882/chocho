@@ -122,22 +122,24 @@ $(document).ready(function(){
     }
   });
 
-  gsap.registerPlugin(ScrollTrigger);
   const sections2 =  document.querySelector(".search .wrapper");  //좌우요소를 감싸는 요소
   const large2 =  document.querySelector(".search .wrapper .right .pic"); //스크롤될 요소
-  gsap.to(large2, {
-    y: () => (window.innerHeight - large.clientHeight - 20),  // 실제 스크롤 값보다 더 스크롤 할 값 - 필요없으면 0 
-    ease: "none",
-    scrollTrigger: {
-      trigger: sections2,
-      pin: true,
-      start: "top 100px",
-      end: () => "+=3000",
-      scrub: 0.5, 
-      markers: false,
-      invalidateOnRefresh: true,
-    }
-  });
+  let mm = gsap.matchMedia();
+  mm.add("(min-width: 768px)", function() { 
+    gsap.to(large2, {
+      y: () => (window.innerHeight - large.clientHeight - 0),  // 실제 스크롤 값보다 더 스크롤 할 값 - 필요없으면 0 
+      ease: "none",
+      scrollTrigger: {
+        trigger: sections2,
+        pin: true,
+        start: "top 130px",
+        end: () => "+=1000",
+        scrub: 0.1, 
+        markers: false,
+        invalidateOnRefresh: true,
+      }
+    });
+  })
 
   const tech_swiper = new Swiper('.tech .swiper', { 
       slidesPerView: "auto", 
@@ -172,20 +174,17 @@ $(document).ready(function(){
 
 	
 
-    const swiper = new Swiper('.insta .swiper', { /* 팝업을 감싼는 요소의 class명 */
-    slidesPerView: "auto", /* li의 넓이 비율로 안함 - css에서 준 넓이대로 함 */
-    spaceBetween: 0, /* li와 li사이 - 제일 작은 여백 */
-    breakpoints: {
-      640: {  /* 640px 이상이 되면 적용 */
-        spaceBetween: 0, 
+  const swiper = new Swiper('.insta .swiper', { /* 팝업을 감싼는 요소의 class명 */
+      slidesPerView: "auto", /* li의 넓이 비율로 안함 - css에서 준 넓이대로 함 */
+      spaceBetween: 0, /* li와 li사이 - 제일 작은 여백 */
+      centeredSlides: true, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
+      loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+      speed: 1000,
+      autoplay: {
+          delay: 0,
+          disableOnInteraction: false
       },
-      1024: {  /* 1024px 이상이 되면 적용 */
-        spaceBetween: 0,
-      },
-    },
-    centeredSlides: true, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
-    loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
-  });
+    });
 
 
       /* 

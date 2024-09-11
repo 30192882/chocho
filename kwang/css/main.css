@@ -14,40 +14,59 @@
         (important는 해제가 어려움. 모바일에서도 적용됨)
 */
 
+.visual h2 {
+    display: none;
+}
 .visual .inner {
     width: auto;
     display: flex;
     justify-content: center;
     position: relative;
 }
-.visual .inner .tit {
+.visual .inner .tit_top {
     position: absolute;
-    padding-top: 50%;
-    transform: translate(0, -50%);
-    height: calc(100vh - 50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 5;
     font-size: 3rem;
     font-weight: 600;
     color: var(--color-main1);
-    width: 95%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 491px;
+    white-space: nowrap;
+}
+.visual .inner .tit_sub {
+    position: absolute;
+    top: calc(50% - 188px);
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    color: rgba(29,29,29,0.5);
+    padding-top: 416px;
+}
+.visual .inner .tit_sub::before {
+    position: absolute;
+    background-color: #B3D8CD;
+    border-radius: 50%;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    width: 377px;
+    height: 377px;
+    content: "";
 }
 .visual .inner::after {
     position: absolute;
-    left: 50%;
-    top: 48%;
-    transform: translate(-50%, -50%);
+    left: 0;
+    top: 50%;
     width: 100%;
     height: 1px;
     background-color: #B3D8CD;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
     content: "";
 }
 .visual .inner .cont_wrap {
-    width: 500px;
     z-index: 10;
 }
 .visual .inner .cont_wrap .cont .item {
@@ -56,103 +75,72 @@
     text-align: center;
     align-items: center;
 }
-.visual .inner::before {
-    position: absolute;
-    background-color: #B3D8CD;
-    border-radius: 50%;
-    left: 50%;
-    top: 48%;
-    transform: translate(-50%, -50%);
-    width: 377px;
-    height: 377px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    content: "";
-}
-.visual .txt {
-    position: absolute;
-    top: 75%;
-    left: auto;
-    text-align: center;
-    color: rgba(29,29,29,0.5);
-}
 
 .visual .inner { display:flex; overflow:hidden; max-height:100vh; } /* 스크롤되면서 보여질 최대높이를 지정해야한다. height로도 가능 */
 
 @media screen and (max-width:1550px){
-    .visual .inner .tit {
+    .visual .inner .tit_top {
         font-size: 2.50rem;
+        gap: 450px;
     }
-    .visual .inner::before {
-        width: 300px;
-        height: 300px;
+    .visual .inner .tit_sub {
+        top: calc(50% - 188px);
+        padding-top: 416px;
     }
-    .visual .inner .cont_wrap {
-        width: 400px;
+    .visual .inner .tit_sub::before {
+        width: 377px;
+        height: 377px;
     }
     .visual .inner .cont_wrap .cont .item img {
         width: 400px;
-    }
-    .visual .txt {
-        top: 70%;
     }
 }
 
 @media screen and (max-width:1300px){
-    .visual .inner .tit {
+    .visual .inner .tit_top {
         font-size: 2rem;
+        gap: 400px;
     }
-    .visual .inner::before {
-        width: 300px;
-        height: 300px;
+    .visual .inner .tit_sub {
+        top: calc(50% - 160px);
+        padding-top: 360px;
     }
-    .visual .inner::after {
-        top: 47.3%;
-    }
-    .visual .inner .cont_wrap {
-        width: 400px;
+    .visual .inner .tit_sub::before {
+        width: 320px;
+        height: 320px;
     }
     .visual .inner .cont_wrap .cont .item img {
-        width: 400px;
-    }
-    .visual .txt {
-        top: 70%;
+        width: 350px;
     }
 }
 @media screen and (max-width:1100px){
-    .visual .inner .tit {
-        padding-top: 230px;
-        font-size: 2rem;
-        height: auto;
-        width: auto;
+    .visual .inner .tit_top {
+        flex-direction: column;
+        gap: 365px;
         text-align: center;
-        flex-wrap: wrap;
-        justify-content: center;
     }
-    .visual .inner .tit strong {
-        width: 100%;
-    }
-    .visual .inner .tit span {
-        padding-top: 366px;
-    }
-    .visual .txt {
-        top: 75%;
-        font-size: 0.80rem;
+    .visual .inner .tit_sub {
+        top: calc(50% - 160px);
+        padding-top: 407px;
     }
 }
 @media screen and (max-width:780px){
-    .visual .inner .tit {
-        padding-top: 407px;
+    .visual .inner .tit_top {
         font-size: 1.50rem;
+        gap: 309px;
     }
-    .visual .txt {
+    .visual .inner .tit_sub {
+        top: calc(50% - 135px);
+        padding-top: 349px;
         font-size: 0.65rem;
+    }
+    .visual .inner .tit_sub::before {
+        width: 270px;
+        height: 270px;
     }
 }
 @media screen and (max-width:360px){
-    .visual .inner .tit {
-        padding-top: 228px;
+    .visual .inner .tit_top {
         font-size: 1.25rem;
     }
 }
@@ -171,7 +159,6 @@
 }
 .search .left {
     width: calc(50% - 12px);
-    padding-top: 50px;
 }
 .search .left .l_tit h2 {
     font-size: 2.50rem;
@@ -184,7 +171,7 @@
     width: 425px;
     height: 63px;
     align-items: center;
-    margin: 27px 0;
+    margin: 72px 0 36px 0;
     border-bottom: 3px solid #1d1d1d;
 }
 .search .left .l_tit .search_box label {
@@ -258,8 +245,14 @@
 }
 
 @media screen and (max-width:1550px){
+    .search .left {
+        width: calc(60% - 12px);
+    }
     .search .left .l_tit h2 {
         font-size: 2rem;
+    }
+    .search .right {
+        width: calc(40% - 12px);
     }
     .search .right .pic img {
         width: 354px;
@@ -269,10 +262,6 @@
     }
 }
 @media screen and (max-width:1100px){
-    .search .left {
-        width: 70%;
-        padding-top: 50px;
-    }
     .search .left .l_tit h2 {
         font-size: 1.5rem;
     }
@@ -295,7 +284,7 @@
         background-image: none;
     }
     .search .left {
-        width: 100%;
+        width: auto;
     }
     .search .left .l_tit h2 {
         font-size: 1.25rem;
@@ -315,6 +304,9 @@
     }
 }
 
+.brand h2 {
+    display: none;
+}
 .brand .loop {
     color: var(--color-main1);
     font-family: 'Paperlogy-6SemiBold';
@@ -410,7 +402,7 @@
 }
 @media screen and (max-width:768px){
     .brand {
-        padding-top: 500px;
+        padding-top: 310px;
     }
     .brand .loop {
         font-size: 3rem;
@@ -448,6 +440,11 @@
     height: 200px;
     color: #fff;
     align-items: center;
+}
+.mall h2 {
+    display: none;
+    font-size: 0;
+    line-height: 0;
 }
 .mall h3 {
     font-size: 2rem;
@@ -633,10 +630,10 @@
     margin-top: 100px;
     margin-bottom: 100px;
 }
-.tech .tech_head h3 {
+.tech .tech_head h2 {
     font-size: 2.50rem;
     font-weight: 600;
-    padding-top: 118px;
+    padding: 118px 0 39px 0;
 }
 .tech .tech_head .tech_brand ul {
     display: flex;
@@ -763,7 +760,7 @@
     height: 253px;
     border-radius: 50%;
 }
-.tech .swiper ul li h4 {
+.tech .swiper ul li h3 {
     font-size: 1.25rem;
     font-weight: 600;
     padding: 39px 0 16px 0;
@@ -773,7 +770,7 @@
 }
 
 @media screen and (max-width:1100px){
-    .tech .tech_head h3 {
+    .tech .tech_head h2 {
         font-size: 2rem;
     } 
     .tech .tech_head .tech_brand {
@@ -797,9 +794,8 @@
 }
 @media screen and (max-width:768px){
     .tech {
-        height: 700px;
     }
-    .tech .tech_head h3 {
+    .tech .tech_head h2 {
         font-size: 1.25rem;
     }
     .tech .tech_head .tech_brand {
@@ -815,7 +811,7 @@
     .tech .tech_sub .list {
         margin: 40px 0 0 130px;
     }
-    .tech .swiper ul li h4 {
+    .tech .swiper ul li h3 {
         font-size: 1rem;
     }
     .tech .swiper ul li p {
@@ -836,11 +832,11 @@
 }
 
 .news {
-    height: 795px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(../images/news_bg01.png);
+    height: 795px;
     margin-bottom: 240px;
 }
 .news .wrapper {
@@ -860,16 +856,16 @@
     padding: 43px 53px 73px 53px;
     box-shadow: 0 3px 5px rgba(0,0,0,0.2);
 }
-.news .wrapper h3 {
+.news .wrapper h2 {
     padding: 0 0 52px 0;
 }
-.news .wrapper h3 span {
+.news .wrapper h2 span {
     font-size: 1.50rem;
     font-weight: 600;
     color: var(--txt-color-tit);
     position: relative;
 }
-.news .wrapper h3 span::before {
+.news .wrapper h2 span::before {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -878,7 +874,7 @@
     background-color: #666;
     content: "";
 }
-.news .wrapper h4 {
+.news .wrapper h3 {
     font-size: 1.25rem;
     font-weight: 600;
     color: var(--txt-color-tit);
@@ -954,7 +950,7 @@
 }
 
 @media screen and (max-width:1100px){
-    .news .wrapper h4 {
+    .news .wrapper h3 {
         font-size: 1rem;
         padding: 9px 0 19px 0;
     }
@@ -963,6 +959,7 @@
     .news {
         height: auto;
         background-image: none;
+        margin-bottom: 120px;
     }
     .news .wrapper {
         display: block;
@@ -971,24 +968,23 @@
     .news .wrapper .post {
         width: 100%;
         height: 508px;
-        margin-top: 62px;
+        margin-top: 42px;
         background-color: #fefefe;
         padding: 42px 27px 54px 27px;
         box-shadow: 0 3px 5px rgba(0,0,0,0.2);
     }
-    .news .wrapper h3 {
+    .news .wrapper h2 {
         padding: 0 0 50px 0;
     }
-    .news .wrapper h3 span {
+    .news .wrapper h2 span {
         font-size: 1.25rem;
     }
-    .news .wrapper h4 {
+    .news .wrapper h3 {
         font-size: 0.80rem;
         padding: 7px 0 15px 0;
     }
     .news .wrapper .list ul li a {
         height: 95px;
-
         border-bottom: 1px solid rgba(61, 61, 61, 0.5);
     }
     .news .wrapper .list ul li a strong,
@@ -1014,18 +1010,18 @@
 .insta {
     position: relative;
     padding-top: 20px;
-    height: 386px;
 }
-.insta .wrapper {
-    position: relative;
+.insta .wrapper .tit {
+    margin-bottom: 32px;
 }
-.insta .wrapper .tit h3 span {
+.insta .wrapper .tit h2 span {
     font-size: 1.50rem;
     font-weight: 600;
     color: var(--txt-color-tit);
     position: relative;
+    margin-bottom: 30px;
 }
-.insta .wrapper .tit h3 span::before {
+.insta .wrapper .tit h2 span::before {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1034,23 +1030,8 @@
     background-color: #666;
     content: "";
 }
-.insta .loop .swiper {
-    white-space: nowrap; /*줄바꿈금지*/
-    position: absolute;
-    left: 0;
-    top: 76px;
-    animation-name: insta_loop;
-    animation-duration: 15s;
-    animation-iteration-count: infinite; /*무한반복*/
-    animation-timing-function: linear; /*가속도 삭제*/
-}
-@keyframes insta_loop {
-    0% {
-        transform: translate(-50%, 0)
-    }
-    100% {
-        transform: translate(-70%, 0);
-    } /*첫글자가 다시 맨 앞으로 도달한 값*/
+.insta .loop .swiper .swiper-wrapper {
+    transition-timing-function: linear;
 }
 .insta .loop .swiper ul li {
     width: 318px;
@@ -1095,9 +1076,6 @@
     background-image: url("data:image/svg+xml,%3Csvg width='38' height='38' viewBox='0 0 38 38' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_86_262' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='38' height='38'%3E%3Crect y='38' width='38' height='38' transform='rotate(-90 0 38)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_86_262)'%3E%3Cpath d='M29.5038 18.9999L20.552 27.9517L18.8836 26.2832L26.1424 18.9999L18.8836 11.7166L20.552 10.0481L29.5038 18.9999ZM20.0343 18.9999L11.0825 27.9517L9.41406 26.2832L16.6729 18.9999L9.41406 11.7166L11.0825 10.0481L20.0343 18.9999Z' fill='%23007D57'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
 @media screen and (max-width:768px){
-    .insta {
-        height: 256px;
-    }
     .insta .wrapper .tit h3 span {
         font-size: 1.25rem;
     }
@@ -1109,7 +1087,7 @@
     }
     .insta .more {
         width: 110px;
-        top: 47px;
+        top: 30px;
         font-size: 0.65rem;
     }
     .insta .more a {

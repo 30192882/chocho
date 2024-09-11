@@ -422,10 +422,11 @@ footer .inner .f_nav ul {
     display: flex;
     flex-wrap: wrap;
     padding-top: 63px;
+    gap: 10px;
     color: rgba(255,255,255,0.6);
 }
 footer .inner .f_nav ul li {
-    margin-right: 42px;
+    margin-right: 36px;
 }
 footer .inner .f_nav ul li.privacy {
     color: #fff;
@@ -441,22 +442,23 @@ footer .familysite {
     position: absolute;
     right: 0;
     top: 0;
+    font-size: 0.80rem;
 }
 footer .familysite button {
-    width: 248px;
-    height: 48px;
+    width: 238px;
+    height: 38px;
     border: 1px solid #fff;
     border-radius: 10px;
-    padding-right: 39px;
+    padding-right: 80px;
     position: relative;
 }
 footer .familysite button.family_open::after,
 footer .familysite button.family_close::after {
     position: absolute;
-    top: 3px;
-    right: 37px;
-    width: 39px;
-    height: 39px;
+    top: 0;
+    right: 15px;
+    width: 35px;
+    height: 35px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -472,7 +474,7 @@ footer .familysite ul {
     display: none; /*숨김*/
     position: absolute; /*familysite를 기준으로 정렬*/
     left: 0;
-    bottom: 55px;
+    bottom: 43px;
     z-index: 10;
     width: 100%;
     background-color: #1d1d1d;
@@ -563,20 +565,6 @@ footer .sns ul li.youtube {
     footer .familysite {
         position: relative;
         margin-top: 28px;
-    }
-    footer .familysite button {
-        width: 238px;
-        height: 40px;
-        border-radius: 10px;
-        padding-right: 39px;
-        font-size: 0.80rem;
-    }
-    footer .familysite button.family_open::after,
-    footer .familysite button.family_close::after {
-        top: 3px;
-        right: 37px;
-        width: 34px;
-        height: 34px;
     }
     footer .familysite ul {
         bottom: 45px;
