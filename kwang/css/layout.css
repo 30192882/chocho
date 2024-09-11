@@ -384,8 +384,6 @@ header .tnb .global > a:hover {
     header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li > ul.depth3 > li > a:hover {
         color: var(--color-main1);
     }
-
-
     header .tnb {
         display: none;
     }
