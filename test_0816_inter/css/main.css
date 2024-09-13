@@ -53,11 +53,12 @@
 }
 .life .photo_wrap {
     margin: 63px 0 0 0;
+    text-align: center;
 }
 /*jquery로 넓이 제어*/
 .life .photo_wrap .photo {
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
     width: 618px;
     height: 503px;
     transition: 1s;

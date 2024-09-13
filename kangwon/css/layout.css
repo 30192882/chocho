@@ -1,0 +1,157 @@
+/*header, footer처럼 페이지에 공통으로 배치되는 요소의 css*/
+
+.skip_nav {
+    position: absolute;
+    left: 0;
+    top: -100px; /*focus가 될때만 나타나야함 - 상단에 숨겨져 있어야함*/
+    z-index: 99999999999999; /*꼭 맨 상단에 배치*/
+    width: 100%;
+}
+.skip_nav a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #FFF7EC;
+    text-align: center;
+    color: #007D57;
+    font-size: 18px;
+}
+.skip_nav a:focus {
+    top: 100px; /*a가 포커스 되면 올라간 만큼 다시 내려옴*/
+}
+
+header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: #1d1d1d;
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+}
+header .logo {
+    margin-top: 25px;
+}
+header .logo a {
+    display: block;
+    width: 234px;
+    height: 57px;
+    font-size: 0;
+    line-height: 0;
+    position: relative; /*before 정렬의 기준*/
+}
+header .logo a::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../images/logo.png);
+    content: "";
+}
+
+header .gnb button {
+    display: none; /*숨김*/
+}
+header .gnb .gnb_wrap ul.depth1 {
+    display: flex;
+    text-align: center;
+}
+header .gnb .gnb_wrap ul.depth1 > li {
+    width: 171px;
+    position: relative; /*depth2 정렬의 기준*/
+}
+header .gnb .gnb_wrap ul.depth1 > li > a {
+    display: block; /*li와 사이즈 동일*/
+    line-height: 100px; /*header의 높이와 동일한 값*/
+    font-size: 20px;
+    font-weight: 700;
+}
+header .gnb .gnb_wrap ul.depth1 > li.active > a > span::before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-main1);
+    content: "";
+}
+header.menu_over .gnb .gnb_wrap ul.depth1 > li.active > a > span::before {
+    display: none;
+}
+header .gnb .gnb_wrap ul.depth1 > li.on > a {
+    color: var(--color-main1);
+}
+header .gnb .gnb_wrap ul.depth1 > li.on > a > span {
+    position: relative; /*after 정렬의 기본*/
+}
+header .gnb .gnb_wrap ul.depth1 > li.on > a > span::after {
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-main1);
+    content: "";
+}
+header .gnb .gnb_wrap ul.depth2 {
+    display: none; /*2차메뉴는 오버한 경우에만 보임*/
+    position: absolute;
+    left: 0;
+    top: 100px; /*header 높이만큼*/
+    width: 100%;
+    padding-top: 13px;
+    /*1차메뉴 a와 2차메뉴 사이의 여백은
+    반드시 padding으로 줘야함
+    padding으로 안주면 2차메뉴로 이동시 메뉴가 아웃됨*/
+}
+header .gnb .gnb_wrap ul.depth2 > li > a {
+    display: block;
+    line-height: 2.5;
+    width: 171px;
+    color: #1d1d1d;
+}
+header .gnb .gnb_wrap ul.depth2 > li > a:hover {
+    color: var(--color-main1);
+}
+
+header.menu_over::before {
+    position: absolute; /*header를 기준으로 정렬*/
+    left: 0;
+    top: 0;
+    z-index: -1;
+    /*정렬의 기준이 되는 header 내부에서
+    가장 하단으로 배치한다는 명령
+    -- visual 아래로는 내려가지 않음*/
+    width: 100%;
+    height: 434px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    content: "";
+}
+header.menu_over::after {
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.2);
+    content: "";
+}
+header.menu_over .gnb .gnb_wrap ul.depth2 {
+    display: block;
+}
+
+footer {
+    margin-top: 500px;
+}
