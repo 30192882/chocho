@@ -10,7 +10,7 @@ html, body {
     font-weight: 400;
     font-size: 16px;
     letter-spacing: -0.7px; /* 자간 */
-    line-height: 1.1; /* 배수 - 글자크기에 1.4배 */
+    line-height: 1.5; /* 배수 - 글자크기에 1.4배 */
     color: #3d3d3d; /* 글자 색상 */
     word-break: keep-all; /* 단어별로 줄바꿈 */
     word-wrap: break-word; /* 만약 단어가 엄청 길면 강제로 줄바꿈 실행 */
@@ -88,11 +88,11 @@ html, body {
 }
 
 @media screen and (max-width:1300px) {
-    :root {--tit-txt-size : 2.500rem;}
-}
-@media screen and (max-width:1024px) {
     :root {--tit-txt-size : 2.188rem;}
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     :root {--tit-txt-size : 1.875rem;}
+}
+@media screen and (max-width:768px) {
+    :root {--tit-txt-size : 1.563rem;}
 }

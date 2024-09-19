@@ -17,43 +17,57 @@
 h2 {
     font-family: 'JejuGothic'; 
 }
-.life .tit h2 {
+.visual .tit h2 {
     margin: 245px 0 24px 0;
-    font-size: 2.500rem;
+    font-size: var(--tit-txt-size);
     text-align: center;
     color: var(--txt-color-tit);
 }
-.life .tit p {
+.visual .tit p {
     text-align: center;
 }
-.life .photo_wrap {
+.visual .photo_wrap {
     margin: 63px 0 0 0;
     text-align: center;
 }
-.life.end .photo_wrap .photo {
-    border-radius: 0;
-}
 
 /*jquery로 넓이 제어*/
-.life .photo_wrap .photo {
+.visual .photo_wrap .photo {
     overflow: hidden;
-    border-radius: 20px;
-    width: 832px;
-    height: 496px;
-    transition: 1s;
+    border-radius: 20px 20px 0 0;
+    width: 50%;
+    height: 1000px;
+    transition: 2s;
     display: inline-block;
+    text-align: center;
     /*text-align: center로 정렬하게 하기 위해*/
 }
-.life.end .photo_wrap .photo {
+.visual.end .photo_wrap .photo {
     border-radius: 0;
+    position: relative;
 }
-.life .photo_wrap .photo img {
+.visual.end .photo_wrap .photo::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    transition: 2s;
+    opacity: 0.5;
+    content: "";
+}
+.visual .photo_wrap .photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .major {
     background-image: url(../images/major_bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 .major .inter,
 .major .sur,
@@ -64,17 +78,31 @@ h2 {
 }
 .major .sur,
 .major .emer {
-    text-align: right;
-    align-items: right;
+    flex-direction: row-reverse
+}
+.major .inner {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: calc(50% - 24px);
+}
+
+.major .sur .inner,
+.major .emer .inner {
+    text-align: left;
 }
 .major .txt {
-    width: 618px;
-    margin: 69px 0 0 24px;
+    width: calc(100% - 24px);
+    padding: 35px 25px;
 }
 .major .pic {
-    width: 511px;
+    width: calc(50% - 24px);
 }
-.major .pic .img {
+.major .pic img {
     width: 100%;
 }
 .major strong {
@@ -85,37 +113,73 @@ h2 {
     font-size: var(--tit-txt-size);
     margin: 31px 0 25px 0;
 }
-.major .more {
-    margin-top: 48px;
+.major .inner .more {
+    width: 49px;
+    height: 49px;
+    bottom: 10%;
+    transition: 0.5s;
     font-size: 0;
     line-height: 0;
-}
-.major .more a {
-    display: block;
-    width: 49px;
-    height: 49px;
-    position: relative;
-}
-.major .emer .more a {
-    justify-content: flex-end;
-}
-.major .more a span {
-    position: absolute;
-    transition: 0.5s;
-    top: 0;
-    left: 0;
-    width: 49px;
-    height: 49px;
     background-image: url("data:image/svg+xml,%3Csvg width='49' height='49' viewBox='0 0 49 49' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.9975 26.0022H0.0371094V22.998H22.9975V0.0375977H26.0017V22.998H48.9621V26.0022H26.0017V48.9626H22.9975V26.0022Z' fill='%233D3D3D'/%3E%3C/svg%3E%0A");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
     content: "";
 }
-.major .more a:hover span {
+.major .inner .more:hover {
+    transform: rotate(225deg);
+}
+.major .inter .inner .more,
+.major .obste .inner .more {
+    margin-left: 24px;
+}
+.major .sur .inner .more,
+.major .emer .inner .more {
+    margin-right: 24px;
+}
+.major .inner .more a {
+    display: block;
     width: 49px;
     height: 49px;
-    transform: rotate(225deg);
+}
+@media screen and (max-width:1300px){
+    .major .inter,
+    .major .sur,
+    .major .obste,
+    .major .emer {
+        display: block;
+    }
+    .major .inner {
+        width: auto;
+    }
+    .major .txt {
+        width: auto;
+        padding: 35px 0;
+    }
+    .major .pic {
+        width: 85%;
+    }
+    .major .sur .inner,
+    .major .emer .inner {
+        text-align: left;
+    }
+    .major .inner .more {
+        width: 30px;
+        height: 30px;
+    }
+    .major .inter .inner .more,
+    .major .obste .inner .more {
+        margin-left: 0;
+    }
+    .major .sur .inner .more,
+    .major .emer .inner .more {
+        margin-right: 0;
+    }
+    .major .inner .more a {
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
 }
 
 .place {
@@ -129,7 +193,7 @@ h2 {
     color: var(--color-main1);
 }
 .place .tit h2 {
-    font-size: 2.500rem;
+    font-size: var(--tit-txt-size);
     margin: 13px 0 26px 0;
 }
 .place .list ul {
@@ -196,6 +260,7 @@ h2 {
     display: none;
     opacity: 0;
     transition: 0.5s;
+    font-size: 1.563rem;
 }
 @media screen and (min-width:769px){
     /*하나의 li에 오버했을때*/
@@ -233,15 +298,15 @@ h2 {
 }
 .place .more {
     position: absolute;
-    top: 0;
+    top: 55px;
     right: 12%;
 }
 .place .more a {
     display: block;
     font-size: 0;
     line-height: 0;
-    width: 103px;
-    height: 103px;
+    width: 80px;
+    height: 80px;
 }
 .place .more a span {
     position: absolute;
@@ -255,7 +320,266 @@ h2 {
     background-size: contain;
     content: "";
 }
+@media screen and (max-width:1300px){
+    .place .tit {
+        margin: 107px 0 22px 0;
+    }
+    .place .list ul {
+        display: block;
+    }
+    .place .list ul li {
+        width: auto;
+    }
+    .place .list ul li::before {
+        background-color: #000;
+        opacity: 0.2;
+    }
+    .place .list ul li a {
+        height: 125px;
+    }
+    .place .list ul li a .inner {
+        margin: 0 5%;
+        /* a를 기준으로 정렬
+           마우스 오버했을때 효과를 부드럽게 주기 위해 absolute */
+        position: absolute;
+        left: 0;
+        bottom: 7px;
+        width: 90%;
+        transition: 0.5s;
+    }
+    .place .list ul li a .inner h3 {
+        font-size: 1.250rem;
+        line-height: 1;
+        margin: 0 0 15px 0;
+        transition: 0.5s;
+        white-space: nowrap;
+    }
+    .place .list ul li a .inner p {
+        display: none;
+        opacity: 0;
+        transition: 0.5s;
+        font-size: 1.563rem;
+    }
+    .place .more {
+        top: 21px;
+        right: 3%;
+    }
+    .place .more a {
+        width: 40px;
+        height: 40px;
+    }
+}
 
 .welcome {
+    margin-top: 186px;
+    position: relative;
+}
+.welcome .txt {
+    width: calc(45% - 20px);
+}
+.welcome .txt strong {
+    color: var(--color-main1);
+}
+.welcome .txt h2 {
+    margin: 20px 0 58px 0;
+    font-size: 1.875rem;
+}
+.welcome .txt p {
+    padding-bottom: 95px;
+}
+.welcome .txt .leader {
+    font-family: 'JejuGothic';
+    font-size: 1.250rem;
+}
+.welcome .swiper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(50% - 20px);
+}
+.welcome .swiper .photo {
+    width: 500px;
+}
+.welcome .swiper {
+    width: calc(50% - 24px);
+}
+.welcome .swiper ul li {
+    width: 590px;
+}
+.welcome .swiper ul li .photo img {
+    width: 100%;
+}
+.welcome .year {
+    position: absolute;
+    bottom: -310px;
+    right: 0;
+    font-size: 12.500rem;
+    color: rgba(61,61,61,0.1);
+}
+
+@media screen and (max-width:768px){
+    .welcome {
+        margin-top: 48px;
+        position: relative;
+    }
+    .welcome .txt {
+        width: 100%;
+    }
+    .welcome .txt h2 {
+        margin: 20px 0 22px 0;
+    }
+    .welcome .txt p {
+        padding-bottom: 62px;
+    }
+    .welcome .swiper {
+        position: relative;
+        width: auto;
+    }
+    .welcome .swiper .photo {
+        width: 264px;
+    }
+    .welcome .swiper {
+        width: calc(100% - 24px);
+    }
+    .welcome .swiper ul li {
+        width: 264px;
+    }
+    .welcome .year {
+        position: absolute;
+        bottom: -90px;
+        right: 0;
+        font-size: 4.375rem;
+        color: rgba(61,61,61,0.1);
+    }
+}
+
+.reser {
+    margin-top: 310px;
+    color: #fff;
+    background-image: url(../images/reser_bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.reser a {
+    display: block;
+    height: 360px;
+}
+.reser h2 {
+    padding-top: 76px;
+    font-size: var(--tit-txt-size);
+}
+.reser p {
+    padding: 24px 0 53px 0;
+}
+.reser .more {
+    font-size: 0;
+    line-height: 0;
+    width: 53px;
+    height: 53px;
+    background-image: url("data:image/svg+xml,%3Csvg width='58' height='58' viewBox='0 0 58 58' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_30_390' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='58' height='58'%3E%3Crect width='57.2246' height='57.2246' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_30_390)'%3E%3Cpath d='M28.6116 36.4535L36.4525 28.6125L28.6116 20.7716L26.9699 22.4132L31.9771 27.4204H20.2663V29.8047H31.9771L26.9699 34.8119L28.6116 36.4535ZM28.6193 50.0718C25.652 50.0718 22.8621 49.5087 20.2496 48.3825C17.6376 47.2563 15.3653 45.7279 13.4327 43.7973C11.5002 41.8668 9.97046 39.5965 8.84345 36.9864C7.71605 34.3767 7.15234 31.588 7.15234 28.6203C7.15234 25.653 7.71545 22.8631 8.84166 20.2506C9.96787 17.6385 11.4962 15.3662 13.4268 13.4337C15.3573 11.5012 17.6276 9.97143 20.2377 8.84443C22.8474 7.71702 25.6361 7.15332 28.6038 7.15332C31.5712 7.15332 34.3611 7.71643 36.9735 8.84264C39.5856 9.96885 41.8579 11.4972 43.7904 13.4278C45.7229 15.3583 47.2527 17.6286 48.3797 20.2387C49.5071 22.8484 50.0708 25.6371 50.0708 28.6048C50.0708 31.5721 49.5077 34.362 48.3815 36.9745C47.2553 39.5866 45.7269 41.8589 43.7964 43.7914C41.8658 45.7239 39.5955 47.2537 36.9854 48.3807C34.3758 49.5081 31.5871 50.0718 28.6193 50.0718Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media screen and (max-width:768px){
+    .reser {
+        margin-top: 135px;
+    }
+    .reser a {
+        height: 223px;
+    }
+    .reser h2 {
+        padding-top: 47px;
+    }
+    .reser p {
+        padding: 12px 0 26px 0;
+    }
+    .reser .more {
+        width: 43px;
+        height: 43px;
+    }
+}
+
+.loca {
     display: flex;
+    height: 611px;
+}
+.loca .left {
+    width: 50%;
+}
+.loca .left .map iframe {
+    width: 100%;
+    height: 611px;
+}
+.loca .right {
+    width: 50%;
+    padding: 92px 78px;
+}
+.loca .right .loca_top h2 span {
+    font-size: 1.875rem;
+    position: relative;
+}
+.loca .right .loca_top h2 span::before {
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    top: -39px;
+    left: 0;
+    background-color: #1d1d1d;
+    content: "";
+}
+.loca .right .loca_top h3 {
+    font-size: 1.250rem;
+    padding: 42px 0 19px 0;
+}
+.loca .right .loca_sub {
+    padding-top: 35px;
+}
+.loca .right .loca_sub h3 {
+    font-size: 1.250rem;
+    padding: 35px 0 19px 0;
+}
+.loca .right .loca_sub h3 span {
+    position: relative;
+}
+.loca .right .loca_sub h3 span::before {
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    top: -35px;
+    left: 0;
+    background-color: #666;
+    content: "";
+}
+.loca .right p {
+    line-height: 2;
+}
+
+@media screen and (max-width:768px){
+    .loca {
+        display: block;
+        height: auto;
+    }
+    .loca .left {
+        width: 100%;
+    }
+    .loca .left .map iframe {
+        width: 100%;
+        height: 272px;
+    }
+    .loca .right {
+        width: 100%;
+        padding: 92px 78px;
+    }
+    .loca .right .loca_top h2 span::before {
+        position: absolute;
+        width: 120%;
+        height: 3px;
+        top: -39px;
+        left: 0;
+        background-color: #1d1d1d;
+        content: "";
+    }
 }

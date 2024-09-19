@@ -14,6 +14,7 @@ $(document).ready(function(){
   let win_w
   let pc_mobile
   let scrolling
+  let visual_w
 
   function resize_chk(){
       win_w = $(window).width()
@@ -42,19 +43,7 @@ $(document).ready(function(){
       }
   })
 
-  function scroll_chk(){
-      scrolling = $(window).scrollTop()
-      if(scrolling > 0){ //스크롤이 조금이라도 되었다면
-          $('header').addClass('fixed')
-      }else{
-          $('header').removeClass('fixed')
-      }
-      console.log(scrolling)
-  }
-  scroll_chk() //브라우저가 로딩되었을 때 한번 실행
-  $(window).scroll(function(){ //스크롤할 때마다 한번 실행
-      scroll_chk()
-  })
+
 
   $('header .gnb .gnb_wrap ul.depth1 > li').on('mouseenter focusin', function(){
       if(pc_mobile == 'pc'){
@@ -108,6 +97,36 @@ $(document).ready(function(){
   })
 
 
+  function scroll_chk(){
+    scrolling = $(window).scrollTop()
+    if(scrolling > 0){ //스크롤이 조금이라도 되었다면
+        $('header').addClass('fixed')
+    }else{
+        $('header').removeClass('fixed')
+    }
+    console.log(scrolling)
+    window_h = $(window).height() //브라우저 높이
+    visual_top = $('.visual').offset().top
+    console.log(window_h, scrolling, visual_top)
+    if(scrolling > (visual_top-window_h + (window_h / 1))) {
+      
+      visual_w = (scrolling - (visual_top - window_h))*1.1 + 832
+      //넓이가 브라우저 설정을 초과하지 않게
+      if(visual_w > $(window).width()){
+        visual_w = $(window).width()
+          $('.visual').addClass('end')
+      }
+      console.log(visual_w)
+      $('.visual .photo_wrap .photo').width(visual_w)
+    }
+}
+
+  scroll_chk() //브라우저가 로딩되었을 때 한번 실행
+$(window).scroll(function(){ //스크롤할 때마다 한번 실행
+    scroll_chk()
+})
+
+
     $('.place .list ul li').on('mouseenter', function(){
         $('.place .list ul li').removeClass('on')
         $('.place .list ul li').addClass('off')
@@ -118,6 +137,20 @@ $(document).ready(function(){
         $('.place .list ul li').removeClass('on')
         $('.place .list ul li').removeClass('off')
     })
+
+
+    const welcome_swiper = new Swiper('.welcome .swiper', { /* 팝업을 감싼는 요소의 class명 */
+	slidesPerView: 'auto', /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+	spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+	breakpoints: {
+		640: {  /* 640px 이상이 되면 적용 */
+			spaceBetween: 24, 
+		},
+	},
+	centeredSlides: false, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
+	loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+});
+
   /* 
       footer .familysite .family_open을 클릭하면
   1. footer familysite에 open 클래스 추가
