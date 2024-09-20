@@ -370,7 +370,7 @@ footer .f_logo {
 footer .inner {
     position: relative;
 }
-footer .inner .f_nav {
+footer .inner .f_nav ul {
     position: absolute;
     top: -85px;
     right: 0;
@@ -378,7 +378,6 @@ footer .inner .f_nav {
     gap: 45px;
 }
 footer .inner .f_info {
-
     margin: 10px 0 40px 0;
 }
 footer .inner .f_info address {

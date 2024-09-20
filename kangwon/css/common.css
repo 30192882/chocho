@@ -56,8 +56,8 @@ html, body {
 /*클릭하는 요소 a button - focus가 되었을 때 스타일 변경*/
 
 ::selection {
-    background-color: #007D57;
-    color: #fff;
+    background-color: #FDFFD1;
+    color: #344EAD;
 }
 
 /*

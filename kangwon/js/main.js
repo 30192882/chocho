@@ -58,7 +58,7 @@ $(document).ready(function(){
           $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('on')
       }
   })
-  $('header .gnb .gnb_wrap ul.depth1 > li:last-child > ul.depth2 > li:last-child > a').on('focusout', function(){
+  $('header .gnb .gnb_wrap ul.depth1 > li:last-child').on('focusout', function(){
       if(pc_mobile == 'pc'){
           $('header').removeClass('menu_over')
           $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('on')
