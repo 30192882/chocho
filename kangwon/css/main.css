@@ -27,20 +27,48 @@ h2 {
     text-align: center;
 }
 .visual .photo_wrap {
-    margin: 63px 0 0 0;
+    margin: 118px 0 0 0;
     text-align: center;
 }
 
 /*jquery로 넓이 제어*/
+.visual .photo_wrap {
+    position: relative;
+}
 .visual .photo_wrap .photo {
     overflow: hidden;
     border-radius: 20px 20px 0 0;
-    width: 50%;
-    height: 1000px;
+    width: 60%;
+    height: 100vh;
     transition: 2s;
     display: inline-block;
     text-align: center;
     /*text-align: center로 정렬하게 하기 위해*/
+}
+.visual .photo_wrap .tit_w {
+    display: none;
+    width: 100%;
+    opacity: 0;
+    transition: 2s;
+}
+.visual.end .photo_wrap .tit_w {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    z-index: 10;
+}
+.visual.end .photo_wrap .tit_w h2 {
+    font-size: var(--tit-txt-size);
+    text-align: center;
+    color: #fff;
+}
+.visual.end .photo_wrap .tit_w p {
+    margin-top: 24px;
+    text-align: center;
 }
 .visual.end .photo_wrap .photo {
     border-radius: 0;
@@ -61,6 +89,12 @@ h2 {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+@media screen and (max-width:768px){
+    .visual .photo_wrap .photo {
+        width: 85%;
+    }
 }
 
 .major {
@@ -87,17 +121,19 @@ h2 {
     position: relative;
     flex-direction: row-reverse;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: flex-end;
     width: calc(50% - 24px);
+    padding-left: 90px;
 }
-
 .major .sur .inner,
 .major .emer .inner {
-    text-align: left;
+    text-align: right;
+    justify-content: flex-start;
+    padding-left: 0;
+    padding-right: 90px;
 }
 .major .txt {
     width: calc(100% - 24px);
-    padding: 35px 25px;
 }
 .major .pic {
     width: calc(50% - 24px);
@@ -106,6 +142,7 @@ h2 {
     width: 100%;
 }
 .major strong {
+    font-size: 1.250rem;
     color: var(--color-main1);
 }
 .major h2 {
@@ -116,10 +153,11 @@ h2 {
 .major .inner .more {
     width: 49px;
     height: 49px;
-    bottom: 10%;
+    bottom: 0;
     transition: 0.5s;
     font-size: 0;
     line-height: 0;
+    margin-top: 20px;
     background-image: url("data:image/svg+xml,%3Csvg width='49' height='49' viewBox='0 0 49 49' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.9975 26.0022H0.0371094V22.998H22.9975V0.0375977H26.0017V22.998H48.9621V26.0022H26.0017V48.9626H22.9975V26.0022Z' fill='%233D3D3D'/%3E%3C/svg%3E%0A");
     background-position: center center;
     background-repeat: no-repeat;
@@ -129,14 +167,7 @@ h2 {
 .major .inner .more:hover {
     transform: rotate(225deg);
 }
-.major .inter .inner .more,
-.major .obste .inner .more {
-    margin-left: 24px;
-}
-.major .sur .inner .more,
-.major .emer .inner .more {
-    margin-right: 24px;
-}
+
 .major .inner .more a {
     display: block;
     width: 49px;
@@ -151,6 +182,7 @@ h2 {
     }
     .major .inner {
         width: auto;
+        justify-content: flex-start;
     }
     .major .txt {
         width: auto;
@@ -159,9 +191,17 @@ h2 {
     .major .pic {
         width: 85%;
     }
+    .major h2 {
+        margin: 13px 0 22px 0;
+    }
+    .major .inner {
+        width: 100%;
+        padding-left: 0;
+    }
     .major .sur .inner,
     .major .emer .inner {
         text-align: left;
+        padding-right: 0;
     }
     .major .inner .more {
         width: 30px;
@@ -262,7 +302,7 @@ h2 {
     transition: 0.5s;
     font-size: 1.563rem;
 }
-@media screen and (min-width:769px){
+@media screen and (min-width:1301px){
     /*하나의 li에 오버했을때*/
     .place .list ul li.on a .inner {
         bottom: 55px;
@@ -320,6 +360,11 @@ h2 {
     background-size: contain;
     content: "";
 }
+@media screen and (max-width:1400px){
+    .place .list ul li a .inner h3 {
+        font-size: 1rem;
+    }
+}
 @media screen and (max-width:1300px){
     .place .tit {
         margin: 107px 0 22px 0;
@@ -338,7 +383,7 @@ h2 {
         height: 125px;
     }
     .place .list ul li a .inner {
-        margin: 0 5%;
+        margin: 0 13%;
         /* a를 기준으로 정렬
            마우스 오버했을때 효과를 부드럽게 주기 위해 absolute */
         position: absolute;
@@ -362,11 +407,19 @@ h2 {
     }
     .place .more {
         top: 21px;
-        right: 3%;
+        right: 11%;
     }
     .place .more a {
         width: 40px;
         height: 40px;
+    }
+}
+@media screen and (max-width:1024px){
+    .place .list ul li a .inner {
+        margin: 0 5%;
+    }
+    .place .more {
+        right: 3%;
     }
 }
 
@@ -378,6 +431,7 @@ h2 {
     width: calc(45% - 20px);
 }
 .welcome .txt strong {
+    font-size: 1.250rem;
     color: var(--color-main1);
 }
 .welcome .txt h2 {
@@ -417,6 +471,11 @@ h2 {
     color: rgba(61,61,61,0.1);
 }
 
+@media screen and (max-width:1024px){
+    .welcome .year {
+        font-size: 8rem;
+    }
+}
 @media screen and (max-width:768px){
     .welcome {
         margin-top: 48px;
@@ -424,6 +483,7 @@ h2 {
     }
     .welcome .txt {
         width: 100%;
+        margin-bottom: 40px;
     }
     .welcome .txt h2 {
         margin: 20px 0 22px 0;
@@ -564,18 +624,18 @@ h2 {
     }
     .loca .left {
         width: 100%;
+        margin-top: 80px;
     }
     .loca .left .map iframe {
-        width: 100%;
+        padding: 0 20px;
         height: 272px;
     }
     .loca .right {
         width: 100%;
-        padding: 92px 78px;
+        padding: 80px 20px;
     }
     .loca .right .loca_top h2 span::before {
         position: absolute;
-        width: 120%;
         height: 3px;
         top: -39px;
         left: 0;

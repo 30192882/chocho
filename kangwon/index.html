@@ -7,6 +7,8 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/main.css">
     <title>강원대학교 동물병원</title>
@@ -60,11 +62,12 @@
                                 <li><a href="#n"><span>동물병원뉴스</span></a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="#n"><span>동물병원후원</span></a>
+                        <li class="donate">
+                            <a href="http://vmth.kangwon.ac.kr/bbs/board.php?bo_table=sub6_1"><span>동물병원후원</span></a>
                         </li>
                     </ul>
                 </div>
+                <button class="gnb_close">메뉴닫기</button>
             </nav>
         </header>
         <main class="container" id="skip_contents">
@@ -77,6 +80,11 @@
                     </div>
                 </div>
                     <div class="photo_wrap">
+                        <div class="tit_w">
+                            <h2>Heal the Animal, Happy to everyone</h2>
+                            <p>반려동물과 함께 사랑과 희망을 나누는<br>
+                                강원대학교 동물병원입니다.</p>
+                        </div>
                         <div class="photo">
                             <img src="images/visual_bg.png" alt="사진">
                         </div>
@@ -253,7 +261,6 @@
                         <address>200-701 강원특별자치도 춘천시 강원대학길 1 강원대학교 동물병원</address>
                         <span>TEL 033-250-8606</span><span>FAX 033-256-8606</span>
                     </div>
-                    <div class="copyright">ⓒ 2014 강원대학교 동물병원 All rights reserved.</div>
                 </div>
                 <div class="familysite">
                     <button class="family_open">FAMILY SITE</button>
@@ -267,6 +274,7 @@
                     </ul>
                     <button class="family_close">FAMILY SITE</button>
                 </div>
+                <div class="copyright">ⓒ 2014 강원대학교 동물병원 All rights reserved.</div>
             </div>
         </footer>
     </div>

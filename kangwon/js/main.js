@@ -18,7 +18,7 @@ $(document).ready(function(){
 
   function resize_chk(){
       win_w = $(window).width()
-      if(win_w > 1024){
+      if(win_w > 1300){
           pc_mobile = 'pc'
       }else{
           pc_mobile = 'mobile'
@@ -95,6 +95,7 @@ $(document).ready(function(){
       $('header').removeClass('menu_open')
       $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
   })
+  
 
 
   function scroll_chk(){
@@ -110,7 +111,7 @@ $(document).ready(function(){
     console.log(window_h, scrolling, visual_top)
     if(scrolling > (visual_top-window_h + (window_h / 1))) {
       
-      visual_w = (scrolling - (visual_top - window_h))*1.1 + 832
+      visual_w = (scrolling - (visual_top - window_h))*1 + 832
       //넓이가 브라우저 설정을 초과하지 않게
       if(visual_w > $(window).width()){
         visual_w = $(window).width()
