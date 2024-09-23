@@ -179,10 +179,6 @@ h2 {
     display: inline-block;
     margin-top: 20px;    
 }
-.major .inner .more:hover {
-    transform: rotate(225deg);
-}
-
 .major .inner .more a {
     display: block;
     width: 49px;
@@ -195,6 +191,10 @@ h2 {
     background-repeat: no-repeat;
     background-size: contain;
 }
+.major .inner .more a:hover {
+    transform: rotate(225deg);
+}
+
 @media screen and (max-width:1024px){
     .major .major_item {
         display: block;
@@ -213,6 +213,7 @@ h2 {
     }
     .major .sur .pic {
         width: 82.50%;
+        margin-left: 12.50%;
     }
     .major .sur .inner {
         width: 100%;
@@ -225,6 +226,7 @@ h2 {
     }
     .major .emer .pic {
         width: 87.50%;
+        margin-left: 12.50%;
     }
     .major .emer .inner {
         width: 100%;
