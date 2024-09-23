@@ -14,7 +14,6 @@ $(document).ready(function(){
     let win_w
     let pc_mobile
     let scrolling
-    let visual_w
 
     function resize_chk(){
         win_w = $(window).width()
@@ -106,12 +105,12 @@ $(document).ready(function(){
             $('header').removeClass('fixed')
         }
         //console.log(scrolling)
-        window_h = $(window).height() //브라우저 높이
+        /*window_h = $(window).height() //브라우저 높이
         window_w = $(window).width()
         visual_top = $('.visual').offset().top + $('.visual .tit').height()
         //console.log(window_h, scrolling, visual_top)
         if(scrolling > (visual_top-window_h + (window_h / 0.91))) {
-            visual_w = (scrolling - (visual_top - window_h))*0.7 + (window_w*0.6)
+            visual_w = (scrolling - (visual_top - window_h))*0.83 + (window_w*0.6)
             //넓이가 브라우저 설정을 초과하지 않게
             if(visual_w > $(window).width()){
                 visual_w = $(window).width()
@@ -122,13 +121,35 @@ $(document).ready(function(){
         }else if(scrolling <= (visual_top-window_h + (window_h / 1))){
             $('.visual').removeClass('end')
             $('.visual .photo_wrap .photo').width(window_w*0.6)
+        }*/
+    }
 
+    let photo_top = $('.visual .photo_wrap').offset().top
+    let tit_top = $('.visual .tit h2').offset().top 
+    let tit_h = $('.visual .tit').height()
+    let tit_bottom = tit_top + tit_h
+    let gap_w = photo_top - tit_bottom
+    let gap_b = photo_top - tit_top
+    console.log(photo_top, tit_top, tit_h, gap_w) 
+
+    function visual_chk(){
+        if(scrolling > gap_w){
+            $('.visual').addClass('wid')
+        }else{
+            $('.visual').removeClass('wid')
+        }
+        if(scrolling > gap_b){
+            $('.visual').addClass('end')
+        }else{
+            $('.visual').removeClass('end')
         }
     }
 
     scroll_chk() //브라우저가 로딩되었을 때 한번 실행
+    visual_chk()
     $(window).scroll(function(){ //스크롤할 때마다 한번 실행
         scroll_chk()
+        visual_chk()
     })
 
 
