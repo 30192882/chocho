@@ -110,7 +110,7 @@ $(document).ready(function(){
         window_w = $(window).width()
         visual_top = $('.visual').offset().top + $('.visual .tit').height()
         //console.log(window_h, scrolling, visual_top)
-        if(scrolling > (visual_top-window_h + (window_h / 0.9))) {
+        if(scrolling > (visual_top-window_h + (window_h / 0.91))) {
             visual_w = (scrolling - (visual_top - window_h))*0.7 + (window_w*0.6)
             //넓이가 브라우저 설정을 초과하지 않게
             if(visual_w > $(window).width()){
