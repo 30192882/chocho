@@ -1,0 +1,134 @@
+@import url(fonts.css);
+@import url(default.css);
+@import url(common.css);
+
+
+/*
+    플러그인을 사용할 때 이미 적용되어 있는 css를 변경하려면
+    1. 동일한 이름의 body태그 선택자를 추가하는 방법
+        strong
+        body strong - 이 경우 body strong이 우선순위가 높음
+    2. 속성값에 뒤에 !important를 추가
+        우선순위가 1순위가 됨
+        (important는 해제가 어려움. 모바일에서도 적용됨)
+*/
+
+.first {
+    text-align: center;
+    background-image: url(../images/main_full.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #009444;
+}
+.first h2 span {
+    font-family: 'Caprasimo';
+    font-size: 200px;
+    position: relative;
+}
+.first h2 span::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #009444;
+    border-radius: 50%;
+    content: "";
+}
+.first p {
+    font-size: 30px;
+}
+
+.info .wrapper {
+    display: flex;
+}
+
+.info h2 {
+    font-size: 25px;
+    font-weight: 700;
+}
+.info .left {
+    position: relative;
+    width: 50%;
+    margin-left: 119px;
+}
+.info .left::after {
+    position: absolute;
+    right: 0;
+    top: 10%;
+    width: 1px;
+    height: 80%;
+    background-color: #1d1d1d;
+    content: "";
+}
+.info .left h2 {
+    font-size: 20px;
+    margin-bottom: 26px;
+}
+.info .right {
+    width: 50%;
+    padding-left: 119px;
+}
+.info .right .li strong {
+    font-weight: 700;
+}
+.info .right .li p {
+    margin: 29px 0 78px 0;
+}
+.info .right .li h2 span {
+    position: relative;
+    color: #009444;
+}
+.info .right .li h2 span::before {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 41px;
+    height: 1px;
+    background-color: #1d1d1d;
+    content: "";
+}
+
+.sitelist .fp-table {
+    justify-content: flex-start;
+}
+.sitelist li a {
+    display: block;
+    border-width: 1px 0 0 0;
+    border-color: #1d1d1d;
+    border-style: solid;
+    height: 164px;
+}
+.sitelist a .inner {
+    display: flex;
+    justify-content: space-between;
+    height: 164px;
+}
+.sitelist a .inner .tit {
+    display: flex;
+    color: #009444;
+}
+.sitelist a .tit strong {
+    font-size: 200px;
+    line-height: 0.93;
+    height: 164px;
+}
+.sitelist a .tit h2 {
+    font-size: 50px;
+    padding-top: 105px;
+}
+.sitelist .more {
+    font-size: 0;
+    line-height: 0;
+    width: 148px;
+    height: 148px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='149' height='149' viewBox='0 0 149 149' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_40_44' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='149' height='149'%3E%3Crect y='148.145' width='148.145' height='148.145' transform='rotate(-90 0 148.145)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_40_44)'%3E%3Cpath d='M141.047 73.9179L92.5916 122.528L78.8573 108.794L104.165 83.6399L70.9871 83.6399L70.9871 64.1959L104.165 64.1959L78.8573 39.0422L92.5915 25.4623L141.047 73.9179ZM58.6418 83.6399L39.1978 83.6399L39.1978 64.1959L58.6418 64.1959L58.6418 83.6399ZM26.8524 83.6399L7.40845 83.6399L7.40844 64.1959L26.8524 64.1959L26.8524 83.6399Z' fill='%23009444'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+
+.fp-watermark {
+    display: none;
+}
