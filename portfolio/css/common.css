@@ -18,12 +18,12 @@ html, body {
 /* 홈페이지 전체를 감싸는 요소 - 
    가로스크롤바가 생겼을때 배경이 짤리는 현상을 막음 */
 #wrap {
-    min-width: 1685px;
+    min-width: 1260px;
     overflow: hidden;
 }
 /* 홈페이지의 넓이를 제한하고 가운데정렬 */
 .wrapper {
-    width: 1685px; 
+    width: 1260px;
     margin: 0 auto; /* 가운데정렬 */
 }
 

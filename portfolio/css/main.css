@@ -42,7 +42,6 @@
 
 
 .info .wrapper {
-    width: 1260px;
     display: flex;
 }
 
@@ -95,10 +94,8 @@
     content: "";
 }
 
-.sitelist ul {
-    border-width: 0 1px;
-    border-color: #1d1d1d;
-    border-style: solid;
+.sitelist .wrapper {
+    width: 100%;
 }
 .sitelist ul li a {
     display: block;

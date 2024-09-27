@@ -17,7 +17,7 @@ header .gnb ul {
 header .gnb button a {
     position: absolute;
     top: 1px;
-    right: 6px;
+    right: 0;
     display: block;
     width: 125px;
     line-height: 40px;
@@ -57,7 +57,7 @@ header .gnb_wrap ul li.main a:hover {
 }
 header .gnb_wrap ul li a {
     display: block;
-    width: 437px;
+    width: 430px;
     height: 100px;
     line-height: 1.35;
     border-right: 1px solid #1d1d1d;

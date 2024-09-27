@@ -3,15 +3,10 @@
 @import url(common.css);
 @import url(layout.css);
 
-.set .wrapper,
-.detail .wrapper {
-    width: 1260px;
-    margin: 200px auto;
+.wrapper {
     display: flex;
 }
-
 .info .wrapper {
-    height: 100vh;
     display: flex;
 }
 .info .txt {
@@ -68,12 +63,15 @@
     border: 1px solid #EB6534;
 }
 .info .pic {
-    width: calc(50% + 20px);
+    width: 50%;
 }
 .info .pic img {
     height: 100vh;
 }
 
+.set {
+    margin-top: 200px;
+}
 .set .bord {
     position: relative;
 }
@@ -120,6 +118,7 @@
 }
 
 .detail .wrapper {
+    margin-top: 200px;
     position: relative;
 }
 .detail .pc {
@@ -177,7 +176,7 @@
 }
 
 .top {
-    margin: 30px 50%;
+    margin: 230px 50% 100px 50%;
     position: relative;
     width: 100px;
     height: 100px;

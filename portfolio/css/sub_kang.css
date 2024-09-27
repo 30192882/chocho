@@ -68,8 +68,10 @@
     font-family: 'JejuGothic';
     border: 1px solid #344EAD;
 }
+.info .pic {
+    width: 50%;
+}
 .info .pic img {
-    padding-top: 100px;
     height: 100vh;
 }
 
