@@ -57,7 +57,7 @@
 .info .left::after {
     position: absolute;
     right: 0;
-    top: 10%;
+    top: 31px;
     width: 1px;
     height: 80%;
     background-color: #1d1d1d;
