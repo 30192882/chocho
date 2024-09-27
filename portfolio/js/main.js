@@ -1,14 +1,15 @@
 $(document).ready(function(){
 
+
     const myFullpage = new fullpage('#fullpage', {  /* html에서 페이지 전체를 감싸는 요소 */
 
-		navigation: true, /* 오른쪽에 각 페이지의 paging */
+		navigation: false, /* 오른쪽에 각 페이지의 paging */
 		navigationPosition: 'right', /* 위치 */
-		navigationTooltips: ['첫번째', '두번째', '세번째', '네번째'], /* 툴팁 */
+		navigationTooltips: ['첫번째', '두번째', '세번째',], /* 툴팁 */
 		showActiveTooltip: true, /* 현재 활성화된 페이지의 툴팁에 특정 클래스 주기 */
 		
 		lockAnchors: true,
-		anchors: ['link1', 'link2', 'link3', 'link4'], /* href="#link1" 이렇게 코딩하면 해당 링크명으로 이동 */
+		anchors: ['link1', 'link2', 'link3'], /* href="#link1" 이렇게 코딩하면 해당 링크명으로 이동 */
 
 		autoScrolling:true, /* 한페이지씩 스크롤 */
 		scrollHorizontally: true,

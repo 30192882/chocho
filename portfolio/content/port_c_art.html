@@ -3,52 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/common.js"></script>
     <link rel="stylesheet" href="../css/sub.css">
     <title>천안예술의전당</title>
 </head>
 <body>
     <header>
-        <ul>
-            <li class="c_art">
-                <a href="../content/port_c_art.html"><strong>1</strong><span>천안예술의전당</span></a>
-            </li>
-            <li class="kangwon">
-                <a href="../content/port_kangwon.html"><strong>2</strong><span>강원대학교동물병원</span></a>
-            </li>
-            <li class="kwang">
-                <a href="../content/port_kwang.html"><strong>3</strong><span>광동제약</span></a>
-            </li>
-        </ul>
+        <nav class="gnb">
+            <div class="gnb_wrap">
+                <ul>
+                    <li class="c_art">
+                        <a href="../content/port_c_art.html"><strong>1</strong><span>천안예술의전당</span></a>
+                    </li>
+                    <li class="kangwon">
+                        <a href="../content/port_kangwon.html"><strong>2</strong><span>강원대학교동물병원</span></a>
+                    </li>
+                    <li class="kwang">
+                        <a href="../content/port_kwang.html"><strong>3</strong><span>광동제약</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
     <main class="container">
         <section class="info">
-            <div class="txt">
-                <div class="tit">
-                    <h2>천안예술의전당</h2>
-                    <p>Cheonan arts center</p>
-                </div>
-                <div class="reason">
-                    <h3>기획의도</h3>
-                    <p>메인페이지에 전체적으로 회빛이 주로 사용되어 주요 공지들이 한눈에 들어오지 않음. 천안예술의전당의 주요 색인 cac red를 통해 보다 활기찬 이미지를 부여하고자 하였음. 공연, 행사 목록 등 중요 정보들을 크게 배치하여 강조함.</p>
-                </div>
-                <div class="how">
-                    <div class="left">
-                        <span>작업기간<br>
-                        기여도<br>
-                        사용프로그램</span>
+            <div class="wrapper">
+                <div class="txt">
+                    <div class="tit">
+                        <h2>천안예술의전당</h2>
+                        <p>Cheonan arts center</p>
                     </div>
-                    <div class="right">
-                        <p>6일<br>
-                        개인작업<br>
-                        Figma, Ilustrator, Photoshop, Html, CSS</p>
+                    <div class="line reason">
+                        <h3>기획의도</h3>
+                        <p>메인페이지에 전체적으로 회빛이 주로 사용되어 주요 공지들이 한눈에 들어오지 않음. 천안예술의전당의 주요 색인 cac red를 통해 보다 활기찬 이미지를 부여하고자 하였음. 공연, 행사 목록 등 중요 정보들을 크게 배치하여 강조함.</p>
                     </div>
+                    <div class="line how">
+                        <div class="left">
+                            <span>작업기간<br>
+                            기여도<br>
+                            사용프로그램</span>
+                        </div>
+                        <div class="right">
+                            <p>6일<br>
+                            개인작업<br>
+                            Figma, Ilustrator, Photoshop, Html, CSS</p>
+                        </div>
+                    </div>
+                    <div class="more"><a href="../../c_art/index.html">홈페이지 바로가기</a></div>
                 </div>
-                <div class="more"><a href="../../c_art/index.html">홈페이지 바로가기</a></div>
-            </div>
-            <div class="pic">
-                <img src="../images/sub_c_art_info.png">
+                <div class="pic">
+                    <img src="../images/sub_c_art_info.png">
+                </div>
             </div>
         </section>
+        <section class="set">
+            <div class="wrapper">
+                <div class="bord font">
+                    <h2>글꼴</h2>
+                    <img src="../images/font.png" alt="폰트 사진">
+                </div>
+                <div class="bord color">
+                    <h2>색상</h2>
+                    <div class="list">
+                        <ul>
+                            <li class="red"><span>#EB6534</span></li>
+                            <li class="white"><span>#FCEDDA</span></li>
+                            <li class="black"><span>#1D1D1D</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="detail">
+            <div class="wrapper">
+                <div class="pic">
+                    <img class="mo" src="../images/mobile_page.png" alt="모바일 페이지 이미지">
+                    <img class="pc" src="../images/pc_page.png" alt="pc 페이지 이미지">
+                    <img class="de" src="../images/pc_page_detail.png" alt="pc 디테일 이미지">
+                </div>
+                <div class="txt">
+                    <div class="ar main">
+                        <h2>Main page</h2>
+                        <p>공연 위주의 공간. 관객들이 현재 진행중인 공연이 무엇인지 쉽게 알 수 있도록 팝업을 가장 위에 배치</p>
+                    </div>
+                    <div class="ar deta">
+                        <h2>Detail</h2>
+                        <p>진행중인 공연을 보다 상세하게 확인할 수 있는 공연 목록</p>
+                    </div>
+                    <div class="ar quick">
+                        <h2>Quick menu</h2>
+                        <p>사람들이 많이 찾는 메뉴를 쉽게 찾아갈 수 있도록 퀵메뉴 추가</p>
+                    </div>
+                    <div class="ar news">
+                        <h2>News</h2>
+                        <p>공지사항 우측에 대관공고와 보도자료를 따로 분리배치하여 공연 관련 직종의 사람들이 대관공고를 쉽게 확인 가능하도록 함.</p>
+                    </div>
+                    <div class="ar cont">
+                        <h2>Contact</h2>
+                        <p>대관 관련 파트는 공연장의 이미지를 크게 넣음으로서 대관 페이지로 넘어가기 전 미리 공연장의 모습을 한눈에 확인할 수 있도록 함.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <button class="top"><span>TOP</span></button>
     </main>
+    <footer>
+        <div class="f_logo">천안예술의전당</div>
+    </footer>
 </body>
 </html>

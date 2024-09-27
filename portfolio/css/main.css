@@ -40,7 +40,9 @@
     font-size: 30px;
 }
 
+
 .info .wrapper {
+    width: 1260px;
     display: flex;
 }
 
@@ -51,7 +53,7 @@
 .info .left {
     position: relative;
     width: 50%;
-    margin-left: 119px;
+    padding-right: 119px;
 }
 .info .left::after {
     position: absolute;
@@ -61,6 +63,9 @@
     height: 80%;
     background-color: #1d1d1d;
     content: "";
+}
+.info .left img {
+    margin: 54px;
 }
 .info .left h2 {
     font-size: 20px;
@@ -90,43 +95,63 @@
     content: "";
 }
 
-.sitelist .fp-table {
-    justify-content: flex-start;
+.sitelist ul {
+    height: 50%;
+    padding-bottom: 50%;
+    border-width: 0 1px;
+    border-color: #1d1d1d;
+    border-style: solid;
 }
-.sitelist li a {
+.sitelist ul li a {
     display: block;
     border-width: 1px 0 0 0;
     border-color: #1d1d1d;
     border-style: solid;
     height: 164px;
 }
-.sitelist a .inner {
+.sitelist ul li a:hover {
+    background-color: #009444;
+
+}
+.sitelist ul li:first-child {
+    border-width: 0;
+}
+.sitelist ul li:last-child {
+    border-bottom: 1px solid #1d1d1d;
+}
+.sitelist ul li a .inner {
     display: flex;
     justify-content: space-between;
     height: 164px;
 }
-.sitelist a .inner .tit {
+.sitelist ul li a .inner .tit {
     display: flex;
     color: #009444;
 }
-.sitelist a .tit strong {
+.sitelist ul li a:hover .inner .tit {
+    color: #fff;
+}
+.sitelist ul li a .tit strong {
     font-size: 200px;
     line-height: 0.93;
     height: 164px;
 }
-.sitelist a .tit h2 {
+.sitelist ul li a .tit h2 {
     font-size: 50px;
     padding-top: 105px;
 }
 .sitelist .more {
     font-size: 0;
     line-height: 0;
-    width: 148px;
-    height: 148px;
+    width: 164px;
+    height: 164px;
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url("data:image/svg+xml,%3Csvg width='149' height='149' viewBox='0 0 149 149' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_40_44' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='149' height='149'%3E%3Crect y='148.145' width='148.145' height='148.145' transform='rotate(-90 0 148.145)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_40_44)'%3E%3Cpath d='M141.047 73.9179L92.5916 122.528L78.8573 108.794L104.165 83.6399L70.9871 83.6399L70.9871 64.1959L104.165 64.1959L78.8573 39.0422L92.5915 25.4623L141.047 73.9179ZM58.6418 83.6399L39.1978 83.6399L39.1978 64.1959L58.6418 64.1959L58.6418 83.6399ZM26.8524 83.6399L7.40845 83.6399L7.40844 64.1959L26.8524 64.1959L26.8524 83.6399Z' fill='%23009444'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.sitelist a:hover .more {
+    background-image: url("data:image/svg+xml,%3Csvg width='149' height='149' viewBox='0 0 149 149' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_107_13' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='149' height='149'%3E%3Crect y='148.145' width='148.145' height='148.145' transform='rotate(-90 0 148.145)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_107_13)'%3E%3Cpath d='M141.047 73.9179L92.5915 122.528L78.8573 108.794L104.165 83.6399L70.9871 83.6399L70.9871 64.1959L104.165 64.1959L78.8573 39.0422L92.5915 25.4623L141.047 73.9179ZM58.6418 83.6399L39.1978 83.6399L39.1978 64.1959L58.6418 64.1959L58.6418 83.6399ZM26.8524 83.6399L7.40845 83.6399L7.40844 64.1959L26.8524 64.1959L26.8524 83.6399Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
 
 .fp-watermark {

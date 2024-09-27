@@ -1,52 +1,61 @@
 header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
     height: 100px;
+    z-index: 100; /*모든 요소의 맨위*/
+    background-color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-header ul {
+header .gnb ul {
     display: flex;
     border-bottom: 1px solid #1d1d1d;
 }
-header ul li.c_art a:hover {
+header .gnb_wrap ul li.c_art a:hover {
     color: #EB6534;
 }
-header ul li.kangwon a:hover {
+header .gnb_wrap ul li.kangwon a:hover {
     color: #344EAD;
 }
-header ul li.kwang a:hover {
+header .gnb_wrap ul li.kwang a:hover {
     color: #E8380D;
 }
-header ul li a {
+header .gnb_wrap ul li.main a:hover {
+    color: #009444;
+}
+header .gnb_wrap ul li a {
     display: block;
     width: 437px;
     height: 100px;
     line-height: 1.35;
     border-right: 1px solid #1d1d1d;
 }
-header ul li a strong {
+header .gnb_wrap ul li a strong {
     font-size: 88px;
     font-weight: 700;
 }
-header ul li a span {
+header .gnb_wrap ul li a span {
     font-size: 30px;
 }
+header.fixed {
+    position: fixed;
+    background-color: #fff;
+}
 
-.info .txt .tit h2 {
-    color: #EB6534;
-    font-size: 50px;
-    font-weight: 700;
+footer {
+    width: 100%;
+    height: 159px;
+    background-color: #FCEDE9;
 }
-.info .txt .tit p {
-    font-size: 20px;
-}
-.info .txt .reason h3 {
-    font-size: 25px;
-    font-weight: 700;
-    color: #EB6534;
-}
-.info .txt .how {
-    display: flex;
-}
-.info .more a {
-    display: block;
-    width: 183px;
-    height: 36px;
+footer .f_logo {
+    margin: 0 auto;
+    font-size: 0;
+    line-height: 0;
+    width: 342px;
+    height: 159px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../images/f_logo.png);
 }
