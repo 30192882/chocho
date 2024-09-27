@@ -49,6 +49,7 @@
 .info .txt .how {
     display: flex;
     margin: 89px 0 75px 0;
+    line-height: 3;
     gap: 27px;
 }
 .info .txt .more a {
