@@ -17,7 +17,7 @@ header .gnb ul {
 header .gnb button a {
     position: absolute;
     top: 1px;
-    right: 0;
+    right: 8px;
     display: block;
     width: 125px;
     line-height: 40px;
