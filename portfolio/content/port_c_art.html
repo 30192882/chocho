@@ -6,6 +6,8 @@
     <script src="../js/jquery-3.7.1.min.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/common.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- AOS를 작동시키기 위한 css와 js파일 -->
     <link rel="stylesheet" href="../css/sub.css">
     <title>천안예술의전당</title>
 </head>
@@ -25,12 +27,13 @@
                     </li>
                 </ul>
             </div>
+            <button><a href="../index.html">HOME</a></button>
         </nav>
     </header>
     <main class="container">
         <section class="info">
             <div class="wrapper">
-                <div class="txt">
+                <div class="txt" data-aos="fade-right">
                     <div class="tit">
                         <h2>천안예술의전당</h2>
                         <p>Cheonan arts center</p>
@@ -53,21 +56,21 @@
                     </div>
                     <div class="more"><a href="../../c_art/index.html">홈페이지 바로가기</a></div>
                 </div>
-                <div class="pic">
+                <div class="pic" data-aos="fade-left">
                     <img src="../images/sub_c_art_info.png">
                 </div>
             </div>
         </section>
         <section class="set">
             <div class="wrapper">
-                <div class="bord font">
+                <div class="bord font" data-aos="fade-up">
                     <h2>글꼴</h2>
-                    <img src="../images/font.png" alt="폰트 사진">
+                    <img src="../images/font.png" alt="폰트 사진" data-aos="fade-up">
                 </div>
-                <div class="bord color">
+                <div class="bord color" data-aos="fade-up" data-aos-delay="500">
                     <h2>색상</h2>
                     <div class="list">
-                        <ul>
+                        <ul data-aos="fade-up" data-aos-delay="500">
                             <li class="red"><span>#EB6534</span></li>
                             <li class="white"><span>#FCEDDA</span></li>
                             <li class="black"><span>#1D1D1D</span></li>
@@ -79,28 +82,28 @@
         <section class="detail">
             <div class="wrapper">
                 <div class="pic">
-                    <img class="mo" src="../images/mobile_page.png" alt="모바일 페이지 이미지">
-                    <img class="pc" src="../images/pc_page.png" alt="pc 페이지 이미지">
-                    <img class="de" src="../images/pc_page_detail.png" alt="pc 디테일 이미지">
+                    <img class="mo" src="../images/mobile_page.png" alt="모바일 페이지 이미지" data-aos="fade-right" data-aos-delay="300">
+                    <img class="pc" src="../images/pc_page.png" alt="pc 페이지 이미지" data-aos="fade-right">
+                    <img class="de" src="../images/pc_page_detail.png" alt="pc 디테일 이미지" data-aos="fade-right">
                 </div>
                 <div class="txt">
-                    <div class="ar main">
+                    <div class="ar main" data-aos="fade-left">
                         <h2>Main page</h2>
                         <p>공연 위주의 공간. 관객들이 현재 진행중인 공연이 무엇인지 쉽게 알 수 있도록 팝업을 가장 위에 배치</p>
                     </div>
-                    <div class="ar deta">
+                    <div class="ar deta" data-aos="fade-left">
                         <h2>Detail</h2>
                         <p>진행중인 공연을 보다 상세하게 확인할 수 있는 공연 목록</p>
                     </div>
-                    <div class="ar quick">
+                    <div class="ar quick" data-aos="fade-left">
                         <h2>Quick menu</h2>
                         <p>사람들이 많이 찾는 메뉴를 쉽게 찾아갈 수 있도록 퀵메뉴 추가</p>
                     </div>
-                    <div class="ar news">
+                    <div class="ar news" data-aos="fade-left">
                         <h2>News</h2>
                         <p>공지사항 우측에 대관공고와 보도자료를 따로 분리배치하여 공연 관련 직종의 사람들이 대관공고를 쉽게 확인 가능하도록 함.</p>
                     </div>
-                    <div class="ar cont">
+                    <div class="ar cont" data-aos="fade-left">
                         <h2>Contact</h2>
                         <p>대관 관련 파트는 공연장의 이미지를 크게 넣음으로서 대관 페이지로 넘어가기 전 미리 공연장의 모습을 한눈에 확인할 수 있도록 함.</p>
                     </div>
@@ -112,5 +115,12 @@
     <footer>
         <div class="f_logo">천안예술의전당</div>
     </footer>
+    <script>// 반드시 콘텐츠 하단에 배치해야 한다.
+        AOS.init({
+        offset: 150, // 해당 콘텐츠가 하단에서 몇 px 위로 올라와에 나타나는 효과가 나타날지 셋팅하는 값
+        duration: 500, // 애니메이션 효과가 작동되는 시간
+        easing: 'ease', // 가속도
+        });
+    </script>
 </body>
 </html>

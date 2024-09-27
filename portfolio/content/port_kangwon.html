@@ -6,6 +6,8 @@
     <script src="../js/jquery-3.7.1.min.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/common.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- AOS를 작동시키기 위한 css와 js파일 -->
     <link rel="stylesheet" href="../css/sub_kang.css">
     <title>천안예술의전당</title>
 </head>
@@ -30,7 +32,7 @@
     <main class="container">
         <section class="info">
             <div class="wrapper">
-                <div class="txt">
+                <div class="txt"  data-aos="fade-right">
                     <div class="tit">
                         <h2>강원대학교 동물병원</h2>
                         <p>Kangwon National University ANIMAL HOSPITAL</p>
@@ -54,20 +56,20 @@
                     </div>
                     <div class="more"><a href="../../kangwon/index.html">홈페이지 바로가기</a></div>
                 </div>
-                <div class="pic">
+                <div class="pic" data-aos="fade-left">
                     <img src="../images/sub_kang_info.png">
                 </div>
             </div>
         </section>
         <section class="set">
             <div class="wrapper">
-                <div class="bord font">
+                <div class="bord font" data-aos="fade-up">
                     <h2>글꼴</h2>
-                    <img src="../images/font_kang.png" alt="폰트 사진">
+                    <img src="../images/font_kang.png" alt="폰트 사진" data-aos="fade-up">
                 </div>
-                <div class="bord color">
+                <div class="bord color" data-aos="fade-up" data-aos-delay="500">
                     <h2>색상</h2>
-                    <div class="list">
+                    <div class="list" data-aos="fade-up" data-aos-delay="500">
                         <ul>
                             <li class="blue"><span>#344EAD</span></li>
                         </ul>
@@ -78,31 +80,31 @@
         <section class="detail">
             <div class="wrapper">
                 <div class="pic">
-                    <img class="mo" src="../images/moblie_page_kang.png" alt="모바일 페이지 이미지">
-                    <img class="pc" src="../images/pc_page_kang.png" alt="pc 페이지 이미지">
-                    <img class="de" src="../images/pc_page_detail_kang.png" alt="pc 디테일 이미지">
+                    <img class="mo" src="../images/moblie_page_kang.png" alt="모바일 페이지 이미지" data-aos="fade-right" data-aos-delay="300">
+                    <img class="pc" src="../images/pc_page_kang.png" alt="pc 페이지 이미지" data-aos="fade-right">
+                    <img class="de" src="../images/pc_page_detail_kang.png" alt="pc 디테일 이미지" data-aos="fade-right">
                 </div>
                 <div class="txt">
-                    <div class="ar main">
+                    <div class="ar main"  data-aos="fade-left">
                         <h2>Main page</h2>
                         <p>홈페이지를 방문한 사람들에게 편안한 느낌을 줄 수 있도록 따뜻한 느낌을 주는 의미의 문구와 사진 배치. 안심하고 맡길 수 있는 동물병원의 이미지를 주고자 했다.
                             스크롤을 내리면 사진이 어두워지고 화면 전체 크기만큼 늘어남. 동시에 문구가 하얗게 변하고 사진 위로 떠오른다.</p>
                     </div>
-                    <div class="ar deta">
+                    <div class="ar deta"  data-aos="fade-left">
                         <h2>Information</h2>
                         <p>반려동물만이 아닌 다양한 동물들을 진료한다는 정보를 강조하기 위해 진료과목을 가장 위에 배치.
 
                             과목명과 간단한 설명, 그 옆에 각 과의 사진을 추가하여 글을 읽지 않아도 과의 특징을 확인 가능.</p>
                     </div>
-                    <div class="ar quick">
+                    <div class="ar quick"  data-aos="fade-left">
                         <h2>Facility</h2>
                         <p>마우스 커서를 오버하면 진료시설의 주요 이미지가 확대되며 시설의 모습을 확인 가능.</p>
                     </div>
-                    <div class="ar news">
+                    <div class="ar news"  data-aos="fade-left">
                         <h2>Greeting</h2>
                         <p>병원장의 인사말과 치료로 건강을 되찾아가는 동물들의 이미지를 함께 보여줌으로서 홈페이지를 방문한 보호자들에게 친절하고 편안한 이미지를 심어줌.</p>
                     </div>
-                    <div class="ar cont">
+                    <div class="ar cont"  data-aos="fade-left">
                         <h2>Reservation</h2>
                         <p>예약 메뉴를 중간에 배치하여 쉽게 접근할 수 있도록 함.
 
@@ -117,5 +119,12 @@
     <footer>
         <div class="f_logo">강원대학교동물병원</div>
     </footer>
+    <script>// 반드시 콘텐츠 하단에 배치해야 한다.
+        AOS.init({
+        offset: 150, // 해당 콘텐츠가 하단에서 몇 px 위로 올라와에 나타나는 효과가 나타날지 셋팅하는 값
+        duration: 500, // 애니메이션 효과가 작동되는 시간
+        easing: 'ease', // 가속도
+        });
+    </script>
 </body>
 </html>

@@ -124,6 +124,7 @@
     position: absolute;
     left: 0;
     top: 98px;
+    z-index: 10;
 }
 .detail img {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
