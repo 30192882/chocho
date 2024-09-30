@@ -6,26 +6,24 @@ header {
     height: 100px;
     z-index: 100; /*모든 요소의 맨위*/
     background-color: #fff;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-header .gnb ul {
-    position: relative;
-    display: flex;
     border-bottom: 1px solid #1d1d1d;
 }
-
-header .gnb button a {
+header .gnb .gnb_wrap ul {
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+header .gnb .gnb_wrap .home a {
     position: absolute;
     top: 1px;
     left: 1290px;
     display: block;
     width: 125px;
     line-height: 40px;
-    padding-right: 25px;
+    padding: 0 25px 0 10px;
     font-size: 30px;
-    border-radius: 20px;
 }
-header .gnb button a::after {
+header .gnb .gnb_wrap .home a::after {
     position: absolute;
     width: 40px;
     height: 40px;
@@ -37,36 +35,39 @@ header .gnb button a::after {
     background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_109_22' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='40' height='40'%3E%3Crect width='40' height='40' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_109_22)'%3E%3Cpath d='M10.6667 30L8.33334 27.6667L24.3333 11.6667H10V8.33334H30V28.3333H26.6667V14L10.6667 30Z' fill='%231D1D1D'/%3E%3C/g%3E%3C/svg%3E%0A");
     content: "";
 }
-header .gnb button a:hover {
+header .gnb .gnb_wrap .home a:hover {
     color: #009444;
 }
-header .gnb button a:hover::after {
+header .gnb .gnb_wrap .home a:hover::after {
     background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_118_23' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='40' height='40'%3E%3Crect width='40' height='40' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_118_23)'%3E%3Cpath d='M10.6667 30L8.33337 27.6667L24.3334 11.6667H10V8.33334H30V28.3333H26.6667V14L10.6667 30Z' fill='%23009444'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
-header .gnb_wrap ul li a {
+header .gnb .gnb_wrap ul li a {
     display: block;
     width: 430px;
     height: 100px;
-    line-height: 1.35;
+    line-height: 1.5;
     border-right: 1px solid #1d1d1d;
 }
-header .gnb_wrap ul li a strong {
+header .gnb .gnb_wrap ul li:last-child a {
+    border: 0;
+}
+header .gnb .gnb_wrap ul li a strong {
     font-size: 88px;
     font-weight: 700;
 }
-header .gnb_wrap ul li a span {
+header .gnb .gnb_wrap ul li a span {
     font-size: 30px;
 }
-header .gnb_wrap ul li.c_art a:hover {
+header .gnb .gnb_wrap ul li.c_art a:hover {
     color: #EB6534;
 }
-header .gnb_wrap ul li.kangwon a:hover {
+header .gnb .gnb_wrap ul li.kangwon a:hover {
     color: #344EAD;
 }
-header .gnb_wrap ul li.kwang a:hover {
+header .gnb .gnb_wrap ul li.kwang a:hover {
     color: #E8380D;
 }
-header .gnb_wrap ul li.main a:hover {
+header .gnb s.gnb_wrap ul li.main a:hover {
     color: #009444;
 }
 header.fixed {
