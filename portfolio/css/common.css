@@ -26,6 +26,12 @@ html, body {
     width: 1260px;
     margin: 0 auto; /* 가운데정렬 */
 }
+@media screen and (max-width:1024px) {
+    .wrapper {
+        width: auto;
+        margin: 0 auto; /* 가운데정렬 */
+    }
+}
 
 
 /*클릭하는 요소 a button - focus가 되었을 때 스타일 변경*/
